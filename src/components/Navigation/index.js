@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './index.css'
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -7,7 +8,7 @@ import * as ROUTES from '../../constants/routes';
 import { AuthUserContext } from '../Session';
 
 const Navigation = () => (
-  <div>
+  <div className="navigation">
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? <NavigationAuth /> : <NavigationNonAuth />
@@ -19,19 +20,19 @@ const Navigation = () => (
 const NavigationAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+      <Link className="link" to={ROUTES.LANDING}>Landing</Link>
     </li>
     <li>
-      <Link to={ROUTES.HOME}>Home</Link>
+      <Link className="link" to={ROUTES.HOME}>Home</Link>
     </li>
     <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
+      <Link className="link" to={ROUTES.ACCOUNT}>Account</Link>
     </li>
     <li>
-      <Link to={ROUTES.ADMIN}>Admin</Link>
+      <Link className="link" to={ROUTES.ADMIN}>Admin</Link>
     </li>
     <li>
-      <SignOutButton />
+      <div className="link right-float"><SignOutButton /></div>
     </li>
   </ul>
 );
@@ -39,10 +40,10 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+      <Link className="link right-float" to={ROUTES.LANDING}>Landing</Link>
     </li>
     <li>
-      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+      <Link className="link right-float" to={ROUTES.SIGN_IN}>Sign In</Link>
     </li>
   </ul>
 );

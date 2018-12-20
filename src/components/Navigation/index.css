@@ -1,0 +1,48 @@
+
+.navigation {
+    background-color: #333;
+    color: white;
+}
+
+.navigation > ul {
+    text-decoration: none;
+    position: initial;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+li .link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+li .link:hover {
+    background-color: #111;
+}
+
+.btn-signout {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-family: default;
+    font-size: default;
+}
+
+
+
+ @media only screen and (min-width: 768px)  {
+
+    li .link {
+        float: left;
+    }
+
+    .right-float {
+        float: right!important;
+    }
+ }
