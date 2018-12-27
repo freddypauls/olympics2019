@@ -1,6 +1,10 @@
-.form-card {
+.form-card-account {
     margin: 0px;
     display: inline-block;
     margin-top: 10%;
 
+}
+
+.form-input-account {
+    float: left;
 }

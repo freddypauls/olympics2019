@@ -10,18 +10,17 @@ const AccountPage = () => (
     <AuthUserContext.Consumer>
       {authUser => (
         <div>
-          <div className="form-card">
+          <div className="form-card form-card-account">
             <h1>Account:</h1>
             <p>Email: {authUser.email}</p>
-          </div>
-          <div className="form-card">
-            <PasswordForgetForm />
-            <PasswordChangeForm />
           </div>
         </div>
       )}
     </AuthUserContext.Consumer>
   );
+
+// <PasswordForgetForm />
+// <PasswordChangeForm />
 
 const condition = authUser => !!authUser;
 
