@@ -14,11 +14,13 @@ const Navigation = () => (
         authUser ? <NavigationAuth /> : <NavigationNonAuth />
       }
     </AuthUserContext.Consumer>
-    <img className="image-menu-ham" src={require('./img/menu.png')} />
+    <img className="image-menu-ham" src={require('./img/menu.png')} onClick={() => handleClick()} />
   </div>
 );
 
-
+const handleClick = () => {
+  
+};
 
 const NavigationAuth = () => (
   <ul className="ham-menu">
