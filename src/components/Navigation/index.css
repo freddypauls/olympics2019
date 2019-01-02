@@ -1,7 +1,12 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
 
 .navigation {
     background-color: #333;
     color: white;
+    position: relative;
 }
 
 .navigation > img {
