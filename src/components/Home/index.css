@@ -1,9 +1,36 @@
-.home-card {
-    margin-left: 25%;
-    width: 50%;
-
+.background-image-behind-card {
+    background-image: url("./img/mossypic.jpg");
+    color: white;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
 }
 
-.home-card > h1 {
-    text-align: center;
+.card-text {
+    background-color: rgba(33, 33, 33, 0.3);
+}
+
+.home-card {
+    width: 80%;
+    padding: 0 10% 0 10%;
+    color: white;
+    position: relative;
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 678px) {
+
+    .home-card {
+        margin-left: 15%;
+        width: 50%;
+    
+    }
+    
+    .home-card > h1 {
+        text-align: center;
+    }
 }

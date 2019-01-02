@@ -1,0 +1,17 @@
+.home-card {
+    width: 80%;
+    padding: 0 10% 0 10%
+}
+
+@media screen and (min-width: 678px) {
+
+    .home-card {
+        margin-left: 15%;
+        width: 50%;
+    
+    }
+    
+    .home-card > h1 {
+        text-align: center;
+    }
+}

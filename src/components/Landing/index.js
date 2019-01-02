@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './index.css';
+
 const Landing = () => (
-  <div>
+  <div className="home-card">
     <h1>Landing</h1>
   </div>
 );

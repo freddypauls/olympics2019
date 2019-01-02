@@ -14,11 +14,14 @@ const Navigation = () => (
         authUser ? <NavigationAuth /> : <NavigationNonAuth />
       }
     </AuthUserContext.Consumer>
+    <img className="image-menu-ham" src={require('./img/menu.png')} />
   </div>
 );
 
+
+
 const NavigationAuth = () => (
-  <ul>
+  <ul className="ham-menu">
     <li>
       <Link className="link" to={ROUTES.LANDING}>Landing</Link>
     </li>
