@@ -9,20 +9,46 @@ const HomePage = () => (
     <section className="background-image-behind-card ">
       <div className="home-card">
 
-        <div className="card-text">
-          <header> <h1>Welcome Home</h1></header>
+        <article className="card-text">
+         <br/>
+          <hr />
+            <header className="welcome"> <h1>Welcome Home</h1></header>
+          <hr />
 
-          <p>This is the page that every logged in user will see first.</p>
-          <p>I would fill this out more, but I dont really know the context of the page yet. havent really thought about it that much tbh</p>
+          <p>Welcome to this page that will tell you about absolutely nothing of segnificans, but its here and it is here to stay.</p>
+          <p>This text will just explain that this page will not really be used for anything special or anything, nbut it will be made and exsist as something that might or might not turn into something I can use, god knows.</p>
         
-        </div>
+        </article>
 
       </div>
     </section>
-    <section className="section-part-games">
-      <div className="home-card">
+    <section className="flex-container">
+      <div className="flex-item">
+        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <div className="overlay">
+          <div className="text">Hello World</div>
+        </div>
+      </div>
 
-        <header>What? </header>
+      <div className="flex-item">
+        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <div className="overlay">
+          <div className="text">Hello World</div>
+        </div>
+      </div>
+
+      <div className="flex-item">
+        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <div className="overlay">
+          <div className="text">Hello World</div>
+        </div>
+      </div>
+
+      <div className="flex-item">
+        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <div className="overlay">
+          <div className="text">Hello World</div>
+        </div>
       </div>
     </section>
 

@@ -8,6 +8,20 @@
     overflow: auto;
 }
 
+.welcome {
+    font-size: 30px;
+    text-align: center;
+}
+
+hr {
+    border-color: white;
+}
+
+.card-text > p {
+    font-size: 20px;
+
+}
+
 .card-text {
     background-color: rgba(33, 33, 33, 0.3);
 }
@@ -19,9 +33,53 @@
     position: relative;
 }
 
-.section-part-games {
-    height: 100vh;
+.flex-container {
+    padding-top: 10px;
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.flex-item {
+    position: relative;
+    width: 80vw;
+    margin: 10px;
+    height: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
 @media screen and (min-width: 678px) {
 
