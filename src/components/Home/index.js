@@ -12,7 +12,7 @@ const HomePage = () => (
         <article className="card-text">
          <br/>
           <hr />
-            <header className="welcome"> <h1>Welcome Home</h1></header>
+            <header className="welcome"> <h1>Welcome</h1></header>
           <hr />
 
           <p>Welcome to this page that will tell you about absolutely nothing of segnificans, but its here and it is here to stay.</p>
@@ -24,30 +24,30 @@ const HomePage = () => (
     </section>
     <section className="flex-container">
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
-          <div className="text">Hello World</div>
+          <div className="text">This is a man of manners</div>
         </div>
       </div>
 
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
-          <div className="text">Hello World</div>
+          <div className="text">This is a man with no manners</div>
         </div>
       </div>
 
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
-          <div className="text">Hello World</div>
+          <div className="text">This is a man with brainpower</div>
         </div>
       </div>
 
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" class="image" />
+        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
-          <div className="text">Hello World</div>
+          <div className="text">This is a man without brainpower</div>
         </div>
       </div>
     </section>

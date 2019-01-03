@@ -35,6 +35,7 @@ hr {
 
 .flex-container {
     padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     width: 100vw;
     flex-wrap: wrap;
@@ -45,7 +46,6 @@ hr {
     position: relative;
     width: 80vw;
     margin: 10px;
-    height: 100%;
   }
   
   .image {
@@ -67,7 +67,7 @@ hr {
     background-color: #008CBA;
   }
   
-  .item:hover .overlay {
+  .flex-item:hover .overlay {
     opacity: 1;
   }
   
@@ -93,8 +93,12 @@ hr {
         text-align: center;
     }
 
-    .section-part-games {
+    .flex-container {
         height: 100vh;
         width: 100vw;
+    }
+
+    .flex-item {
+        width: 500px;
     }
 }
