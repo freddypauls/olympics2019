@@ -7,6 +7,8 @@ import * as ROUTES from '../../constants/routes';
 
 import { AuthUserContext } from '../Session';
 
+const classname = "image-menu-ham";
+
 const Navigation = () => (
   <div className="navigation">
     <AuthUserContext.Consumer>
@@ -14,12 +16,13 @@ const Navigation = () => (
         authUser ? <NavigationAuth /> : <NavigationNonAuth />
       }
     </AuthUserContext.Consumer>
-    <img className="image-menu-ham" src={require('./img/menu.png')} onClick={() => handleClick()} />
+    <img className={classname} src={require('./img/menu.png')} onClick={() => handleClick()} />
   </div>
 );
 
 const handleClick = () => {
-  
+  classname = "image-menu-ham img-movement";
+  alert(classname);
 };
 
 const NavigationAuth = () => (

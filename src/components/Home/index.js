@@ -9,45 +9,37 @@ const HomePage = () => (
     <section className="background-image-behind-card ">
       <div className="home-card">
 
-        <article className="card-text">
+        <div className="card-text">
          <br/>
           <hr />
-            <header className="welcome"> <h1>Welcome</h1></header>
+            <div className="welcome"> <h1>Welcome to B-OL 2019</h1></div>
           <hr />
-
-          <p>Welcome to this page that will tell you about absolutely nothing of segnificans, but its here and it is here to stay.</p>
-          <p>This text will just explain that this page will not really be used for anything special or anything, nbut it will be made and exsist as something that might or might not turn into something I can use, god knows.</p>
-        
-        </article>
+          <br />
+        </div>
 
       </div>
     </section>
     <section className="flex-container">
-      <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
-        <div className="overlay">
-          <div className="text">This is a man of manners</div>
-        </div>
+
+      <div className="flex-item image-1">
+        <div className="text"> B-OL er ett event startet av Eirik Holmebukt og skal i år arrangeres for andre gang. </div>
       </div>
 
-      <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
+      <div className="flex-item image-2">
         <div className="overlay">
           <div className="text">This is a man with no manners</div>
         </div>
       </div>
 
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
           <div className="text">This is a man with brainpower</div>
         </div>
       </div>
 
       <div className="flex-item">
-        <img src={require("./img/img_avatar.png")} alt="Avatar" className="image" />
         <div className="overlay">
-          <div className="text">This is a man without brainpower</div>
+          <div className="text">This is a man without branp</div>
         </div>
       </div>
     </section>

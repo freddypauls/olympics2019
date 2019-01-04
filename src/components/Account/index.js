@@ -9,6 +9,7 @@ import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import '../SignIn/index.css';
 import './index.css';
+import { userInfo } from 'os';
 
 const AccountPage = () => (
     <AuthUserContext.Consumer>
@@ -17,7 +18,7 @@ const AccountPage = () => (
           <div className="form-card form-card-account">
             <h1>Account:</h1>
             <p>Email: {authUser.email}</p>
-            <p>Username:</p>
+            <p>Username: </p>
           </div>
         </div>
       )}

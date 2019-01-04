@@ -1,5 +1,5 @@
 .background-image-behind-card {
-    background-image: url("./img/mossypic.jpg");
+    background-image: url("./img/image-main.jpg");
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -17,9 +17,9 @@ hr {
     border-color: white;
 }
 
-.card-text > p {
-    font-size: 20px;
-
+.card-text {
+    width: 100%;
+    padding-top: 50%;
 }
 
 
@@ -34,8 +34,6 @@ hr {
 }
 
 .flex-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
     display: flex;
     width: 100vw;
     flex-wrap: wrap;
@@ -44,14 +42,10 @@ hr {
 
 .flex-item {
     position: relative;
-    width: 80vw;
-    margin: 10px;
-  }
-  
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    border-bottom: solid 1px  #333;
   }
   
   .overlay {
@@ -63,7 +57,7 @@ hr {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: 1s ease;
     background-color: #008CBA;
   }
   
@@ -73,12 +67,30 @@ hr {
   
   .text {
     color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    font-size: 50px;
+    text-align: left;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.3);
+    font-family: 'yellowtail', cursive;
+    
+  }
+
+  .flex-item.image-1 {
+    background-image: url('./img/image1.jpg');
+    background-position: right;
+    background-size: cover;
+  }
+
+  .flex-item.image-2 {
+      background-image: url('./img/image1.jpg');
+      background-position: right;
+      background-size: cover;
+  }
+
+  .flex-item.image-3 {
+      background-image: url('./img/image3.jpg');
+      background-size: cover;
   }
 
 @media screen and (min-width: 678px) {

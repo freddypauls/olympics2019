@@ -4,13 +4,24 @@ body {
 }
 
 .navigation {
-    background-color: #333;
+    background-color: #111;
     color: white;
     position: relative;
 }
 
 .navigation > img {
     padding: 7px 16px;
+    position: absolute;
+    right: 10px;
+    background-color: black;
+}
+
+.navigation > .img-movement {
+    top: 100px;
+}
+
+.navigation > .ul-transform {
+    transform: translate3d(0, 0, 0);
 }
 
 .navigation > ul {
@@ -35,7 +46,7 @@ li .link {
 }
 
 li .link:hover {
-    background-color: #111;
+    background-color: #333;
 }
 
 .btn-signout {
