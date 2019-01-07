@@ -11,7 +11,7 @@ import '../SignIn/index.css';
 import './index.css';
 import { userInfo } from 'os';
 
-const AccountPage = ({ users }) => (
+const AccountPage = () => (
     <AuthUserContext.Consumer>
       {authUser => (
         <div>
