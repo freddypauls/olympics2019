@@ -11,12 +11,12 @@ import '../SignIn/index.css';
 import './index.css';
 import { userInfo } from 'os';
 
-const AccountPage = () => (
+const AccountPage = ({ users }) => (
     <AuthUserContext.Consumer>
       {authUser => (
         <div>
           <div className="form-card form-card-account">
-            <h1>Account:</h1>
+            <h1>Account: </h1>
             <p>Email: {authUser.email}</p>
             <p>Username: </p>
           </div>
