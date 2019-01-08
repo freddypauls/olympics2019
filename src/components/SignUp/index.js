@@ -4,6 +4,7 @@ import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import * as ROLES from '../../constants/roles';
 import '../SignIn/index.css';
 
 const SignUpPage = () => (
@@ -20,6 +21,7 @@ const INITIAL_STATE = {
     gender: '',
     passwordOne: '',
     passwordTwo: '',
+    isAdmin: false,
     error: null,
   };
 
@@ -32,7 +34,12 @@ class SignUpFormBase extends Component {
 
   onSubmit = event => {
 
-    const { username, email, teamnum, gender, passwordOne } = this.state;
+    const { username, email, teamnum, gender, passwordOne, isAdmin } = this.state;
+    const roles = [];
+
+    if (isAdmin) {
+      roles.push(ROLES.ADMIN);
+    }
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -45,6 +52,7 @@ class SignUpFormBase extends Component {
             email,
             teamnum,
             gender,
+            roles,
           });
       })
       .then(() => {   
@@ -99,13 +107,11 @@ class SignUpFormBase extends Component {
           placeholder="Email Address"
         />
         <br/>
-        <label>
-          Kjønn:
-          <select name="gender" className="form-input" value={this.props.value} onChange={this.onChange}>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </label>
+        <select name="gender" className="form-input" value={this.props.value} onChange={this.onChange}>
+          <option>Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
         <input
           name="passwordOne"
           className="form-input form-input-password"

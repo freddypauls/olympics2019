@@ -42,6 +42,14 @@
     border: 1px solid #333;
 }
 
+.form-btn-signin:disabled {
+    background-color: gray;
+}
+
+.form-btn-signin:disabled:hover {
+    background-color: gray;
+}
+
 .form-btn-signin:hover {
     background-color: #555;
 }

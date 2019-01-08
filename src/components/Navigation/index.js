@@ -4,7 +4,7 @@ import './index.css'
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
-
+import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 
 const classname = "image-menu-ham";
@@ -13,7 +13,11 @@ const Navigation = () => (
   <div className="navigation">
     <AuthUserContext.Consumer>
       {authUser =>
-        authUser ? <NavigationAuth /> : <NavigationNonAuth />
+        authUser ? ( 
+          <NavigationAuth authUser={authUser} />
+         ) : ( 
+          <NavigationNonAuth /> 
+         )
       }
     </AuthUserContext.Consumer>
     <img className={classname} src={require('./img/menu.png')} onClick={() => handleClick()} />
@@ -25,7 +29,7 @@ const handleClick = () => {
   alert(classname);
 };
 
-const NavigationAuth = () => (
+const NavigationAuth = ({ authUser }) => (
   <ul className="ham-menu">
     <li>
       <Link className="link" to={ROUTES.LANDING}>Landing</Link>
@@ -36,9 +40,11 @@ const NavigationAuth = () => (
     <li>
       <Link className="link" to={ROUTES.ACCOUNT}>Account</Link>
     </li>
-    <li>
-      <Link className="link" to={ROUTES.ADMIN}>Admin</Link>
-    </li>
+    {authUser.roles.includes(ROLES.ADMIN) && (
+      <li>
+        <Link className="link" to={ROUTES.ADMIN}>Admin</Link>
+      </li>
+    )}
     <li>
       <div className="link right-float"><SignOutButton /></div>
     </li>
