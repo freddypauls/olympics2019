@@ -45,42 +45,31 @@ class AccountPage extends Component {
     const { users } = this.state;
 
     return (
-      <div>
-        <AccountInfo users={users}/>
-      </div>
-    );
-  }
-}
-const AccountInfo = ({users}) => (
-    <AuthUserContext.Consumer>
+      <AuthUserContext.Consumer>
       {authUser => (
         <div>
         {users.map(user => (
-          <div className="form-card form-card-account">
-            <p key={user.uid}>
-                {user.uid === authUser.uid ? <div><strong>Username: </strong> {user.username}
-                <br/>
-                <strong>Email:</strong> {user.email}</div> : null} 
-            </p>
+          <div>
+            {user.uid == authUser.uid ? <AccountInfo user={user}/> : null}
           </div>
-          ))};
+          ))}
         </div>
       )}
     </AuthUserContext.Consumer>
-  );
-
-  const UserList = ({users}) => (
+    );
+  }
+}
+const AccountInfo = ({user}) => (
     <div>
-      {users.map(user => (
-        <ul key={user.uid}>
-          <li>
-            <strong>Username: </strong> {user.username}
-            {user.roles ? <p><strong>Role: </strong> {user.roles} </p> : <p><strong>Role: </strong> no role</p>} 
-          </li>
-        </ul>
-      ))};
+      <ul>
+        <li>
+          {user.username}
+        </li>
+        <li>
+          {user.email}
+        </li>
+      </ul>
     </div>
-
   );
 
 // <PasswordForgetForm />
