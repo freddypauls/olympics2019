@@ -72,6 +72,9 @@ const UserList = ({ users }) => (
         <li>
           <strong>Gender: </strong> {user.gender}
         </li>
+        <li>
+          <strong>Rolle: </strong> {user.roles ? user.roles : "No role"}
+        </li>
       </ul>
     ))}
   </div>

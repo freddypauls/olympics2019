@@ -59,15 +59,24 @@ class AccountPage extends Component {
     );
   }
 }
+
 const AccountInfo = ({user}) => (
     <div>
       <ul>
         <li>
-          {user.username}
+          <strong>Username: </strong>{user.username}
         </li>
         <li>
-          {user.email}
+          <strong>Email: </strong>{user.email}
         </li>
+        <li>
+          <strong>Team: </strong>{user.teamnum}
+        </li>
+        {user.roles ?
+        <li>
+          <strong>Rolle: </strong>{user.roles}
+        </li> : null
+        }
       </ul>
     </div>
   );
