@@ -42,16 +42,10 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
 
     return (
-      <div>
-        <h1>Admin</h1>
-
-        <p>
-          The Admin Page is accessible by every signed in admin user.
-        </p>
+      <div className="admin-card">
+        <UserList users={users} />
 
         {loading && <div>Loading ...</div>}
-
-        <UserList users={users} />
       </div>
     );
   }
@@ -59,41 +53,45 @@ class AdminPage extends Component {
 
 const UserList = ({ users }) => (
   <table className="admin-table">
-      <tr className="admin-table-row">
-        <th className="admin-table-column">
-          E-Mail:
-        </th>
-        <th>
-          Username:
-        </th>
-        <th>
-          Team Number:
-        </th>
-        <th>
-          Gender:
-        </th>
-        <th>
-          Rolle:
-        </th>
-      </tr>
+      <thead>
+        <tr className="admin-table-row">
+          <th className="admin-table-column">
+            E-Mail:
+          </th>
+          <th>
+            Username:
+          </th>
+          <th>
+            Team Number:
+          </th>
+          <th>
+            Gender:
+          </th>
+          <th>
+            Rolle:
+          </th>
+        </tr>
+      </thead>
     {users.map(user => (
-      <tr key={user.uid} className="admin-table-row">
-        <td>
-          { user.email }
-        </td>
-        <td>
-          { user.username }
-        </td>
-        <td>
-          { user.teamnum }
-        </td>
-        <td>
-          { user.gender }
-        </td>
-        <td>
-          { user.roles ? user.roles : "No role" }
-        </td> 
-      </tr>
+      <tbody className="admin-table-row" key={user.uid}>
+        <tr>
+          <td>
+            { user.email }
+          </td>
+          <td>
+            { user.username }
+          </td>
+          <td>
+            { user.teamnum }
+          </td>
+          <td>
+            { user.gender }
+          </td>
+          <td>
+            { user.roles ? user.roles : "No role" }
+          </td> 
+        </tr>
+      </tbody>
     ))}
   </table>
 );

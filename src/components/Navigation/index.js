@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import './index.css'
 
@@ -7,7 +8,7 @@ import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 
-const classname = "image-menu-ham";
+
 
 const Navigation = () => (
   <div className="navigation">
@@ -20,17 +21,11 @@ const Navigation = () => (
          )
       }
     </AuthUserContext.Consumer>
-    <img className={classname} src={require('./img/menu.png')} onClick={() => handleClick()} />
   </div>
 );
 
-const handleClick = () => {
-  classname = "image-menu-ham img-movement";
-  alert(classname);
-};
-
 const NavigationAuth = ({ authUser }) => (
-  <ul className="ham-menu">
+  <ul>
     {/*<li>
       <Link className="link" to={ROUTES.LANDING}>Landing</Link>
     </li>*/}
@@ -46,7 +41,7 @@ const NavigationAuth = ({ authUser }) => (
       </li>
     )}
     <li>
-        <a className="link">Teams (TBD)</a>
+        <a className="link" href="#teams">Teams (TBD)</a>
     </li>
     <li>
       <div className="link right-float"><SignOutButton /></div>

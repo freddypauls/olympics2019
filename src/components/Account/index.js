@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import app, { auth } from 'firebase/app';
+//import app, { auth } from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
-import { compose } from 'recompose';
+//import { compose } from 'recompose';
 
 import { AuthUserContext, withAuthorization } from '../Session';
-import { PasswordForgetForm } from '../PasswordForget'; //Might need
-import PasswordChangeForm from '../PasswordChange'; //Might need
+//import { PasswordForgetForm } from '../PasswordForget'; //Might need
+//import PasswordChangeForm from '../PasswordChange'; //Might need
 import '../SignIn/index.css';
 import './index.css';
-import { userInfo } from 'os'; //Might need later
+//import { userInfo } from 'os'; //Might need later
 
 class AccountPage extends Component {
   constructor(props) {
@@ -49,8 +49,8 @@ class AccountPage extends Component {
       {authUser => (
         <div>
         {users.map(user => (
-          <div>
-            {user.uid == authUser.uid ? <AccountInfo user={user}/> : null}
+          <div key={user.uid}>
+            {user.uid === authUser.uid ? <AccountInfo user={user}/> : null}
           </div>
           ))}
         </div>
@@ -63,40 +63,46 @@ class AccountPage extends Component {
 const AccountInfo = ({user}) => (
     <div className="profile-card-left">
       <table className="account-table">
-        <tr className="account-table-row">
-          <th>
-            Username:
-          </th>
+        <tbody>
+          <tr className="account-table-row">
+            <th>
+              Username:
+            </th>
+            <td>
+              { user.username }
+            </td>
+          </tr>
+          <tr className="account-table-row">
+            <th>
+              Email:
+            </th>
+            <td>
+              { user.email }
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr className="account-table-row">
+            <th>
+              Team: 
+            </th>
+            <td>
+              { user.teamnum }
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          {user.roles ?
+          <tr className="account-table-row">
+            <th>
+              Rolle: 
+            </th>
           <td>
-            { user.username }
+            { user.roles }
           </td>
-        </tr>
-        <tr className="account-table-row">
-          <th>
-            Email:
-          </th>
-          <td>
-            { user.email }
-          </td>
-        </tr>
-        <tr className="account-table-row">
-          <th>
-            Team: 
-          </th>
-          <td>
-            { user.teamnum }
-          </td>
-        </tr>
-        {user.roles ?
-        <tr className="account-table-row">
-          <th>
-            Rolle: 
-          </th>
-         <td>
-          { user.roles }
-         </td>
-        </tr> : null
-        }
+          </tr> : null
+          }
+        </tbody> 
       </table>
     </div>
   );

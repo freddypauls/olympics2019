@@ -109,8 +109,8 @@ class SignUpFormBase extends Component {
         <br/>
         <select name="gender" className="form-input" value={this.props.value} onChange={this.onChange}>
           <option>Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
         </select>
         <input
           name="passwordOne"

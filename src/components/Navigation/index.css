@@ -4,25 +4,9 @@ body {
 }
 
 .navigation {
-    background-color: #111;
+    background-color: #222;
     color: white;
     position: relative;
-}
-
-.navigation > img {
-    padding: 7px 16px;
-    position: absolute;
-    right: 10px;
-    background-color: black;
-}
-
-.navigation > .img-movement {
-    top: 100px;
-}
-
-
-.navigation > .ul-transform {
-    transform: translate3d(0, 0, 0);
 }
 
 .navigation > ul {
@@ -31,10 +15,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    position: fixed;
-    left: 0;
-    top: 0;
-    transform: translate3d(-100vw, 0, 0)                
+    width: 100%;
 }
 
 
@@ -47,7 +28,7 @@ li .link {
 }
 
 li .link:hover {
-    background-color: #333;
+    background-color: #111;
 }
 
 .btn-signout {
