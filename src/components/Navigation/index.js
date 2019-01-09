@@ -31,20 +31,23 @@ const handleClick = () => {
 
 const NavigationAuth = ({ authUser }) => (
   <ul className="ham-menu">
-    <li>
+    {/*<li>
       <Link className="link" to={ROUTES.LANDING}>Landing</Link>
-    </li>
+    </li>*/}
     <li>
       <Link className="link" to={ROUTES.HOME}>Home</Link>
     </li>
     <li>
-      <Link className="link" to={ROUTES.ACCOUNT}>Account</Link>
+      <Link className="link" to={ROUTES.ACCOUNT}>Profile</Link>
     </li>
     {authUser.roles.includes(ROLES.ADMIN) && (
       <li>
         <Link className="link" to={ROUTES.ADMIN}>Admin</Link>
       </li>
     )}
+    <li>
+        <a className="link">Teams (TBD)</a>
+    </li>
     <li>
       <div className="link right-float"><SignOutButton /></div>
     </li>
@@ -54,7 +57,7 @@ const NavigationAuth = ({ authUser }) => (
 const NavigationNonAuth = () => (
   <ul>
     <li>
-      <Link className="link right-float" to={ROUTES.LANDING}>Landing</Link>
+      <Link className="link right-float" to={ROUTES.LANDING}>Info Page</Link>
     </li>
     <li>
       <Link className="link right-float" to={ROUTES.SIGN_IN}>Sign In</Link>

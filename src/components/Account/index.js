@@ -61,23 +61,43 @@ class AccountPage extends Component {
 }
 
 const AccountInfo = ({user}) => (
-    <div>
-      <ul>
-        <li>
-          <strong>Username: </strong>{user.username}
-        </li>
-        <li>
-          <strong>Email: </strong>{user.email}
-        </li>
-        <li>
-          <strong>Team: </strong>{user.teamnum}
-        </li>
+    <div className="profile-card-left">
+      <table className="account-table">
+        <tr className="account-table-row">
+          <th>
+            Username:
+          </th>
+          <td>
+            { user.username }
+          </td>
+        </tr>
+        <tr className="account-table-row">
+          <th>
+            Email:
+          </th>
+          <td>
+            { user.email }
+          </td>
+        </tr>
+        <tr className="account-table-row">
+          <th>
+            Team: 
+          </th>
+          <td>
+            { user.teamnum }
+          </td>
+        </tr>
         {user.roles ?
-        <li>
-          <strong>Rolle: </strong>{user.roles}
-        </li> : null
+        <tr className="account-table-row">
+          <th>
+            Rolle: 
+          </th>
+         <td>
+          { user.roles }
+         </td>
+        </tr> : null
         }
-      </ul>
+      </table>
     </div>
   );
 

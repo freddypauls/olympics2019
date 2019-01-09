@@ -4,6 +4,7 @@ import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
+import './index.css';
 
 class AdminPage extends Component {
   constructor(props) {
@@ -57,27 +58,44 @@ class AdminPage extends Component {
 }
 
 const UserList = ({ users }) => (
-  <div>
+  <table className="admin-table">
+      <tr className="admin-table-row">
+        <th className="admin-table-column">
+          E-Mail:
+        </th>
+        <th>
+          Username:
+        </th>
+        <th>
+          Team Number:
+        </th>
+        <th>
+          Gender:
+        </th>
+        <th>
+          Rolle:
+        </th>
+      </tr>
     {users.map(user => (
-      <ul key={user.uid}>
-        <li>
-          <strong>E-Mail: </strong> {user.email}
-        </li>
-        <li>
-          <strong>Username: </strong> {user.username}
-        </li>
-        <li>
-          <strong>Team Number: </strong> {user.teamnum}
-        </li>
-        <li>
-          <strong>Gender: </strong> {user.gender}
-        </li>
-        <li>
-          <strong>Rolle: </strong> {user.roles ? user.roles : "No role"}
-        </li>
-      </ul>
+      <tr key={user.uid} className="admin-table-row">
+        <td>
+          { user.email }
+        </td>
+        <td>
+          { user.username }
+        </td>
+        <td>
+          { user.teamnum }
+        </td>
+        <td>
+          { user.gender }
+        </td>
+        <td>
+          { user.roles ? user.roles : "No role" }
+        </td> 
+      </tr>
     ))}
-  </div>
+  </table>
 );
 
 const condition = authUser =>
