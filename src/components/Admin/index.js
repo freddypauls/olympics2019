@@ -43,15 +43,14 @@ class AdminPage extends Component {
 
     return (
       <div className="admin-card">
-        <UserList users={users} />
-
-        {loading && <div>Loading ...</div>}
+          <UserList users={users} loading={loading} />
+          <TeamList />
       </div>
     );
   }
 }
 
-const UserList = ({ users }) => (
+const UserList = ({ users, loading }) => (
   <table className="admin-table">
       <thead>
         <tr className="admin-table-row">
@@ -74,6 +73,7 @@ const UserList = ({ users }) => (
       </thead>
     {users.map(user => (
       <tbody className="admin-table-row" key={user.uid}>
+        {loading && <tr>Loading ...</tr>}
         <tr>
           <td>
             { user.email }
@@ -94,6 +94,62 @@ const UserList = ({ users }) => (
       </tbody>
     ))}
   </table>
+);
+
+const TeamList = () => (
+    <table className="admin-table teams-table">
+      <thead>
+        <th>Team 1</th>
+      </thead>
+      <thead>
+        <tr className="admin-table-row">
+          <th>
+            Name
+          </th>
+          <th>
+            Rolle
+          </th>
+        </tr>
+      </thead>
+      <tbody className="admin-table-row">
+        <tr>
+          <td>
+              Fredrik
+          </td>
+          <td>
+            Star
+          </td>
+        </tr>
+      </tbody>
+      <tbody className="admin-table-row">
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody className="admin-table-row">
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody className="admin-table-row">
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody className="admin-table-row">
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
 );
 
 const condition = authUser =>
