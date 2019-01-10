@@ -10,12 +10,12 @@ body {
 }
 
 .navigation > ul {
-    text-decoration: none;
-    list-style-type: none;
     margin: 0px;
     padding: 0px;
     overflow: hidden;
     width: 100%;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 

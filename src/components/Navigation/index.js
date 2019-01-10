@@ -21,10 +21,7 @@ class Example extends React.Component {
       <div className="navigation">
       {window.innerWidth < 768 ?
         <Menu>
-          <a id="home" className="menu-item" href="/account">Home</a>
-          <a id="about" className="menu-item" href="/admin">About</a>
-          <a id="contact" className="menu-item" href="/home">Contact</a>
-          <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+          <Navigation />
         </Menu>
         :
         <Navigation /> }
