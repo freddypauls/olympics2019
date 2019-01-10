@@ -69,6 +69,8 @@ const config = {
 
     users = () => this.db.ref('users');
 
+    teams = () => this.db.ref('teams');
+
   }
   
   export default Firebase;
