@@ -20,7 +20,7 @@ class Example extends React.Component {
     return (
       <div className="navigation">
       {window.innerWidth < 768 ?
-        <Menu>
+        <Menu className={ "menu-hams" }>
           <Navigation />
         </Menu>
         :

@@ -54,6 +54,15 @@
     color: #b8b7ad;
     padding: 0.8em;
   }
+
+  .bm-item-list > ul {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    text-decoration: none;
+    list-style-type: none;
+  }
   
   /* Individual item */
   .bm-item {
