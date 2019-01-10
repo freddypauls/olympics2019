@@ -22,7 +22,6 @@ class AccountPage extends Component {
   }
 
   componentDidMount() {
-
     this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
@@ -50,7 +49,7 @@ class AccountPage extends Component {
         <div>
         {users.map(user => (
           <div key={user.uid}>
-            {user.uid === authUser.uid ? <AccountInfo user={user}/> : null}
+            {user.uid === authUser.uid ? <AccountInfo user={user} /> : null }
           </div>
           ))}
         </div>

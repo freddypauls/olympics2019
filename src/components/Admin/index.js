@@ -111,7 +111,7 @@ const UserList = ({ users, loading }) => (
             Username:
           </th>
           <th>
-            Team Number:
+            Team:
           </th>
         </tr>
           :
@@ -123,8 +123,7 @@ const UserList = ({ users, loading }) => (
             Username:
           </th>
           <th>
-            Team Numbe
-      :
+            Team:
           </th>
           <th>
             Gender:
