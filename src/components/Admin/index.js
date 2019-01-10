@@ -44,7 +44,46 @@ class AdminPage extends Component {
     return (
       <div className="admin-card">
           <UserList users={users} loading={loading} />
-          <TeamList />
+          <table className="admin-table teams-table">
+            <thead>
+              <th>Team 1</th>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 1 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
+          <table className="admin-table teams-table">
+            <thead>
+              <th>Team 2</th>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 2 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
       </div>
     );
   }
@@ -52,6 +91,11 @@ class AdminPage extends Component {
 
 const UserList = ({ users, loading }) => (
   <table className="admin-table">
+      <thead>
+        <tr>
+          <th>Users</th>
+        </tr>
+      </thead>
       <thead>
         <tr className="admin-table-row">
           <th className="admin-table-column">
@@ -96,60 +140,15 @@ const UserList = ({ users, loading }) => (
   </table>
 );
 
-const TeamList = () => (
-    <table className="admin-table teams-table">
-      <thead>
-        <th>Team 1</th>
-      </thead>
-      <thead>
-        <tr className="admin-table-row">
-          <th>
-            Name
-          </th>
-          <th>
-            Rolle
-          </th>
-        </tr>
-      </thead>
-      <tbody className="admin-table-row">
-        <tr>
-          <td>
-              Fredrik
-          </td>
-          <td>
-            Star
-          </td>
-        </tr>
-      </tbody>
-      <tbody className="admin-table-row">
-        <tr>
-          <td>
-
-          </td>
-        </tr>
-      </tbody>
-      <tbody className="admin-table-row">
-        <tr>
-          <td>
-
-          </td>
-        </tr>
-      </tbody>
-      <tbody className="admin-table-row">
-        <tr>
-          <td>
-
-          </td>
-        </tr>
-      </tbody>
-      <tbody className="admin-table-row">
-        <tr>
-          <td>
-
-          </td>
-        </tr>
-      </tbody>
-    </table>
+const TeamList = ({user}) => (
+    <tr>
+      <td>
+          {user.username}
+      </td>
+      <td>
+          {user.roles ? user.roles : "no role"}
+      </td>
+    </tr>
 );
 
 const condition = authUser =>

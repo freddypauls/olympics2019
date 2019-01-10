@@ -40,10 +40,12 @@
 @media only screen and (min-width: 768px)  { 
     .admin-table {
         width: 55%;
+        margin: 10px;
     }
 
     .teams-table {
         width: 40%!important;
-        float: right;
+        margin: 10px;
+        vertical-align: top;
     }
 }
