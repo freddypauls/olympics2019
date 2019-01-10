@@ -62,7 +62,7 @@ class AccountPage extends Component {
 
 const AccountInfo = ({user}) => (
     <div className="profile-card-left">
-      <table className="account-table">
+      <table key={user.uid} className="account-table">
         <tbody>
           <tr className="account-table-row">
             <th>

@@ -123,7 +123,8 @@ const UserList = ({ users, loading }) => (
             Username:
           </th>
           <th>
-            Team Number:
+            Team Numbe
+      :
           </th>
           <th>
             Gender:

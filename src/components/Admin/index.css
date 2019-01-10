@@ -13,6 +13,8 @@
     border-collapse: collapse;
 }
 
+.teams-table > tr:nth-child(even) {background-color: #f2f2f2}
+
 .admin-table-row th {
     background-color: #333;
     color: white;
@@ -43,6 +45,10 @@
 
 .admin-table-row th, .admin-table-row td {
     padding: 10px;
+}
+
+.teams-table {
+    margin-bottom: 10px;
 }
 
 
