@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase": "^5.7.0",
     "react": "^16.6.3",
+    "react-burger-menu": "^2.6.1",
     "react-dom": "^16.6.3",
     "react-hamburger-menu": "^1.1.1",
     "react-router-dom": "^4.3.1",

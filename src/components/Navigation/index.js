@@ -2,16 +2,38 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import './index.css'
+import './hamburger-menu.css'
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 
+import { slide as Menu } from 'react-burger-menu'
 
+class Example extends React.Component {
+  showSettings (event) {
+    event.preventDefault();
+  }
+
+  render () {
+    return (
+      <div className="navigation">
+      {window.innerWidth < 768 ?
+        <Menu>
+          <a id="home" className="menu-item" href="/account">Home</a>
+          <a id="about" className="menu-item" href="/admin">About</a>
+          <a id="contact" className="menu-item" href="/home">Contact</a>
+          <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+        </Menu>
+        :
+        <Navigation /> }
+      </div>
+    );
+  }
+}
 
 const Navigation = () => (
-  <div className="navigation">
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? ( 
@@ -20,8 +42,7 @@ const Navigation = () => (
           <NavigationNonAuth /> 
          )
       }
-    </AuthUserContext.Consumer>
-  </div>
+    </AuthUserContext.Consumer> 
 );
 
 const NavigationAuth = ({ authUser }) => (
@@ -60,4 +81,4 @@ const NavigationNonAuth = () => (
   </ul>
 );
 
-export default Navigation;
+export default Example;
