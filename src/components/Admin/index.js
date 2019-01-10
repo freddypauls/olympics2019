@@ -42,11 +42,16 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
 
     return (
-      <div className="admin-card">
+      <div className="admin-card flex-container-admin">
+        <div className="section-admin-table flex-item-admin-section">
           <UserList users={users} loading={loading} />
+        </div>
+        <div className="asde-admin-table flex-item-admin-aside">
           <table className="admin-table teams-table">
             <thead>
-              <th>Team 1</th>
+              <tr>
+                <th>Team 1</th>
+              </tr>
             </thead>
             <thead>
               <tr className="admin-table-row">
@@ -66,7 +71,9 @@ class AdminPage extends Component {
           </table>
           <table className="admin-table teams-table">
             <thead>
-              <th>Team 2</th>
+              <tr>
+                <th>Team 2</th>
+              </tr>
             </thead>
             <thead>
               <tr className="admin-table-row">
@@ -84,6 +91,7 @@ class AdminPage extends Component {
               </tbody>
             ))}
           </table>
+        </div>
       </div>
     );
   }
@@ -97,8 +105,18 @@ const UserList = ({ users, loading }) => (
         </tr>
       </thead>
       <thead>
+      {window.innerWidth < 768 ?
         <tr className="admin-table-row">
-          <th className="admin-table-column">
+          <th>
+            Username:
+          </th>
+          <th>
+            Team Number:
+          </th>
+        </tr>
+          :
+        <tr className="admin-table-row">
+          <th>
             E-Mail:
           </th>
           <th>
@@ -114,10 +132,21 @@ const UserList = ({ users, loading }) => (
             Rolle:
           </th>
         </tr>
+      }
       </thead>
     {users.map(user => (
       <tbody className="admin-table-row" key={user.uid}>
         {loading && <tr>Loading ...</tr>}
+        {window.innerWidth < 768 ?
+        <tr>
+          <td>
+            { user.username }
+          </td>
+          <td>
+            { user.teamnum }
+          </td>
+        </tr>
+      :
         <tr>
           <td>
             { user.email }
@@ -135,6 +164,7 @@ const UserList = ({ users, loading }) => (
             { user.roles ? user.roles : "No role" }
           </td> 
         </tr>
+        }
       </tbody>
     ))}
   </table>
