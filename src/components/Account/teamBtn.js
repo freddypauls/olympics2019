@@ -37,7 +37,6 @@ class SetTeamBtnLogic extends Component {
             .set({
               username,
               gender,
-              roles,
             });
         })
         .then(() => {   
@@ -76,17 +75,9 @@ class SetTeamBtnLogic extends Component {
     }
   }
   
-  const SignUpLink = () => (
-    <p>
-      Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
-    </p>
-  );
-  
-  const SignUpForm = compose(
+  const TeamBtnLogic = compose(
     withRouter,
     withFirebase,
-  )(SignUpFormBase);
+  )(SetTeamBtnLogic);
   
-  export default SignUpPage;
-  
-  export { SignUpForm, SignUpLink };
+  export default teamBtn;
