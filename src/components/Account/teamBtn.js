@@ -7,11 +7,17 @@ import { withFirebase } from '../Firebase';
 const teamBtn = () => (
     <div>
         <p>Put me on a team!</p>
-        <button> + </button>
+        <SetTeamBtnLogic />
     </div>
 );
 
-class SignUpFormBase extends Component {
+const INITIAL_STATE = {
+    username: '',
+    gender: '',
+    error: null,
+  };
+
+class SetTeamBtnLogic extends Component {
     constructor(props) {
       super(props);
   
@@ -20,12 +26,7 @@ class SignUpFormBase extends Component {
   
     onSubmit = event => {
   
-      const { username, email, teamnum, gender, passwordOne, isAdmin } = this.state;
-      const roles = [];
-  
-      if (isAdmin) {
-        roles.push(ROLES.ADMIN);
-      }
+      const { username, gender } = this.state;
   
       this.props.firebase
         .doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -35,8 +36,6 @@ class SignUpFormBase extends Component {
             .user(authUser.user.uid)
             .set({
               username,
-              email,
-              teamnum,
               gender,
               roles,
             });
@@ -60,63 +59,15 @@ class SignUpFormBase extends Component {
     render() {
       const {
           username,
-          email,
           gender,
-          passwordOne,
-          passwordTwo,
           error,
         } = this.state;
   
-        const isInvalid =
-        passwordOne !== passwordTwo ||
-        passwordOne === '' ||
-        email === '' ||
-        username === '' ||
-        gender === '';
-  
       return (
         <form onSubmit={this.onSubmit}>
-        <input
-            name="username"
-            className="form-input form-input-username"
-            value={username}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Full Name"
-          />
-          <input
-            name="email"
-            className="form-input form-input-email"
-            value={email}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Email Address"
-          />
-          <br/>
-          <select name="gender" className="form-input" value={this.props.value} onChange={this.onChange}>
-            <option>Select gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-          <input
-            name="passwordOne"
-            className="form-input form-input-password"
-            value={passwordOne}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Password"
-          />
-          <input
-            name="passwordTwo"
-            className="form-input form-input-password"
-            value={passwordTwo}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Confirm Password"
-          />
-          <br/>
-          <button disabled={isInvalid} type="submit" className="form-btn-signin">
-              Sign Up
+
+          <button disabled={isInvalid} type="submit" className="form-btn-setTeams">
+              +
           </button>
   
           {error && <p>{error.message}</p>}
