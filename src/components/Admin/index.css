@@ -51,9 +51,8 @@
     margin-bottom: 10px;
 }
 
-.admin-table-header th {
+.admin-table-header.admin-table-row th {
     text-align: center!important;
-    border-bottom: none!important;
 }
 
 
