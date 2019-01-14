@@ -20,9 +20,11 @@ class Example extends React.Component {
     return (
       <div className="navigation">
       {window.innerWidth < 768 ?
-        <Menu className={ "menu-hams" }>
-          <Navigation />
-        </Menu>
+        <div className="mobile-nav">
+          <Menu className={ "menu-hams" }>
+            <Navigation />
+          </Menu>
+        </div>
         :
         <Navigation /> }
       </div>

@@ -9,6 +9,12 @@ body {
     position: relative;
 }
 
+.mobile-nav {
+    background-color: #222;
+    margin: 0;
+    height: 50px;
+  }
+
 .navigation > ul {
     margin: 0px;
     padding: 0px;
