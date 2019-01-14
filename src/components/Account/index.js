@@ -4,6 +4,7 @@ import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
 //import { compose } from 'recompose';
+import TeamsTable from './teamTable.js';
 
 import { AuthUserContext, withAuthorization } from '../Session';
 //import { PasswordForgetForm } from '../PasswordForget'; //Might need
@@ -52,6 +53,8 @@ class AccountPage extends Component {
             {user.uid === authUser.uid ? <AccountInfo user={user} /> : null }
           </div>
           ))}
+
+          <TeamsTable />
         </div>
       )}
     </AuthUserContext.Consumer>
