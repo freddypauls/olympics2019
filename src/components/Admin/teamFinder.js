@@ -37,7 +37,8 @@ class TeamFinderBase extends Component {
       .then(authUser => {
         // Create a user in your Firebase realtime database
         return this.props.firebase
-          .teams(authUser.user.teamnum)
+          .team()
+          .user(authUser.user.uid)
           .set({
             username,
             position,

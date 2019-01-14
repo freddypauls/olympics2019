@@ -49,8 +49,8 @@ class AdminPage extends Component {
         <div className="asde-admin-table flex-item-admin-aside">
           <table className="admin-table teams-table">
             <thead>
-              <tr>
-                <th>Team 1</th>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 1</th>
               </tr>
             </thead>
             <thead>
@@ -71,8 +71,8 @@ class AdminPage extends Component {
           </table>
           <table className="admin-table teams-table">
             <thead>
-              <tr>
-                <th>Team 2</th>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 2</th>
               </tr>
             </thead>
             <thead>
@@ -100,8 +100,8 @@ class AdminPage extends Component {
 const UserList = ({ users, loading }) => (
   <table className="admin-table">
       <thead>
-        <tr>
-          <th>Users</th>
+        <tr className="admin-table-row admin-table-header">
+          <th colSpan="6">Users</th>
         </tr>
       </thead>
       <thead>
