@@ -5,6 +5,7 @@ import { withFirebase } from '../Firebase';
 import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
 import './index.css';
+import teamFinderFunc from './teamFinder.js';
 
 class AdminPage extends Component {
   constructor(props) {
@@ -91,6 +92,8 @@ class AdminPage extends Component {
               </tbody>
             ))}
           </table>
+        
+          <teamFinderFunc />
         </div>
       </div>
     );

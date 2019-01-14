@@ -9,14 +9,13 @@ import '../SignIn/index.css';
 
 const teamFinderFunc= () => (
   <div className="form-card">
-    <TeamFinderForm />
-    <button onClick={teamFinder()}> Set teams </button>
+    <TeamFinderBase />
   </div>
 );
 
 const INITIAL_STATE = {
     username: '',
-    role: '',
+    position: '',
     error: null,
   };
 
@@ -65,30 +64,17 @@ class TeamFinderBase extends Component {
         
       } = this.state;
 
-      const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      email === '' ||
-      username === '' ||
-      gender === '';
-
     return (
-        <button disabled={isInvalid} type="submit" className="form-btn-signin">
+        <button type="submit" className="form-btn-signin">
             Sign Up
         </button>
     );
   }
 }
 
-const SignUpLink = () => (
-  <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
-  </p>
-);
-
 const TeamFinderForm = compose(
   withRouter,
   withFirebase,
 )(TeamFinderBase);
 
-export default AdminLogic;
+export default teamFinderFunc;
