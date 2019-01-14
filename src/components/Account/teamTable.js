@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
-import { AuthUserContext, withAuthorization } from '../Session';
+import { withAuthorization } from '../Session';
 
 import '../SignIn/index.css';
 import './index.css';
