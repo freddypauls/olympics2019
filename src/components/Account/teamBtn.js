@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import app from 'firebase/app';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { AuthUserContext, withAuthorization } from '../Session';
@@ -10,6 +11,7 @@ const TeamBtn = () => (
         <TeamBtnLogic />
     </div>
 );
+
 
 
 class SetTeamBtnLogic extends Component {
@@ -25,7 +27,7 @@ class SetTeamBtnLogic extends Component {
 
       const { wantTeam } = this.state;
 
-      this.props.firebase.user()
+      this.props.firebase.authUser()
       .update({
         wantTeam,
      })
@@ -53,7 +55,7 @@ class SetTeamBtnLogic extends Component {
       );
     }
   }
-  
+
   const TeamBtnLogic =  compose(
     withRouter,
     withFirebase,

@@ -65,6 +65,8 @@ const config = {
 
         // *** User API ***
 
+    authUser = () => this.db.ref(`users/${this.auth.currentUser.uid}`);
+
     user = uid => this.db.ref(`users/${uid}`);
 
     users = () => this.db.ref('users');
