@@ -35,7 +35,7 @@ class SignUpFormBase extends Component {
 
   onSubmit = event => {
 
-    const { username, email, teamnum, gender, passwordOne, isAdmin, wantTeam } = this.state;
+    const { username, email, teamnum, gender, created_at, passwordOne, isAdmin, wantTeam } = this.state;
     const roles = [];
 
     if (isAdmin) {
@@ -53,6 +53,7 @@ class SignUpFormBase extends Component {
             email,
             teamnum,
             gender,
+            created_at,
             roles,
             wantTeam,
           });
@@ -141,7 +142,9 @@ class SignUpFormBase extends Component {
   }
 }
 
+
 const SignUpLink = () => (
+  
   <p>
     Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
   </p>

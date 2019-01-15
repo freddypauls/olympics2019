@@ -15,10 +15,14 @@ class SetTeamBtnLogic extends Component {
     constructor(props) {
       super(props);
   
-      this.state = '';
+      this.state = {
+        wantTeam: true,
+      };
     }
   
     onSubmit = event => {
+
+    const { wantTeam } = this.state;
     
     this.props.firebase
     .users(authUser => {
@@ -26,9 +30,12 @@ class SetTeamBtnLogic extends Component {
           return this.props.firebase
             .user(authUser.user.uid)
             .update({
-              wantTeam: true,
-            });
-        });
+              wantTeam,
+            })
+          })
+          .catch(error => {
+            this.setState({ error });
+          });
   
       event.preventDefault();
   
@@ -43,6 +50,7 @@ class SetTeamBtnLogic extends Component {
       return (
         <form onSubmit={this.onSubmit}>
           <label>Put me on a team!</label>
+          <br />
           <button type="submit" className="form-btn-want-team">
               +
           </button>
