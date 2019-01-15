@@ -55,7 +55,7 @@ class AccountPage extends Component {
           </div>
           ))}
           <div className="account-team-btn-div">
-            <TeamBtn />
+            <TeamBtn auth={authUser.uid}/>
           </div>
         </div>
       )}

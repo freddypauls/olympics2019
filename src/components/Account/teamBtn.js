@@ -25,11 +25,10 @@ class SetTeamBtnLogic extends Component {
 
       const { wantTeam } = this.state;
 
-      this.props.firebase
-          .user(this.firebase.auth().currentUser.uid)
-          .update({
-            wantTeam,
-      })
+      this.props.firebase.user()
+      .update({
+        wantTeam,
+     })
       .catch(error => {
         this.setState({ error });
       });
@@ -55,7 +54,7 @@ class SetTeamBtnLogic extends Component {
     }
   }
   
-  const TeamBtnLogic = compose(
+  const TeamBtnLogic =  compose(
     withRouter,
     withFirebase,
   )(SetTeamBtnLogic);
