@@ -54,8 +54,9 @@ class AccountPage extends Component {
             {user.uid === authUser.uid ? <AccountInfo user={user} /> : null }
           </div>
           ))}
-          
-          <TeamBtn />
+          <div className="account-team-btn-div">
+            <TeamBtn />
+          </div>
         </div>
       )}
     </AuthUserContext.Consumer>

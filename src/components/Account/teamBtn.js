@@ -21,7 +21,7 @@ class SetTeamBtnLogic extends Component {
     onSubmit = event => {
     
     this.props.firebase
-    .ref(authUser => {
+    .users(authUser => {
           // Create a user in your Firebase realtime database
           return this.props.firebase
             .user(authUser.user.uid)
@@ -43,7 +43,7 @@ class SetTeamBtnLogic extends Component {
       return (
         <form onSubmit={this.onSubmit}>
           <label>Put me on a team!</label>
-          <button type="submit" className="form-btn-setTeams">
+          <button type="submit" className="form-btn-want-team">
               +
           </button>
         </form>
