@@ -21,6 +21,7 @@ const INITIAL_STATE = {
     gender: '',
     passwordOne: '',
     passwordTwo: '',
+    wantTeam: false,
     isAdmin: false,
     error: null,
   };
@@ -34,7 +35,7 @@ class SignUpFormBase extends Component {
 
   onSubmit = event => {
 
-    const { username, email, teamnum, gender, passwordOne, isAdmin } = this.state;
+    const { username, email, teamnum, gender, passwordOne, isAdmin, wantTeam } = this.state;
     const roles = [];
 
     if (isAdmin) {
@@ -53,6 +54,7 @@ class SignUpFormBase extends Component {
             teamnum,
             gender,
             roles,
+            wantTeam,
           });
       })
       .then(() => {   

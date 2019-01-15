@@ -65,9 +65,11 @@ class TeamFinderBase extends Component {
       } = this.state;
 
     return (
-        <button type="submit" className="form-btn-signin">
-            Set teams
-        </button>
+        <form onSubmit={this.onSubmit}>
+            <button type="submit" className="form-btn-set-teams">
+                Set teams
+            </button>
+        </form>
     );
   }
 }

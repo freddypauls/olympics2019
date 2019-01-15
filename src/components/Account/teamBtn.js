@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
 
-const teamBtn = () => (
+const TeamBtn = () => (
     <div>
-        <p>Put me on a team!</p>
-        <SetTeamBtnLogic />
+        <TeamBtnLogic />
     </div>
 );
 
@@ -16,30 +15,19 @@ class SetTeamBtnLogic extends Component {
     constructor(props) {
       super(props);
   
-      this.state = this.props.firebase.users();
+      this.state = '';
     }
   
     onSubmit = event => {
-  
-      const { username, gender } = this.state;
-  
-      this.props.firebase
-        .doCreateUserWithEmailAndPassword(email, passwordOne)
-        .then(authUser => {
+    
+    this.props.firebase
+    .ref(authUser => {
           // Create a user in your Firebase realtime database
           return this.props.firebase
             .user(authUser.user.uid)
-            .set({
-              username,
-              gender,
+            .update({
+              wantTeam: true,
             });
-        })
-        .then(() => {   
-          this.setState({ ...INITIAL_STATE });
-          this.props.history.push(ROUTES.HOME);
-        })
-        .catch(error => {
-          this.setState({ error });
         });
   
       event.preventDefault();
@@ -51,20 +39,13 @@ class SetTeamBtnLogic extends Component {
     };
   
     render() {
-      const {
-          username,
-          gender,
-          error,
-        } = this.state;
   
       return (
         <form onSubmit={this.onSubmit}>
-
-          <button disabled={isInvalid} type="submit" className="form-btn-setTeams">
+          <label>Put me on a team!</label>
+          <button type="submit" className="form-btn-setTeams">
               +
           </button>
-  
-          {error && <p>{error.message}</p>}
         </form>
       );
     }
@@ -75,4 +56,4 @@ class SetTeamBtnLogic extends Component {
     withFirebase,
   )(SetTeamBtnLogic);
   
-  export default teamBtn;
+  export default TeamBtn;

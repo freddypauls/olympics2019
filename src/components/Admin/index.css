@@ -55,6 +55,16 @@
     text-align: center!important;
 }
 
+.form-btn-set-teams {
+    width: 100px;
+    background-color: #222;
+    color: white;
+    height: 35px;
+    font-size: 13px;
+    border: 1px solid white;
+    
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1435px) { 
     .flex-item-admin-aside {
