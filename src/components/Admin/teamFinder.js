@@ -8,9 +8,7 @@ import * as ROLES from '../../constants/roles';
 import '../SignIn/index.css';
 
 const TeamFinderFunc= () => (
-  <div className="form-card">
-    <TeamFinderBase />
-  </div>
+  <TeamFinderForm></TeamFinderForm>
 );
 
 const INITIAL_STATE = {
@@ -32,21 +30,8 @@ class TeamFinderBase extends Component {
     const positions = [];
 
     this.props.firebase
-      .teams()
-      .then(authUser => {
-        // Create a user in your Firebase realtime database
-        return this.props.firebase
-          .team()
-          .user(authUser.user.uid)
-          .set({
-            username,
-            position,
-          });
-      })
-      .then(() => {   
-        this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
-      })
+      .team()
+      .users()
       .catch(error => {
         this.setState({ error });
       });
