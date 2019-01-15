@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
+import { AuthUserContext, withAuthorization } from '../Session';
 
 import { withFirebase } from '../Firebase';
 
@@ -14,7 +15,7 @@ const TeamBtn = () => (
 class SetTeamBtnLogic extends Component {
     constructor(props) {
       super(props);
-  
+
       this.state = {
         wantTeam: true,
       };
@@ -22,24 +23,19 @@ class SetTeamBtnLogic extends Component {
   
     onSubmit = event => {
 
-    const { wantTeam } = this.state;
+      const { wantTeam } = this.state;
+
+      this.props.firebase
+          .user(this.firebase.auth().currentUser.uid)
+          .update({
+            wantTeam,
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
     
-    this.props.firebase
-    .users(authUser => {
-          // Create a user in your Firebase realtime database
-          return this.props.firebase
-            .user(authUser.user.uid)
-            .update({
-              wantTeam,
-            })
-          })
-          .catch(error => {
-            this.setState({ error });
-          });
-  
       event.preventDefault();
-  
-    }
+      }
   
     onChange = event => {
       this.setState({ [event.target.name]: event.target.value });
@@ -49,7 +45,7 @@ class SetTeamBtnLogic extends Component {
   
       return (
         <form onSubmit={this.onSubmit}>
-          <label>Put me on a team!</label>
+          <label>Put me on a team! </label>
           <br />
           <button type="submit" className="form-btn-want-team">
               +
