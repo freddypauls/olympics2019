@@ -7,7 +7,7 @@ import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import '../SignIn/index.css';
 
-const teamFinderFunc= () => (
+const TeamFinderFunc= () => (
   <div className="form-card">
     <TeamFinderBase />
   </div>
@@ -66,7 +66,7 @@ class TeamFinderBase extends Component {
 
     return (
         <button type="submit" className="form-btn-signin">
-            Sign Up
+            Set teams
         </button>
     );
   }
@@ -77,4 +77,4 @@ const TeamFinderForm = compose(
   withFirebase,
 )(TeamFinderBase);
 
-export default teamFinderFunc;
+export default TeamFinderFunc;

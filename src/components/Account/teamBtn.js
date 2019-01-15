@@ -11,17 +11,12 @@ const teamBtn = () => (
     </div>
 );
 
-const INITIAL_STATE = {
-    username: '',
-    gender: '',
-    error: null,
-  };
 
 class SetTeamBtnLogic extends Component {
     constructor(props) {
       super(props);
   
-      this.state = { ...INITIAL_STATE };
+      this.state = this.props.firebase.users();
     }
   
     onSubmit = event => {
