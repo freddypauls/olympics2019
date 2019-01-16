@@ -55,7 +55,6 @@
 }
 
 .form-btn-want-team:focus {
-    border: 1px solid orange;
     outline: none;
 }
 

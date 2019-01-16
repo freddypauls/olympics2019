@@ -8,13 +8,13 @@ import * as ROLES from '../../constants/roles';
 import '../SignIn/index.css';
 
 const TeamFinderFunc= () => (
-  <TeamFinderForm></TeamFinderForm>
+  <TeamFinderForm>
+
+  </TeamFinderForm>
 );
 
 const INITIAL_STATE = {
-    username: '',
-    position: '',
-    error: null,
+    users: [],
   };
 
 class TeamFinderBase extends Component {
@@ -24,10 +24,30 @@ class TeamFinderBase extends Component {
     this.state = { ...INITIAL_STATE };
   }
 
+  componentDidMount() {
+
+    this.props.firebase.users().on('value', snapshot => {
+      const usersObject = snapshot.val();
+
+      const usersList = Object.keys(usersObject).map(key => ({
+        ...usersObject[key],
+        uid: key,
+      }));
+
+      this.setState({
+        users: usersList,
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.props.firebase.users().off();
+  }
+
   onSubmit = event => {
 
-    const { username, position } = this.state;
-    const positions = [];
+    const users = this.state;
+
 
     this.props.firebase
       .team()
@@ -45,9 +65,6 @@ class TeamFinderBase extends Component {
   };
 
   render() {
-    const {
-        
-      } = this.state;
 
     return (
         <form onSubmit={this.onSubmit}>
