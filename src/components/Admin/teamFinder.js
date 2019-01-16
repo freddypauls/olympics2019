@@ -76,11 +76,11 @@ class TeamFinderBase extends Component {
         .catch(error => {
             this.setState({ error });
         });
-
-        event.preventDefault();
     */
+        event.preventDefault();
+    
 
-  }
+  };
 
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -89,11 +89,13 @@ class TeamFinderBase extends Component {
   render() {
 
     return (
-        <form onSubmit={this.onSubmit}>
-            <button type="submit" className="form-btn-set-teams">
-                Set teams
-            </button>
-        </form>
+        <div>
+            <form onSubmit={this.onSubmit}>
+                <button type="submit" className="form-btn-set-teams">
+                    Set teams
+                </button>
+            </form>
+        </div>
     );
   }
 }
