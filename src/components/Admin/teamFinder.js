@@ -46,17 +46,25 @@ class TeamFinderBase extends Component {
 
   onSubmit = event => {
 
-    const users = this.state;
+    const { users } = this.state;
+    let { teamUsers } = [];
 
+    users.map(user => {
+        if(user.wantTeam === true) {
+            user.push(teamUsers);
+        }
+    })
+    alert(teamUsers);
+    /*
+        this.props.firebase
+        .team()
+        .users()
+        .catch(error => {
+            this.setState({ error });
+        });
 
-    this.props.firebase
-      .team()
-      .users()
-      .catch(error => {
-        this.setState({ error });
-      });
-
-    event.preventDefault();
+        event.preventDefault();
+    */
 
   }
 
