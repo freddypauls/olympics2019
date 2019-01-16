@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    padding-top: 50px;
 }
 
 .navigation {
@@ -11,8 +12,13 @@ body {
 
 .mobile-nav {
     background-color: #222;
-    margin: 0;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
     height: 50px;
+    z-index: 99;
   }
 
 .navigation > ul {
@@ -54,6 +60,10 @@ li .link:hover {
     li .link {
         float: left;
         height: 100%;
+    }
+
+    body {
+        padding-top: 0px;
     }
 
     .right-float {

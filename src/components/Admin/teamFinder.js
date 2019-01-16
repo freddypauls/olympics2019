@@ -54,6 +54,16 @@ class TeamFinderBase extends Component {
             this.props.firebase.user(user.uid).update({
                 teamnum: i,
               });
+
+            this.props.firebase
+              .team(`${i}/${user.uid}`)
+              .set({
+                  username: user.username,
+              })
+              .catch(error => {
+                  this.setState({ error });
+              });
+
               i++
               if(i > 2){
                 i = 1;
@@ -63,20 +73,22 @@ class TeamFinderBase extends Component {
             this.props.firebase.user(user.uid).update({
                 teamnum: j,
               });
+              this.props.firebase
+              .team(`${j}/${user.uid}`)
+              .set({
+                  username: user.username,
+              })
+              .catch(error => {
+                  this.setState({ error });
+              });
               j++
               if(j > 2){
                   j = 1;
               }
         }
+
     })
-    /*
-        this.props.firebase
-        .team()
-        .users()
-        .catch(error => {
-            this.setState({ error });
-        });
-    */
+
         event.preventDefault();
     
 
