@@ -73,7 +73,7 @@ const config = {
 
     team = teamnum => this.db.ref(`teams/team${teamnum}`);
 
-    teams = () => this.db.ref('teams');
+    teams = () => this.db.ref(`teams`);
 
   }
   

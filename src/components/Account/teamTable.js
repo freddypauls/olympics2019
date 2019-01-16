@@ -17,7 +17,7 @@ class TeamsTable extends Component {
   }
 
   componentDidMount() {
-    this.props.firebase.users().orderByChild("teamnum").equalTo(1).on('value', snapshot => {
+    this.props.firebase.teams(1).on('value', snapshot => {
       const usersObject = snapshot.val();
 
       const usersList = Object.keys(usersObject).map(key => ({
@@ -51,9 +51,6 @@ class TeamsTable extends Component {
               <tr key={user.uid} className="admin-table-row">
                   <td>
                       { user.username }
-                  </td>
-                  <td>
-                      { user.roles }
                   </td>
               </tr>
           ))}
