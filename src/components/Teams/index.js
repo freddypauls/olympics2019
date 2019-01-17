@@ -3,7 +3,7 @@ import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
 
-import { AuthUserContext, withAuthorization } from '../Session';
+import { /*AuthUserContext,*/ withAuthorization } from '../Session';
 import './index.css';
 
 class TeamsPage extends Component {

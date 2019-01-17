@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import app from 'firebase/app';
+//import app from 'firebase/app';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-import { AuthUserContext, withAuthorization } from '../Session';
+//import { AuthUserContext, withAuthorization } from '../Session';
 
 import { withFirebase } from '../Firebase';
 

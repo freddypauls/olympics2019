@@ -4,7 +4,7 @@ import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
 //import { compose } from 'recompose';
-import TeamsTable from './teamTable.js';
+//import TeamsTable from './teamTable.js';
 import TeamBtn from './teamBtn.js';
 
 import { AuthUserContext, withAuthorization } from '../Session';
