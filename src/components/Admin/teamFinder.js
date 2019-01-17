@@ -47,7 +47,20 @@ class TeamFinderBase extends Component {
     const { users } = this.state;
     let i = 1;
     let j = 1;
-    users.map(user => {
+    function shuffleArray(array) {
+      let i = array.length - 1;
+      for (; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    }
+  
+    const shuffledUsers = shuffleArray(users);
+
+    shuffledUsers.map(user => {
         if(user.wantTeam === true && user.gender === "Female") {
             this.props.firebase.user(user.uid).update({
                 teamnum: i,
