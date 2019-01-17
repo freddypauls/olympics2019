@@ -39,8 +39,10 @@ class RenderTeamsPage extends Component {
   }
 
   render() {
-    const { teams, loading } = this.state;
+    const { teams2 , loading } = this.state;
     
+    const { teams } = this.firebase.teams(); //fortsett her
+
     return (
       <div>
           
