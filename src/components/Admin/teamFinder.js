@@ -45,8 +45,7 @@ class TeamFinderBase extends Component {
   onSubmit = event => {
 
     const { users } = this.state;
-    let i = 1;
-    let j = 1;
+
     function shuffleArray(array) {
       let i = array.length - 1;
       for (; i > 0; i--) {
@@ -59,41 +58,32 @@ class TeamFinderBase extends Component {
     }
   
     const shuffledUsers = shuffleArray(users);
+    let i = 1;
+    let j = 1;
 
     shuffledUsers.map(user => {
         if(user.wantTeam === true && user.gender === "Female") {
             this.props.firebase.user(user.uid).update({
                 teamnum: i,
-              });
-
-            this.props.firebase
-              .team(`${i}/${user.uid}`)
-              .set({
-                  username: user.username,
               })
               .catch(error => {
                   this.setState({ error });
               });
 
               i++
-              if(i > 2){
+              if(i > 3){
                 i = 1;
               }
         }
         else if(user.wantTeam === true && user.gender === "Male") {
             this.props.firebase.user(user.uid).update({
                 teamnum: j,
-              });
-              this.props.firebase
-              .team(`${j}/${user.uid}`)
-              .set({
-                  username: user.username,
               })
               .catch(error => {
                   this.setState({ error });
               });
               j++
-              if(j > 2){
+              if(j > 3){
                   j = 1;
               }
         }
@@ -115,7 +105,7 @@ class TeamFinderBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-set-teams">
-                    Set teams
+                    Divide players
                 </button>
             </form>
         </div>

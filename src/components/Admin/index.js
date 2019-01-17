@@ -6,6 +6,7 @@ import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
 import './index.css';
 import TeamFinderFunc from './teamFinder.js';
+import TeamSetterFunc from './setTeams.js';
 
 class AdminPage extends Component {
   constructor(props) {
@@ -94,6 +95,8 @@ class AdminPage extends Component {
           </table>
         
           <TeamFinderFunc />
+
+          <TeamSetterFunc />
         </div>
       </div>
     );

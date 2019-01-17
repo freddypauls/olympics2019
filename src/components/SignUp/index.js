@@ -53,7 +53,6 @@ class SignUpFormBase extends Component {
             email,
             teamnum,
             gender,
-            randomNum: Math.random(),
             created_at: Date().Now().toString(),
             roles,
             wantTeam,
