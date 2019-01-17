@@ -45,12 +45,12 @@ class TeamSetterBase extends Component {
   onSubmit = event => {
 
     const { users } = this.state;
-
+    
     users.map(user => {
         if(user.teamnum != '') {
             let i = user.teamnum;
             this.props.firebase
-            .team(`${i}/${user.uid}`)
+            .team(`${i}/users/${user.uid}`)
             .set({
                 username: user.username,
             })

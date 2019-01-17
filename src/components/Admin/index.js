@@ -7,6 +7,7 @@ import * as ROLES from '../../constants/roles';
 import './index.css';
 import TeamFinderFunc from './teamFinder.js';
 import TeamSetterFunc from './setTeams.js';
+import RenderTeamsPage from './renderTeams.js';
 
 class AdminPage extends Component {
   constructor(props) {
@@ -97,6 +98,8 @@ class AdminPage extends Component {
           <TeamFinderFunc />
 
           <TeamSetterFunc />
+
+          <RenderTeamsPage />
         </div>
       </div>
     );
