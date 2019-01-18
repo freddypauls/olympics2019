@@ -94,6 +94,94 @@ class AdminPage extends Component {
               </tbody>
             ))}
           </table>
+          <table className="admin-table teams-table">
+            <thead>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 3</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 3 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
+          <table className="admin-table teams-table">
+            <thead>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 4</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 4 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
+          <table className="admin-table teams-table">
+            <thead>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 5</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 5 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
+          <table className="admin-table teams-table">
+            <thead>
+              <tr className="admin-table-row admin-table-header">
+                <th colSpan="2">Team 6</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr className="admin-table-row">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Rolle
+                </th>
+              </tr>
+            </thead>
+            {users.map(user => (
+              <tbody className="admin-table-row" key={user.uid}>
+                  {user.teamnum === 6 ? <TeamList user={user} /> : null}
+              </tbody>
+            ))}
+          </table>
         
           <TeamFinderFunc />
 

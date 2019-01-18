@@ -73,6 +73,8 @@ const config = {
 
     team = teamnum => this.db.ref(`teams/team${teamnum}`);
 
+    teamUser = ( teamnum, uid ) => this.db.ref(`teams/team${teamnum}/users/${uid}`);
+
     teams = () => this.db.ref(`teams`);
 
   }

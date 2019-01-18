@@ -13,6 +13,7 @@ class RenderTeamsPage extends Component {
     this.state = {
       loading: false,
       teams: [],
+      users: [],
     };
   }
 
@@ -24,14 +25,28 @@ class RenderTeamsPage extends Component {
 
       const teamsList = Object.keys(teamsObject).map(key => ({
         ...teamsObject[key],
-        score: key,
+        tid: key,
       }));
 
       this.setState({
-        users: teamsList,
+        teams: teamsList,
         loading: false,
       });
     });
+
+    this.props.firebase.users().on('value', snapshot => {
+        const usersObject = snapshot.val();
+  
+        const usersList = Object.keys(usersObject).map(key => ({
+          ...usersObject[key],
+          uid: key,
+        }));
+  
+        this.setState({
+          users: usersList,
+          loading: false,
+        });
+      });
   }
 
   componentWillUnmount() {
@@ -39,12 +54,23 @@ class RenderTeamsPage extends Component {
   }
 
   render() {
-    const { teams2 , loading } = this.state;
-    
-    const { teams } = this.firebase.teams(); //fortsett her
-
+    const { teams , loading, users } = this.state;
+    let teamnum = 0;
     return (
       <div>
+          {teams.map(team => (
+            <div key={team.tid}>
+                {team.tid} <br/>
+                {teamnum = team.teamnum}
+                Score: {team.score}
+                {users.map(user => (
+                    <div key={user.uid}>
+                        {user.teamnum == teamnum ? user.username : null}
+                    </div>
+                ))}
+            </div>
+          ))}
+
           
       </div>
     );

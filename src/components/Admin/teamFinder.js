@@ -71,7 +71,7 @@ class TeamFinderBase extends Component {
               });
 
               i++
-              if(i > 3){
+              if(i > 6){
                 i = 1;
               }
         }
@@ -83,7 +83,7 @@ class TeamFinderBase extends Component {
                   this.setState({ error });
               });
               j++
-              if(j > 3){
+              if(j > 6){
                   j = 1;
               }
         }

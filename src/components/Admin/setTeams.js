@@ -53,7 +53,7 @@ class TeamSetterBase extends Component {
             .team(`${i}/users/${user.uid}`)
             .set({
                 username: user.username,
-            })
+            });
         }
 
     })
