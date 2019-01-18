@@ -8,6 +8,7 @@ import './index.css';
 import TeamFinderFunc from './teamFinder.js';
 import TeamSetterFunc from './setTeams.js';
 import RenderTeamsPage from './renderTeams.js';
+import RenderTeam1 from '../Teams/team1.js';
 
 class AdminPage extends Component {
   constructor(props) {
@@ -49,146 +50,12 @@ class AdminPage extends Component {
         <div className="section-admin-table flex-item-admin-section">
           <UserList users={users} loading={loading} />
         </div>
-        <div className="asde-admin-table flex-item-admin-aside">
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 1</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 1 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 2</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 2 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 3</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 3 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 4</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 4 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 5</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 5 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 6</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 6 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-        
+        <div className="flex-item-admin-aside">
+          <RenderTeam1 />
+        </div>
           <TeamFinderFunc />
 
           <TeamSetterFunc />
-
-          <RenderTeamsPage />
-        </div>
       </div>
     );
   }

@@ -1,0 +1,22 @@
+.table-for-teams {
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.table-for-teams th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.table-for-teams .double-colspan {
+    text-align: left;
+}
+
+.table-for-teams-row td {
+    border-bottom: 1p solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
