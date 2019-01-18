@@ -24,7 +24,7 @@ class TeamFinderBase extends Component {
 
   componentDidMount() {
 
-    this.props.firebase.users().orderByChild("randomNum").on('value', snapshot => {
+    this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
       const usersList = Object.keys(usersObject).map(key => ({

@@ -61,7 +61,7 @@ class RenderTeamsPage extends Component {
           {teams.map(team => (
             <div key={team.tid}>
                 {team.tid} <br/>
-                {teamnum = team.teamnum}
+                <div hidden>{teamnum = team.teamnum}</div>
                 Score: {team.score}
                 {users.map(user => (
                     <div key={user.uid}>
