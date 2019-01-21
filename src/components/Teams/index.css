@@ -1,3 +1,4 @@
+/* All table */
 .table-for-teams {
     width: 100%;
     position: relative;
@@ -5,14 +6,17 @@
     border-collapse: collapse;
 }
 
+/* Setting the bottom border to be white */
 .table-for-teams, .table-for-teams-row td, .table-for-teams-row th {
     border-bottom: #ddd 1px solid;
 }
 
+/* Setting every other child of a row to be #f2f2f2 */
 .table-for-teams-row:nth-child(even) {
     background-color: #f2f2f2
 }
 
+/* Headers */
 .table-for-teams th {
     background-color: #333;
     color: white;
@@ -23,24 +27,29 @@
     text-align: left;
 }
 
+/* tbody */
 .table-for-teams-row td {
-    border-bottom: 1p solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
+/* setting up flex */
+
+/* flex body */
 .flex-container-teams {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 }
-
+/* flex child s*/
 .flex-item-renderTeams {
     margin: 10px;
     width: 100%;
 }
 
+/* Everything bigger than mobile view */
 @media only screen and (min-width: 768px) { 
 
     .flex-container-teams {

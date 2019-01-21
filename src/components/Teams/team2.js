@@ -5,6 +5,7 @@ import { withFirebase } from '../Firebase';
 import { withAuthorization } from '../Session';
 import './index.css';
 
+// For comments check team1.js, the code is the same with only the number 1 switched with 2 (redundant I know)
 class RenderTeam2 extends Component {
   constructor(props) {
     super(props);
