@@ -49,9 +49,9 @@ class AccountPage extends Component {
       <AuthUserContext.Consumer>
       {authUser => (
         <div className="flex-container-account">
-        {users.map(user => (
+        {users.filter(user => user.uid === authUser.uid).map(user => (
           <div key={user.uid}>
-            {user.uid === authUser.uid ? <AccountInfo user={user} /> : null }
+             <AccountInfo user={user} /> 
           </div>
           ))}
           <div className="account-team-btn-div">
