@@ -41,8 +41,6 @@ class TeamsPage extends Component {
   }
 
   render() {
-    const { users } = this.state;
-
     return (
       <div className="flex-container-teams">
         <div className="flex-item-renderTeams">
