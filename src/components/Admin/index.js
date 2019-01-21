@@ -7,7 +7,6 @@ import * as ROLES from '../../constants/roles';
 import './index.css';
 import TeamFinderFunc from './teamFinder.js';
 import TeamSetterFunc from './setTeams.js';
-import RenderTeamsPage from './renderTeams.js';
 import RenderTeam1 from '../Teams/team1.js';
 import RenderTeam2 from '../Teams/team2.js';
 import RenderTeam3 from '../Teams/team3.js';
@@ -54,6 +53,9 @@ class AdminPage extends Component {
       <div className="admin-card flex-container-admin">
         <div className="section-admin-table flex-item-admin-section">
           <UserList users={users} loading={loading} />
+          <TeamFinderFunc />
+
+          <TeamSetterFunc />
         </div>
         <div className="flex-item-admin-aside">
           <RenderTeam1 />
@@ -68,9 +70,6 @@ class AdminPage extends Component {
 
           <RenderTeam6 />
         </div>
-          <TeamFinderFunc />
-
-          <TeamSetterFunc />
       </div>
     );
   }

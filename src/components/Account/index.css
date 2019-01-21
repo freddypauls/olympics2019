@@ -74,16 +74,31 @@
     width: 100%;
 }
 
+.profile-card-avatar {
+    width: 100%
+}
+
 
 @media only screen and (min-width: 768px)  { 
     
+    .flex-container-account {
+        justify-content: center;
+    }
+
     .profile-card-left {
-        width: 50%;
+        width: 35%;
+        margin: 0;
+        align-self: center;
     }
     
     .account-team-btn-div {
-        width: 50%;
+        width: 35%;
         align-self: center;
+    }
+    
+    .profile-card-avatar {
+        width: 80%;
+        height: 400px;
     }
 
 }

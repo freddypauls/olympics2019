@@ -54,11 +54,14 @@ class AccountPage extends Component {
       <AuthUserContext.Consumer>
       {authUser => (
         <div className="flex-container-account">
-        {users.filter(user => user.uid === authUser.uid).map(user => (
-          <div key={user.uid}>
-             <AccountInfo user={user} /> 
+          <div className="profile-card-avatar">
+
           </div>
-          ))}
+          {users.filter(user => user.uid === authUser.uid).map(user => (
+            <div className="profile-card-left" key={user.uid}>
+              <AccountInfo user={user} /> 
+            </div>
+            ))}
           <div className="account-team-btn-div">
             <TeamBtn />
           </div>
@@ -71,7 +74,6 @@ class AccountPage extends Component {
 
 //Takes user from render and prints values
 const AccountInfo = ({user}) => (
-    <div className="profile-card-left">
       <table key={user.uid} className="account-table">
         <tbody>
           <tr className="account-table-row">
@@ -114,7 +116,6 @@ const AccountInfo = ({user}) => (
           }
         </tbody> 
       </table>
-    </div>
   );
 
 // <PasswordForgetForm />
