@@ -5,6 +5,12 @@ import '../Firebase';
 
 import { /*AuthUserContext,*/ withAuthorization } from '../Session';
 import './index.css';
+import RenderTeam1 from '../Teams/team1.js';
+import RenderTeam2 from '../Teams/team2.js';
+import RenderTeam3 from '../Teams/team3.js';
+import RenderTeam4 from '../Teams/team4.js';
+import RenderTeam5 from '../Teams/team5.js';
+import RenderTeam6 from '../Teams/team6.js';
 
 class TeamsPage extends Component {
   constructor(props) {
@@ -38,66 +44,29 @@ class TeamsPage extends Component {
     const { users } = this.state;
 
     return (
-      <div>
-      <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 1</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 1 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
-          <table className="admin-table teams-table">
-            <thead>
-              <tr className="admin-table-row admin-table-header">
-                <th colSpan="2">Team 2</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr className="admin-table-row">
-                <th>
-                  Name
-                </th>
-                <th>
-                  Rolle
-                </th>
-              </tr>
-            </thead>
-            {users.map(user => (
-              <tbody className="admin-table-row" key={user.uid}>
-                  {user.teamnum === 2 ? <TeamList user={user} /> : null}
-              </tbody>
-            ))}
-          </table>
+      <div className="flex-container">
+        <div className="flex-item-renderTeams">
+            <RenderTeam1 />
+        </div>
+        <div className="flex-item-renderTeams">
+            <RenderTeam2 />
+        </div>
+        <div className="flex-item-renderTeams">
+            <RenderTeam3 />
+        </div>
+        <div className="flex-item-renderTeams">
+            <RenderTeam4 />
+        </div>
+        <div className="flex-item-renderTeams">
+            <RenderTeam5 />
+        </div>
+        <div className="flex-item-renderTeams">
+            <RenderTeam6 />
+        </div>
       </div>
     );
   }
 }
-
-const TeamList = ({user}) => (
-    <tr>
-      <td>
-          {user.username}
-      </td>
-      <td>
-          {user.roles ? user.roles : "no role"}
-      </td>
-    </tr>
-);
 
 
 const condition = authUser => !!authUser;
