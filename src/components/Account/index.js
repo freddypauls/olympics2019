@@ -48,7 +48,7 @@ class AccountPage extends Component {
     return (
       <AuthUserContext.Consumer>
       {authUser => (
-        <div>
+        <div className="flex-container-account">
         {users.map(user => (
           <div key={user.uid}>
             {user.uid === authUser.uid ? <AccountInfo user={user} /> : null }
