@@ -14,16 +14,19 @@ import '../SignIn/index.css';
 import './index.css';
 //import { userInfo } from 'os'; //Might need later
 
+//Making class that will be the page itself
 class AccountPage extends Component {
   constructor(props) {
     super(props);
 
+    // Setting state making users object array
     this.state = {
       users: []
     };
   }
 
   componentDidMount() {
+    // Fetching users from database to fill state obj
     this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
@@ -39,10 +42,12 @@ class AccountPage extends Component {
   }
 
   componentWillUnmount() {
+    //unmounting the obj
     this.props.firebase.users().off();
   }
 
   render() {
+    //Fetching state, and making a obj arr in the render
     const { users } = this.state;
 
     return (
@@ -64,6 +69,7 @@ class AccountPage extends Component {
   }
 }
 
+//Takes user from render and prints values
 const AccountInfo = ({user}) => (
     <div className="profile-card-left">
       <table key={user.uid} className="account-table">

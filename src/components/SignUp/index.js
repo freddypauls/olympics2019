@@ -14,6 +14,7 @@ const SignUpPage = () => (
   </div>
 );
 
+// Setting initial state, this will be default value for user info
 const INITIAL_STATE = {
     username: '',
     email: '',
@@ -26,6 +27,7 @@ const INITIAL_STATE = {
     error: null,
   };
 
+// Making component for the sign up
 class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
@@ -35,6 +37,7 @@ class SignUpFormBase extends Component {
 
   onSubmit = event => {
 
+    // Fetching state
     const { username, email, teamnum, gender, passwordOne, isAdmin, wantTeam } = this.state;
     const roles = [];
 
@@ -57,7 +60,7 @@ class SignUpFormBase extends Component {
             roles,
             wantTeam,
           });
-      })
+      }) // Then set state back and reroute home
       .then(() => {   
         this.setState({ ...INITIAL_STATE });
         this.props.history.push(ROUTES.HOME);
@@ -70,6 +73,7 @@ class SignUpFormBase extends Component {
 
   }
 
+  // Event listenerm checking for change of values
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -142,7 +146,7 @@ class SignUpFormBase extends Component {
   }
 }
 
-
+// Sign up link, to be displayed on the sign in page
 const SignUpLink = () => (
   
   <p>
