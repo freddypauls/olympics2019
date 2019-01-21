@@ -17,15 +17,17 @@ class RenderTeam1 extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-
+    // Fethcing table for team 1 and targeting all users, setting uid as key (for pritning later)
     this.props.firebase.team(`${1}/users`).on('value', snapshot => {
       const usersObject = snapshot.val();
 
+      // Setting object as list (to ready for print)
       const usersList = Object.keys(usersObject).map(key => ({
         ...usersObject[key],
         uid: key,
       }));
 
+      // Setting the list of users as state to be used across the file
       this.setState({
         users: usersList,
         loading: false,
@@ -34,11 +36,14 @@ class RenderTeam1 extends Component {
   }
 
   componentWillUnmount() {
+    // Stopping event listener
     this.props.firebase.teams().off();
   }
 
   render() {
+    // Fetching all users from state, and assigning a variable to call them
     const { users } = this.state;
+    // Returning JSX to render
     return (
       <table className="table-for-teams">
         <thead className="table-for-teams-header">
@@ -56,6 +61,7 @@ class RenderTeam1 extends Component {
           </tr>
         </thead>
         <tbody className="table-for-teams-body">
+          {/* Cyceling through all users, and set referance as user  */}
           {users.map(user => (
             <tr className="table-for-teams-row" key={user.uid}>
                 <td>{user.username}</td>
@@ -67,9 +73,10 @@ class RenderTeam1 extends Component {
   }
 }
 
-
+// Setting condition checking that the user is logged in.
 const condition = authUser => !!authUser;
 
+// Exporting the info, with auth and firebase connection.
 export default compose(
   withAuthorization(condition),
   withFirebase,
