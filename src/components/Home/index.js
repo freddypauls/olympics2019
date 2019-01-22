@@ -6,10 +6,24 @@ import './index.css';
 import Clock from './clock.js';
 
 class HomePage extends Component {
+  _isMounted = false;
+
   constructor(props) {
        super(props);
-       this.state = { deadline: 'July, 20, 2019' };
+       this.state = {
+         deadline: [],
+       }
   }
+
+  componentDidMount() {
+    this._isMounted = true;
+
+    if (this._isMounted) {
+      this.setState({ deadline: 'July, 20, 2019' });
+    }
+  }
+
+
   render() {
        return (
 
@@ -29,17 +43,17 @@ class HomePage extends Component {
               </div>
             </section>
             <section className="flex-container">
-              
+
             </section>
 
           </div>
        );
   }
+  
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 }
-
-/*const HomePage = () => (
-
-);*/
 
 const condition = authUser => !!authUser;
 
