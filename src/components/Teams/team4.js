@@ -21,15 +21,17 @@ class RenderTeam4 extends Component {
     this.props.firebase.team(`${4}/users`).on('value', snapshot => {
       const usersObject = snapshot.val();
 
-      const usersList = Object.keys(usersObject).map(key => ({
-        ...usersObject[key],
-        uid: key,
-      }));
+      if(usersObject != null){
+        const usersList = Object.keys(usersObject).map(key => ({
+          ...usersObject[key],
+          uid: key,
+        }));
 
-      this.setState({
-        users: usersList,
-        loading: false,
-      });
+        this.setState({
+          users: usersList,
+          loading: false,
+        });
+      }
     });
   }
 

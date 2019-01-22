@@ -1,12 +1,21 @@
+/* Main React and Component */
 import React, { Component } from 'react';
 import { compose } from 'recompose';
 
+/* Firebase, Auth and Roles (login conditions) */
 import { withFirebase } from '../Firebase';
 import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
+
+/* Styling */
 import './index.css';
+
+/* Team components */
 import TeamFinderFunc from './teamFinder.js';
 import TeamSetterFunc from './setTeams.js';
+import TeamRemoverFunc from './delUsersTeam.js';
+
+/* Team Render Components */
 import RenderTeam1 from '../Teams/team1.js';
 import RenderTeam2 from '../Teams/team2.js';
 import RenderTeam3 from '../Teams/team3.js';
@@ -14,6 +23,7 @@ import RenderTeam4 from '../Teams/team4.js';
 import RenderTeam5 from '../Teams/team5.js';
 import RenderTeam6 from '../Teams/team6.js';
 
+/* Admin Page Code */
 class AdminPage extends Component {
   constructor(props) {
     super(props);
@@ -56,6 +66,8 @@ class AdminPage extends Component {
           <TeamFinderFunc />
 
           <TeamSetterFunc />
+
+          <TeamRemoverFunc />
         </div>
         <div className="flex-item-admin-aside">
           <RenderTeam1 />

@@ -23,6 +23,10 @@ class HomePage extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
 
   render() {
        return (
@@ -37,7 +41,7 @@ class HomePage extends Component {
                     <div className="welcome"> <h1>Welcome to B-OL 2019</h1></div>
                   <hr />
                   <br />
-                    <Clock deadline={ this.state.deadline }/>
+                  {this._isMounted == true && <Clock deadline={ this.state.deadline } /> }
                 </div>
 
               </div>
@@ -48,10 +52,6 @@ class HomePage extends Component {
 
           </div>
        );
-  }
-  
-  componentWillUnmount() {
-    this._isMounted = false;
   }
 }
 

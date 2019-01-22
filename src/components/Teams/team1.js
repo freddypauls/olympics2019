@@ -20,18 +20,20 @@ class RenderTeam1 extends Component {
     // Fethcing table for team 1 and targeting all users, setting uid as key (for pritning later)
     this.props.firebase.team(`${1}/users`).on('value', snapshot => {
       const usersObject = snapshot.val();
+      
+      if(usersObject != null){
+        // Setting object as list (to ready for print)
+        const usersList = Object.keys(usersObject).map(key => ({
+          ...usersObject[key],
+          uid: key,
+        }));
 
-      // Setting object as list (to ready for print)
-      const usersList = Object.keys(usersObject).map(key => ({
-        ...usersObject[key],
-        uid: key,
-      }));
-
-      // Setting the list of users as state to be used across the file
-      this.setState({
-        users: usersList,
-        loading: false,
-      });
+        // Setting the list of users as state to be used across the file
+        this.setState({
+          users: usersList,
+          loading: false,
+        });
+      }
     });
   }
 
