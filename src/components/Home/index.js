@@ -29,28 +29,7 @@ class HomePage extends Component {
               </div>
             </section>
             <section className="flex-container">
-
-              <div className="flex-item image-1">
-                <div className="text"> B-OL er ett event startet av Eirik Holmebukt og skal i år arrangeres for andre gang. </div>
-              </div>
-
-              <div className="flex-item image-2">
-                <div className="overlay">
-                  <div className="text">This is a man with no manners</div>
-                </div>
-              </div>
-
-              <div className="flex-item">
-                <div className="overlay">
-                  <div className="text">This is a man with brainpower</div>
-                </div>
-              </div>
-
-              <div className="flex-item">
-                <div className="overlay">
-                  <div className="text">This is a man without branp</div>
-                </div>
-              </div>
+              
             </section>
 
           </div>

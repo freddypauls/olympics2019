@@ -112,51 +112,44 @@ const UserList = ({ users, loading }) => (
         </tr>
       }
       </thead>
-    {users.map(user => (
-      <tbody className="admin-table-row" key={user.uid}>
-        {loading && <tr>Loading ...</tr>}
-        {window.innerWidth < 768 ?
-        <tr>
-          <td>
-            { user.username }
-          </td>
-          <td>
-            { user.teamnum }
-          </td>
-        </tr>
+      {window.innerWidth < 768 ?
+        users.map(user => (
+          <tbody className="admin-table-row" key={user.uid}>
+            {loading && <tr>Loading ...</tr>}
+            <tr>
+              <td>
+                { user.username }
+              </td>
+              <td>
+                { user.teamnum }
+              </td>
+            </tr>
+          </tbody>
+        ))
       :
-        <tr>
-          <td>
-            { user.email }
-          </td>
-          <td>
-            { user.username }
-          </td>
-          <td>
-            { user.teamnum }
-          </td>
-          <td>
-            { user.gender }
-          </td>
-          <td>
-            { user.roles ? user.roles : "No role" }
-          </td> 
-        </tr>
-        }
-      </tbody>
-    ))}
+      users.map(user => (
+        <tbody className="admin-table-row" key={user.uid}>
+          {loading && <tr>Loading ...</tr>}
+          <tr>
+            <td>
+              { user.email }
+            </td>
+            <td>
+              { user.username }
+            </td>
+            <td>
+              { user.teamnum }
+            </td>
+            <td>
+              { user.gender }
+            </td>
+            <td>
+              { user.roles ? user.roles : "No role" }
+            </td> 
+          </tr>
+        </tbody>
+      ))}
   </table>
-);
-
-const TeamList = ({user}) => (
-    <tr>
-      <td>
-          {user.username}
-      </td>
-      <td>
-          {user.roles ? user.roles : "no role"}
-      </td>
-    </tr>
 );
 
 const condition = authUser =>
