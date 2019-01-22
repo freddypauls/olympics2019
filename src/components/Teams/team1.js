@@ -17,6 +17,7 @@ class RenderTeam1 extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
+    
     // Fethcing table for team 1 and targeting all users, setting uid as key (for pritning later)
     this.props.firebase.team(`${1}/users`).on('value', snapshot => {
       const usersObject = snapshot.val();
