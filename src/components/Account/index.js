@@ -53,13 +53,13 @@ class AccountPage extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <div>
+          <div className="profile-full">
           {users.filter(user => user.uid === authUser.uid).map(user => (
-          <div className="flex-container-account">
+          <div className="flex-container-account" key={user.uid}>
             <div className="profile-card-banner">
               <div className="profile-banner-header">Hello, {user.username}</div>
             </div>
-              <div className="profile-card-left" key={user.uid}>
+              <div className="profile-card-left">
                 <AccountInfo user={user} /> 
               </div>
               
@@ -81,7 +81,7 @@ const AccountInfo = ({user}) => (
         <tbody>
           <tr className="account-table-row">
             <th>
-              Username:
+              Full Name:
             </th>
             <td>
               { user.username }

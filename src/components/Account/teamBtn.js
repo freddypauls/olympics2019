@@ -47,7 +47,7 @@ class SetTeamBtnLogic extends Component {
       return (
         <form onSubmit={this.onSubmit}>
           <button type="submit" className="form-btn-want-team">
-              Join the games
+              +
           </button>
         </form>
       );
