@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './index.css'
 import './hamburger-menu.css'
 
@@ -9,13 +9,12 @@ import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu';
 
 class Example extends React.Component {
   showSettings (event) {
     event.preventDefault();
   }
-
   render () {
     return (
       <div className="navigation">

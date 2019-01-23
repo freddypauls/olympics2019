@@ -30,7 +30,6 @@ class HomePage extends Component {
 
   render() {
        return (
-
             <div className="">
             <section className="background-image-behind-card ">
               <div className="home-card">
