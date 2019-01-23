@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.css'
 import './hamburger-menu.css'
 

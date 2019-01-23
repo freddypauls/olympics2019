@@ -37,8 +37,8 @@ class HomePage extends Component {
                 <div className="card-text">
                 <br/>
                   <hr />
-                    <div className="welcome"> <h1>Welcome to B-OL 2019</h1></div>
-                  <hr />
+                    <div className="welcome"> WELCOME </div>
+                  <hr className="hr2" />
                   <br />
                   {this._isMounted == true && <Clock deadline={ this.state.deadline } /> }
                 </div>

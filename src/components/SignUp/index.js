@@ -22,6 +22,7 @@ const INITIAL_STATE = {
     gender: '',
     passwordOne: '',
     passwordTwo: '',
+    ssc: '',
     wantTeam: false,
     isAdmin: false,
     error: null,
@@ -43,6 +44,8 @@ class SignUpFormBase extends Component {
 
     if (isAdmin) {
       roles.push(ROLES.ADMIN);
+    } else {
+      roles.push(ROLES.PARTICIPANT);
     }
 
     this.props.firebase
@@ -56,7 +59,7 @@ class SignUpFormBase extends Component {
             email,
             teamnum,
             gender,
-            created_at: Date().Now().toString(),
+            created_at: new Date().toString(),
             roles,
             wantTeam,
           });
@@ -73,7 +76,7 @@ class SignUpFormBase extends Component {
 
   }
 
-  // Event listenerm checking for change of values
+  // Event listenerm checking for change of values, and assigning the values from inputs to the state
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -83,6 +86,7 @@ class SignUpFormBase extends Component {
         username,
         email,
         gender,
+        ssc,
         passwordOne,
         passwordTwo,
         error,
@@ -93,7 +97,8 @@ class SignUpFormBase extends Component {
       passwordOne === '' ||
       email === '' ||
       username === '' ||
-      gender === '';
+      gender === '' ||
+      ssc !== 'SSDG';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -136,6 +141,14 @@ class SignUpFormBase extends Component {
           placeholder="Confirm Password"
         />
         <br/>
+        <input
+          name="ssc"
+          className="form-input form-input-secretCode"
+          value={ssc}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Super Secret Code"
+        />
         <button disabled={isInvalid} type="submit" className="form-btn-signin">
             Sign Up
         </button>

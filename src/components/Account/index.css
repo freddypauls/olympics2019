@@ -42,8 +42,8 @@
 }
 
 .form-btn-want-team {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 75px;
     font-size: 20px;
     color: white;
     background-color: #222;
@@ -87,19 +87,21 @@
     }
 
     .profile-card-left {
-        width: 35%;
+        width: 40%;
         margin: 0;
         align-self: center;
+        display: flex;
+        justify-content: center;
     }
     
     .account-team-btn-div {
-        width: 35%;
+        width: 40%;
         align-self: center;
     }
     
     .profile-card-avatar {
         width: 80%;
-        height: 400px;
+        height: 500px;
     }
 
 }
