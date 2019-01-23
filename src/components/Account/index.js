@@ -53,18 +53,22 @@ class AccountPage extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
+          <div>
+          {users.filter(user => user.uid === authUser.uid).map(user => (
           <div className="flex-container-account">
-            <div className="profile-card-avatar">
+            <div className="profile-card-banner">
+              <div className="profile-banner-header">Hello, {user.username}</div>
             </div>
-            {users.filter(user => user.uid === authUser.uid).map(user => (
               <div className="profile-card-left" key={user.uid}>
                 <AccountInfo user={user} /> 
               </div>
-              ))}
+              
             <div className="account-team-btn-div">
               <TeamBtn />
             </div>
           </div>
+          ))}
+        </div>
         )}
       </AuthUserContext.Consumer>
     );
