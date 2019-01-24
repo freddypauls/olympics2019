@@ -156,7 +156,7 @@ const UserList = ({ users, loading }) => (
               { user.gender }
             </td>
             <td>
-              { user.roles ? user.roles : "No role" }
+              { user.roles[2] ? user.roles[2] : user.roles[1] ? user.roles[1] : user.roles[0] }
             </td> 
           </tr>
         </tbody>

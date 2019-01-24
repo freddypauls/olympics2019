@@ -85,12 +85,19 @@ th {
 }
 
 .profile-card-left {
-    width: 100%;
-    margin: 10px;
+    margin-top: 10px;
+    height: 34.5vh;
+    align-self: center;
 }
 .account-team-btn-div {
     text-align: center;
     width: 100%;
+}
+
+.account-team-btn-label {
+    position: fixed;
+    bottom: 45px;
+    right: 95px;
 }
 
 .profile-card-banner {
@@ -124,16 +131,12 @@ th {
     }
 
     .profile-card-left {
-        padding-top: 20px;
-        width: 40%;
-        margin: 0;
-        align-self: center;
-        display: flex;
-        justify-content: center;
+        width: 48%;
+        height: 34.5vh;
     }
     
     .account-team-btn-div {
-        width: 40%;
+        width: 50%;
         align-self: center;
     }
     

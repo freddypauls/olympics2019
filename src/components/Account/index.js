@@ -113,7 +113,7 @@ const AccountInfo = ({user}) => (
               Rolle: 
             </th>
           <td>
-            { user.roles }
+            { user.roles[2] ? user.roles[2] : user.roles[1] ? user.roles[1] : user.roles[0] }
           </td>
           </tr> : null
           }
