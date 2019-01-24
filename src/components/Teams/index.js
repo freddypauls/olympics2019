@@ -11,6 +11,7 @@ import RenderTeam3 from '../Teams/team3.js';
 import RenderTeam4 from '../Teams/team4.js';
 import RenderTeam5 from '../Teams/team5.js';
 import RenderTeam6 from '../Teams/team6.js';
+import Leaderboard from './leaderboard.js';
 
 class TeamsPage extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class TeamsPage extends Component {
     return (
       <div className="flex-container-teams">
         <div className="flex-item-leaderboard">
-            Leaderboard  {/*<Leaderboard />*/}
+            <Leaderboard />
         </div>
         <div className="flex-item-renderTeams">
             <RenderTeam1 />
