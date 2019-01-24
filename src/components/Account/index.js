@@ -64,7 +64,7 @@ class AccountPage extends Component {
               </div>
               
             <div className="account-team-btn-div">
-              {user.wantTeam ? <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+              {user.wantTeam ? user.teamnum ? <p>show team!!</p> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
             </div>
           </div>
           ))}

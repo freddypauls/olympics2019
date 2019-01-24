@@ -59,7 +59,7 @@
     .flex-item-leaderboard {
         width: 80%;
         height: 20vh;
-        border-bottom: 1px solid purple;
+        border-bottom: 1px solid black;
     }
     
     .flex-item-renderTeams {
