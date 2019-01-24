@@ -43,6 +43,9 @@ class TeamsPage extends Component {
   render() {
     return (
       <div className="flex-container-teams">
+        <div className="flex-item-leaderboard">
+            Leaderboard  {/*<Leaderboard />*/}
+        </div>
         <div className="flex-item-renderTeams">
             <RenderTeam1 />
         </div>

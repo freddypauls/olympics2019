@@ -55,9 +55,15 @@
     .flex-container-teams {
         width: 100%;
     }
+
+    .flex-item-leaderboard {
+        width: 80%;
+        height: 20vh;
+        border-bottom: 1px solid purple;
+    }
     
     .flex-item-renderTeams {
-        width: 20%;
+        width: 400px;
     }
 
 }
