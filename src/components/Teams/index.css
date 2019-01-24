@@ -57,9 +57,9 @@
     }
 
     .flex-item-leaderboard {
-        width: 80%;
+        width: 100%;
         height: 20vh;
-        border-bottom: 1px solid black;
+        background-size: cover;
     }
     
     .flex-item-renderTeams {
