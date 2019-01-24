@@ -57,7 +57,7 @@ class AccountPage extends Component {
           {users.filter(user => user.uid === authUser.uid).map(user => (
           <div className="flex-container-account" key={user.uid}>
             <div className="profile-card-banner">
-              <div className="profile-banner-header">Hello, {user.username}</div>
+              <span className="profile-banner-header">Hello, {user.username}</span>
             </div>
               <div className="profile-card-left">
                 <AccountInfo user={user} /> 

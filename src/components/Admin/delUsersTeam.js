@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
@@ -47,7 +47,7 @@ class TeamRemoverBase extends Component {
     const { users } = this.state;
     
     users.map(user => {
-        if(user.teamnum != '') {
+        if(user.teamnum !== '') {
             let i = user.teamnum;
             this.props.firebase
             .team(`${i}/users/${user.uid}`)

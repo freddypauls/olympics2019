@@ -40,7 +40,7 @@ class HomePage extends Component {
                     <div className="welcome"> WELCOME </div>
                   <hr className="hr2" />
                   <br />
-                  {this._isMounted == true && <Clock deadline={ this.state.deadline } /> }
+                  {this._isMounted === true && <Clock deadline={ this.state.deadline } /> }
                 </div>
 
               </div>
