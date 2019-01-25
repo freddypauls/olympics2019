@@ -48,10 +48,10 @@ class TeamFinderBase extends Component {
 
     const GoT = ["Lannister", "Targaryen", "Baratheon", "Stark", "Tyrell", "Arryn"];
     const HP = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
-    const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Demeter", "Apollo"];
+    const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Hermes", "Apollo"];
     const LotR = ["Elf", "Dwarf", "Hobbit", "Goblin", "Balroy", "Huorn"];
     const SW = ["Jedi", "Sith", "Stormtrooper", "Wookie", "Rebel", "Imperial"];
-    const M = ["X-Men", "Avengers", "Guardians", "S.H.I.E.L.D", "Defender", "A.I.M"];
+    const M = ["X-Men", "Avengers", "Guardians", "S.H.I.E.L.D", "Defenders", "A.I.M"];
 
     function shuffleArray(array) {
       let i = array.length - 1;
@@ -99,7 +99,7 @@ class TeamFinderBase extends Component {
           } else if(i === 3){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
-              house: `Dauther of ${shuffleArray(PJ)[0]}`,
+              house: `Daugther of ${shuffleArray(PJ)[0]}`,
             })
             .catch(error => {
                 this.setState({ error });
