@@ -67,17 +67,14 @@ class TeamFinderBase extends Component {
     const shuffledUsers = shuffleArray(users);
     let i = 1;
     let j = 1;
-    let house = 1;
-    let house2 = 1;
 
     shuffledUsers.map(user => {
         if(user.wantTeam === true && user.gender === "Female") {
           if(i > 6) {
             i = 1;
-            house = 1;
           }
 
-          if(house === 1){
+          if(i === 1){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: shuffleArray(GoT)[0],
@@ -87,9 +84,8 @@ class TeamFinderBase extends Component {
             });
 
             i++;
-            house++;
 
-          } else if(house === 2){
+          } else if(i === 2){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: shuffleArray(HP)[0],
@@ -98,10 +94,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            i++;
-            house++;
+            i++
 
-          } else if(house === 3){
+          } else if(i === 3){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: `Dauther of ${shuffleArray(PJ)[0]}`,
@@ -110,10 +105,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            i++;
-            house++;
+            i++
 
-          } else if(house === 4){
+          } else if(i === 4){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: shuffleArray(LotR)[0],
@@ -122,10 +116,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            i++;
-            house++;
+            i++
 
-          } else if(house === 5){
+          } else if(i === 5){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: shuffleArray(SW)[0],
@@ -134,11 +127,10 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            i++;
-            house++;
+            i++
 
           
-          } else if(house === 6){
+          } else if(i === 6){
             this.props.firebase.user(user.uid).update({
               teamnum: i,
               house: shuffleArray(M)[0],
@@ -147,8 +139,7 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            i++;
-            house++;
+            i++
 
             
           } 
@@ -156,9 +147,8 @@ class TeamFinderBase extends Component {
         else if(user.wantTeam === true && user.gender === "Male") {
           if(j > 6) {
             j = 1;
-            house2 = 1;
           }
-          if(house2 === 1){
+          if(j === 1){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: shuffleArray(GoT)[0],
@@ -167,11 +157,10 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
 
-          } else if(house2 === 2){
+          } else if(j === 2){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: shuffleArray(HP)[0],
@@ -180,11 +169,10 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
            
-          } else if(house2 === 3){
+          } else if(j === 3){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: `Son of ${shuffleArray(PJ)[0]}`,
@@ -193,10 +181,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
-          } else if(house2 === 4){
+          } else if(j === 4){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: shuffleArray(LotR)[0],
@@ -205,10 +192,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
-          } else if(house2 === 5){
+          } else if(j === 5){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: shuffleArray(SW)[0],
@@ -217,10 +203,9 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
-          } else if(house2 === 6){
+          } else if(j === 6){
             this.props.firebase.user(user.uid).update({
               teamnum: j,
               house: shuffleArray(M)[0],
@@ -229,8 +214,7 @@ class TeamFinderBase extends Component {
                 this.setState({ error });
             });
 
-            j++;
-            house2++;
+            j++
 
           } 
         }
