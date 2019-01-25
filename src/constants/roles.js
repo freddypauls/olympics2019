@@ -1,3 +1,3 @@
-export const ADMIN = 'Supreme Wizard';
+export const ADMIN = 'Admin';
 export const PARTICIPANT = 'Muggle';
-export const GAMEADMIN = 'Wizard';
+export const GAMEADMIN = 'Game Admin';

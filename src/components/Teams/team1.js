@@ -17,7 +17,7 @@ class RenderTeam1 extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-    
+
     // Fethcing table for team 1 and targeting all users, setting uid as key (for pritning later)
     this.props.firebase.team(`${1}/users`).on('value', snapshot => {
       const usersObject = snapshot.val();
@@ -61,6 +61,9 @@ class RenderTeam1 extends Component {
             <th className="double-colspan">
               User:
             </th>
+            <th className="double-colspan">
+              House:
+            </th>
           </tr>
         </thead>
         <tbody className="table-for-teams-body">
@@ -68,6 +71,7 @@ class RenderTeam1 extends Component {
           {users.map(user => (
             <tr className="table-for-teams-row" key={user.uid}>
                 <td>{user.username}</td>
+                <td>{user.house ? user.house : "None"}</td>
             </tr>
           ))}
         </tbody>

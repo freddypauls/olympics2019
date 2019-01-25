@@ -93,16 +93,19 @@
 }
 
 .leaderboard-num4 {
+    color: #777;
     font-weight: 300;
     margin-top: 10px;
 }
 
 .leaderboard-num5 {
+    color: #777;
     font-weight: 300;
     margin-top: 10px;
 }
 
 .leaderboard-num6 {
+    color: #777;
     font-weight: 300;
     margin-top: 10px;
 }
@@ -139,37 +142,31 @@
     }
     
     .leaderboard-num1 {
-        color: gold;
         font-weight: 400;
         margin-top: 10px;
     }
     
     .leaderboard-num2 {
-        color: silver;
         font-weight: 400;
         margin-top: 10px;
     }
     
     .leaderboard-num3 {
-        color: darkgoldenrod;
         font-weight: 400;
         margin-top: 10px;
     }
     
     .leaderboard-num4 {
-        color: #777;
         font-weight: 300;
         margin-top: 10px;
     }
     
     .leaderboard-num5 {
-        color: #777;
         font-weight: 300;
         margin-top: 10px;
     }
     
     .leaderboard-num6 {
-        color: #777;
         font-weight: 300;
         margin-top: 10px;
     }
