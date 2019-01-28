@@ -65,6 +65,7 @@ class TeamFinderBase extends Component {
     }
   
     const shuffledUsers = shuffleArray(users);
+
     let i = 1;
     let j = 1;
 

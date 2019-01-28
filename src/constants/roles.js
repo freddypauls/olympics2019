@@ -1,3 +1,3 @@
 export const ADMIN = 'Admin';
-export const PARTICIPANT = 'Muggle';
+export const PARTICIPANT = 'Participant';
 export const GAMEADMIN = 'Game Admin';
