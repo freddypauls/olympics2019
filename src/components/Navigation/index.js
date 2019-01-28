@@ -57,6 +57,11 @@ const NavigationAuth = ({ authUser }) => (
     <li>
         <Link className="link" to={ROUTES.TEAMS}>Teams</Link>
     </li>
+    {authUser.roles.includes(ROLES.GAMEADMIN) && (
+      <li>
+        <Link className="link" to={ROUTES.GAMEADMIN}>Games Admin</Link>
+      </li>
+    )}
     {authUser.roles.includes(ROLES.ADMIN) && (
       <li>
         <Link className="link" to={ROUTES.ADMIN}>Admin</Link>
