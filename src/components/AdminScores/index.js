@@ -65,10 +65,9 @@ class AdminGamesPage extends Component {
       <div className="admin-card flex-container-admin admin-score-background">
           {teams.map(team => (
             <div className="admin-score-item" key={team.tid}>
-              <h3>Team {team.teamnum}</h3>
+              <div className="admin-score-header">Team {team.teamnum} </div>
               <button className="admin-score-btn-plus" onClick={() => this.plus(team.teamnum, team.score)}>+</button>
-                {/*<input type="number" name="" />*/}
-                {team.score} pts
+              {team.score} pts
               <button className="admin-score-btn-minus" onClick={() => this.minus(team.teamnum, team.score)}>-</button>
             </div>
           ))}
