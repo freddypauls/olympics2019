@@ -68,7 +68,7 @@ const NavigationAuth = ({ authUser }) => (
       </li>
     )}
     <li>
-      <div className="link right-float"><SignOutButton /></div>
+      <SignOutButton />
     </li>
   </ul>
 );

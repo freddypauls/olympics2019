@@ -30,7 +30,7 @@ class AdminGamesPage extends Component {
 
       const teamsList = Object.keys(teamsObject).map(key => ({
         ...teamsObject[key],
-        uid: key,
+        tid: key,
       }));
 
       this.setState({
@@ -46,16 +46,14 @@ class AdminGamesPage extends Component {
 
   plus = (id, score) => {
     const number = score + 1;
-    this.props.firebase.team(id).set({
-        teamnum: id,
+    this.props.firebase.team(id).update({
         score: number,
     })
   }
 
   minus = (id, score) => {
     const number = score - 1;
-    this.props.firebase.team(id).set({
-        teamnum: id,
+    this.props.firebase.team(id).update({
         score: number,
     })
   }
@@ -66,11 +64,12 @@ class AdminGamesPage extends Component {
     return (
       <div className="admin-card flex-container-admin">
           {teams.map(team => (
-            <div key={team.tid}>
-                <button onClick={() => this.plus(team.teamnum, team.score)}>+</button>
+            <div className="admin-score-item" key={team.tid}>
+              <h3>Team {team.teamnum}</h3>
+              <button className="admin-score-btn-plus" onClick={() => this.plus(team.teamnum, team.score)}>+</button>
                 {/*<input type="number" name="" />*/}
-                {team.score}
-                <button onClick={() => this.minus(team.teamnum, team.score)}>-</button>
+                {team.score} pts
+              <button className="admin-score-btn-minus" onClick={() => this.minus(team.teamnum, team.score)}>-</button>
             </div>
           ))}
       </div>
