@@ -55,14 +55,34 @@
     text-align: center!important;
 }
 
-.form-btn-set-teams {
-    width: 100px;
-    background-color: #222;
+.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams {
+    position: fixed;
+    background-color: #333;
     color: white;
-    height: 35px;
-    font-size: 13px;
-    border: 1px solid white;
-    
+    border: 1px solid #555;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    z-index: 99;
+}
+
+.form-btn-set-teams {
+    bottom: 15px;
+    right: 85px;
+}
+
+.form-btn-devide-teams {
+    bottom: 15px;
+    right: 15px;
+}
+
+.form-btn-delete-teams {
+    bottom: 15px;
+    left: 15px;
+}
+
+.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams {
+    outline: 0;
 }
 
 

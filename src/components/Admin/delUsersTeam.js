@@ -67,8 +67,8 @@ class TeamRemoverBase extends Component {
     return (
         <div>
             <form onSubmit={this.onSubmit}>
-                <button type="submit" className="form-btn-set-teams">
-                    Remove Teams
+                <button type="submit" className="form-btn-delete-teams">
+                    Remove
                 </button>
             </form>
         </div>

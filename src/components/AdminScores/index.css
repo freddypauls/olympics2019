@@ -15,6 +15,10 @@
     background-color: #333;
 }
 
+.admin-score-btn-plus {
+    outline: 0;
+}
+
 .admin-score-btn-minus {
     height: 60px;
     width: 60px;
@@ -23,4 +27,12 @@
     margin: 10px 20px 10px 20px;
     color: white;
     background-color: #333;
+}
+
+.admin-score-btn-minus {
+    outline: 0;
+}
+
+.admin-score-background {
+    background-color: #f2f2f2;
 }

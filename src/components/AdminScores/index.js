@@ -62,7 +62,7 @@ class AdminGamesPage extends Component {
     const { teams } = this.state;
 
     return (
-      <div className="admin-card flex-container-admin">
+      <div className="admin-card flex-container-admin admin-score-background">
           {teams.map(team => (
             <div className="admin-score-item" key={team.tid}>
               <h3>Team {team.teamnum}</h3>
