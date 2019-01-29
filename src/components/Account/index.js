@@ -40,31 +40,16 @@ class AccountPage extends Component {
         users: usersList,
       });
     });
-    this.props.firebase.teams().on('value', snapshot => {
-      const teamsObject = snapshot.val();
-
-      const teamsList = Object.keys(teamsObject).map(key => ({
-        ...teamsObject[key],
-        tid: key,
-      }));
-
-      this.setState({
-        teams: teamsList,
-      });
-    });
   }
 
   componentWillUnmount() {
     //unmounting the obj
     this.props.firebase.users().off();
-    this.props.firebase.teams().off();
   }
 
   render() {
     //Fetching state, and making a obj arr in the render
     const { users } = this.state;
-
-    let listUsers = [];
 
     return (
       <AuthUserContext.Consumer>
@@ -80,7 +65,7 @@ class AccountPage extends Component {
               </div>
               
             <div className="account-team-btn-div">
-              {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+              {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} house={user.house} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
             </div>
           </div>
           ))}
@@ -91,19 +76,21 @@ class AccountPage extends Component {
   }
 }
 
-const TeamInfo = ({users, team}) => (
+const TeamInfo = ({users, team, house}) => (
   <table className="account-table">
      <thead>
-       <tr>
-         <th></th>
+       <tr className="account-table-row">
+         <th>Team Mates:</th>
+         <th>House: The {house + "s"} </th>
        </tr>
      </thead>
      <tbody>
         {users.filter(user => user.teamnum === team).map(user => (
-          <tr key={user.uid}>
+          <tr className="account-table-row" key={user.uid}>
             <td>
                 {user.username}
             </td>
+            <td></td>
           </tr>
         ))}
      </tbody>

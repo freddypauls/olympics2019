@@ -1,6 +1,6 @@
 .profile-full {
     width: 100%;
-    height: 94.5vh;
+    height: 100vh;
     background-color: #f2f2f2;
 }
 
@@ -36,7 +36,6 @@ th {
     background-color: white;
     color: black;
 }
-
 
 .account-table-row th {
     text-align: left;
@@ -86,12 +85,14 @@ th {
 
 .profile-card-left {
     margin-top: 10px;
-    height: 34.5vh;
+    height: 28vh;
     align-self: center;
 }
 .account-team-btn-div {
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .account-team-btn-label {
@@ -126,25 +127,29 @@ th {
 
 @media only screen and (min-width: 768px)  { 
     
+    .profile-full {
+        height: 94.5vh;
+    }
+
     .flex-container-account {
         justify-content: center;
     }
 
     .profile-card-left {
-        width: 48%;
+        width: 38%;
         height: 33vh;
     }
     
     .account-team-btn-div {
-        width: 50%;
-        align-self: center;
+        width: 60%;
+        padding: 10px;
     }
     
     .profile-card-banner    {
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 60vh;
+        height: 55vh;
         line-height: 60vh;
         font-weight: 100;
         font-size: 50px;

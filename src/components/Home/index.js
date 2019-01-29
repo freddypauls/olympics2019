@@ -6,27 +6,6 @@ import './index.css';
 import Clock from './clock.js';
 
 class HomePage extends Component {
-  _isMounted = false;
-
-  constructor(props) {
-       super(props);
-       this.state = {
-         deadline: [],
-       }
-  }
-
-  componentDidMount() {
-    this._isMounted = true;
-
-    if (this._isMounted) {
-      this.setState({ deadline: 'July, 20, 2019' });
-    }
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
 
   render() {
        return (
@@ -40,7 +19,7 @@ class HomePage extends Component {
                     <div className="welcome"> WELCOME </div>
                   <hr className="hr2" />
                   <br />
-                  {this._isMounted === true && <Clock deadline={ this.state.deadline } /> }
+                  {<Clock deadline={'July, 20, 2019'} /> }
                 </div>
 
               </div>
