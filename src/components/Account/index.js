@@ -22,7 +22,6 @@ class AccountPage extends Component {
     // Setting state making users object array
     this.state = {
       users: [],
-      teams: [],
     };
   }
 
