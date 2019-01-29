@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-//import app, { auth } from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import '../Firebase';
-//import { compose } from 'recompose';
-//import TeamsTable from './teamTable.js';
 import TeamBtn from './teamBtn.js';
 
 import { AuthUserContext, withAuthorization } from '../Session';
-//import { PasswordForgetForm } from '../PasswordForget'; //Might need
-//import PasswordChangeForm from '../PasswordChange'; //Might need
 import '../SignIn/index.css';
 import './index.css';
-//import { userInfo } from 'os'; //Might need later
+
 
 //Making class that will be the page itself
 class AccountPage extends Component {
@@ -57,7 +52,7 @@ class AccountPage extends Component {
           {users.filter(user => user.uid === authUser.uid).map(user => (
           <div className="flex-container-account" key={user.uid}>
             <div className="profile-card-banner">
-              <span className="profile-banner-header">Hello, {user.username}</span>
+              <span className="profile-banner-header">Hello, {user.username.split(" ")[0]}</span>
             </div>
               <div className="profile-card-left">
                 <AccountInfo user={user} /> 
@@ -79,7 +74,7 @@ const TeamInfo = ({users, team, house}) => (
   <table className="account-table">
      <thead>
        <tr className="account-table-row">
-         <th>Team Mates:</th>
+         <th>Your Team:</th>
          <th>House: The {house + "s"} </th>
        </tr>
      </thead>
@@ -116,8 +111,6 @@ const AccountInfo = ({user}) => (
               { user.email }
             </td>
           </tr>
-        </tbody>
-        <tbody>
           <tr className="account-table-row">
             <th>
               Team: 
@@ -126,8 +119,6 @@ const AccountInfo = ({user}) => (
               { user.teamnum }
             </td>
           </tr>
-        </tbody>
-        <tbody>
           {user.roles ?
           <tr className="account-table-row">
             <th>

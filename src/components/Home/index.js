@@ -19,7 +19,7 @@ class HomePage extends Component {
                     <div className="welcome"> WELCOME </div>
                   <hr className="hr2" />
                   <br />
-                  {<Clock deadline={'July, 20, 2019'} /> }
+                  <Clock deadline={'July, 20, 2019'} />
                 </div>
 
               </div>

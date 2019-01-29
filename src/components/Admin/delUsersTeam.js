@@ -51,7 +51,11 @@ class TeamRemoverBase extends Component {
             let i = user.teamnum;
             this.props.firebase
             .team(`${i}/users/${user.uid}`)
-            .remove()
+            .remove();
+
+            this.props.firebase.team(i).update({
+              score: 0,
+            })
         }
 
     })
