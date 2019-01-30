@@ -46,9 +46,9 @@ class TeamFinderBase extends Component {
 
     const { users } = this.state;
 
-    const GoT = ["Lannister", "Targaryen", "Baratheon", "Stark", "Tyrell", "Arryn"];
+    const GoT = ["Lannister", "Targaryen", "Baratheon", "Stark"];
     const HP = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
-    const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Hermes", "Apollo"];
+    const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Aphrodite"];
     const LotR = ["Elf", "Dwarf", "Hobbit", "Goblin", "Balroy", "Huorn"];
     const SW = ["Jedi", "Sith", "Stormtrooper", "Wookie", "Rebel", "Imperial"];
     const M = ["X-Men", "Avengers", "Guardians", "S.H.I.E.L.D", "Defenders", "A.I.M"];
@@ -65,7 +65,6 @@ class TeamFinderBase extends Component {
     }
   
     const shuffledUsers = shuffleArray(users);
-
     let i = 1;
     let j = 1;
 
