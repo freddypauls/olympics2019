@@ -61,21 +61,23 @@ class HomePage extends Component {
                     <div className="welcome"> WELCOME </div>
                   <hr className="hr2" />
                   <br />
-                  <i class="material-icons icon-place">
-                  place
-                  </i>
-                  <i class="material-icons icon-event">
-                  event
-                  </i>
+                  <div className="icon-place">
+                    Hello World
+                    <i class="material-icons icon-font-size">place</i>
+                  </div>
+                  <div className="icon-event">
+                    Hello World
+                    <i class="material-icons icon-font-size">event</i>
+                  </div>
                   
                 </div>
               </div>
             </section>
             
             <section className="home-flex-container">
-            <div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}>
+            {/*<div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}>
             
-            </div>
+            </div>*/}
             </section>
 
           </div>
