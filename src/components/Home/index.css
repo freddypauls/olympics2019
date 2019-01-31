@@ -52,7 +52,6 @@ hr.hr2 {
     left: 0;
     height: 10%;
     width: 50%;
-    background-color: #222;
     color: white;
 }
 
@@ -67,7 +66,6 @@ hr.hr2 {
     width: 100vw;
     background-color: #f2f2f2;
 }
-  
 
 @media screen and (min-width: 678px) and (max-width: 1450px) {
 
@@ -85,6 +83,34 @@ hr.hr2 {
     .flex-item {
         width: 500px;
     }
+
+    .icon-place {
+        position: absolute;
+        left: 20px;
+        top: 150px;
+        font-size: 40px;
+    }
+
+    .icon-place:hover {
+        background-color: rgba(11,11,11,0.5);
+        color: white;
+        width: 500px;
+        height: 50px;
+        left: 0;
+        top: 135px;
+        padding-left: 20px;
+        padding-top: 15px;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+
+    }
+
+    .icon-event {
+        position: absolute;
+        left: 20px;
+        top: 350px;
+        font-size: 40px;
+    }
 }
 
 @media screen and (min-width: 1450px) {
@@ -94,4 +120,5 @@ hr.hr2 {
         align-self: center;
         height: 37%;
     }
+    
 }

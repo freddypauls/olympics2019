@@ -236,7 +236,7 @@ class TeamFinderBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-devide-teams">
-                    Divide
+                <i class="material-icons">shuffle</i>
                 </button>
             </form>
         </div>

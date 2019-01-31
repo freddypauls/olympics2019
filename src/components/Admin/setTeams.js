@@ -71,7 +71,7 @@ class TeamSetterBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-set-teams">
-                    Set
+                <i class="material-icons">group_add</i>
                 </button>
             </form>
         </div>

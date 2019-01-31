@@ -55,19 +55,26 @@ class HomePage extends Component {
               <div className="home-card">
 
                 <div className="card-text">
+                  <Clock deadline={'July, 20, 2019'} />
                 <br/>
                   <hr />
                     <div className="welcome"> WELCOME </div>
                   <hr className="hr2" />
                   <br />
-                  <Clock deadline={'July, 20, 2019'} />
+                  <i class="material-icons icon-place">
+                  place
+                  </i>
+                  <i class="material-icons icon-event">
+                  event
+                  </i>
+                  
                 </div>
               </div>
             </section>
             
             <section className="home-flex-container">
             <div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}>
-              
+            
             </div>
             </section>
 

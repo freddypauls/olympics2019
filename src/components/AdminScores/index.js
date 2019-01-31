@@ -44,15 +44,15 @@ class AdminGamesPage extends Component {
     this.props.firebase.teams().off();
   }
 
-  plus = (id, score) => {
-    const number = score + 1;
+  plus = (id, score, num) => {
+    const number = score + num;
     this.props.firebase.team(id).update({
         score: number,
     })
   }
 
-  minus = (id, score) => {
-    const number = score - 1;
+  minus = (id, score, num) => {
+    const number = score - num;
     this.props.firebase.team(id).update({
         score: number,
     })
@@ -66,9 +66,9 @@ class AdminGamesPage extends Component {
           {teams.map(team => (
             <div className="admin-score-item" key={team.tid}>
               <div className="admin-score-header">Team {team.teamnum} </div>
-              <button className="admin-score-btn-plus" onClick={() => this.plus(team.teamnum, team.score)}>+</button>
+              <button className="admin-score-btn-plus" onClick={() => this.plus(team.teamnum, team.score, 1)}>+</button>
               {team.score} pts
-              <button className="admin-score-btn-minus" onClick={() => this.minus(team.teamnum, team.score)}>-</button>
+              <button className="admin-score-btn-minus" onClick={() => this.minus(team.teamnum, team.score, 1)}>-</button>
             </div>
           ))}
       </div>
