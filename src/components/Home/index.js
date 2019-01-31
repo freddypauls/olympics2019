@@ -62,7 +62,6 @@ class HomePage extends Component {
                   <br />
                   <Clock deadline={'July, 20, 2019'} />
                 </div>
-
               </div>
             </section>
             

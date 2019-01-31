@@ -132,17 +132,15 @@ th {
     }
 
     .flex-container-account {
-        justify-content: center;
     }
 
     .profile-card-left {
-        width: 38%;
-        height: 33vh;
+        width: 40%;
+        height: 36vh;
     }
     
     .account-team-btn-div {
         width: 60%;
-        padding: 10px;
     }
     
     .profile-card-banner    {
@@ -155,6 +153,17 @@ th {
         font-size: 50px;
         color: white;
         text-align: center;
+    }
+
+    .account-table-teams {
+        position: absolute;
+        right: 10px;
+        margin-top: 10px;
+    }
+
+    .account-table-info {
+        position: absolute;
+        left: 10px;
     }
 
     .profile-banner-header {

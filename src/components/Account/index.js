@@ -71,7 +71,7 @@ class AccountPage extends Component {
 }
 
 const TeamInfo = ({users, team, house}) => (
-  <table className="account-table">
+  <table className="account-table account-table-teams">
      <thead>
        <tr className="account-table-row">
          <th>Your Team:</th>
@@ -93,7 +93,7 @@ const TeamInfo = ({users, team, house}) => (
 
 //Takes user from render and prints values
 const AccountInfo = ({user}) => (
-      <table key={user.uid} className="account-table">
+      <table key={user.uid} className="account-table account-table-info">
         <tbody>
           <tr className="account-table-row">
             <th>
