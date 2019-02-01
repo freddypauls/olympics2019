@@ -62,11 +62,11 @@ class HomePage extends Component {
                   <hr className="hr2" />
                   <br />
                   <div className="icon-place">
-                    Hello World
+                    Place
                     <i class="material-icons icon-font-size">place</i>
                   </div>
                   <div className="icon-event">
-                    Hello World
+                    Time
                     <i class="material-icons icon-font-size">event</i>
                   </div>
                   
