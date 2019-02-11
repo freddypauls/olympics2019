@@ -50,8 +50,8 @@ class TeamFinderBase extends Component {
     const HP = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
     const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Aphrodite"];
     const LotR = ["Elf", "Dwarf", "Hobbit", "Goblin", "Balroy", "Huorn"];
-    const SW = ["Jedi", "Sith", "Stormtrooper", "Wookie", "Rebel", "Imperial"];
-    const M = ["X-Men", "Avengers", "Guardians", "S.H.I.E.L.D", "Defenders", "A.I.M"];
+    const SW = ["Jedi", "Wookie", "Rebel"];
+    const M = ["Sith", "Stormstrooper", "Imperial"];
 
     function shuffleArray(array) {
       let i = array.length - 1;
