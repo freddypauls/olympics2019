@@ -105,7 +105,7 @@ hr.hr2 {
     }
     
     .icon-place:hover {
-        transition-duration: 0.8s;
+        transition-duration: 1s;
         transition-timing-function: ease-in-out;
         transform: translate(0px, 0px);
         background-color: rgba(11,11,11,0.5);
@@ -131,7 +131,7 @@ hr.hr2 {
     }
     
     .icon-event:hover {
-        transition-duration: 0.8s;
+        transition-duration: 1s;
         transition-timing-function: ease-in-out;
         transform: translate(0px, 0px);
         background-color: rgba(11,11,11,0.5);

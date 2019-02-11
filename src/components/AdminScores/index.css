@@ -16,6 +16,7 @@
 .admin-score-btn-plus {
     height: 60px;
     width: 60px;
+    border: 1px solid #555;
     border-radius: 50px;
     font-size: 35px;
     font-family: 'roboto', sans-serif;
@@ -33,6 +34,7 @@
 .admin-score-btn-minus {
     height: 60px;
     width: 60px;
+    border: 1px solid #555;
     border-radius: 50px;
     font-size: 45px;
     font-family: 'roboto', sans-serif;
