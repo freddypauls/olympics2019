@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import './index.css'
-import './hamburger-menu.css'
+//import './hamburger-menu.css'
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -18,14 +18,7 @@ class Example extends React.Component {
   render () {
     return (
       <div className="navigation">
-      {window.innerWidth < 768 ?
-        <div className="mobile-nav">
-          <Menu className={ "menu-hams" }>
-            <Navigation />
-          </Menu>
-        </div>
-        :
-        <Navigation /> }
+        <Navigation />
       </div>
     );
   }

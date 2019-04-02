@@ -20,18 +20,25 @@ import { withAuthentication } from '../Session';
 
 const App = () => (
         <Router>
-            <div>
-            <Navigation />
-            
-            <Route exact path={ROUTES.LANDING} component={LandingPage} />
-            <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-            <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-            <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-            <Route path={ROUTES.HOME} component={HomePage} />
-            <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-            <Route path={ROUTES.TEAMS} component={TeamsPage} />
-            <Route path={ROUTES.ADMIN} component={AdminPage} />
-            <Route path={ROUTES.GAMEADMIN} component={AdminGamesPage} />
+            <div id="app">
+              <input id="hamburger" type="checkbox" />
+              <div id="hamburger">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+              </div>
+
+              <Navigation />
+
+              <Route exact path={ROUTES.LANDING} component={LandingPage} />
+              <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+              <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+              <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+              <Route path={ROUTES.HOME} component={HomePage} />
+              <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+              <Route path={ROUTES.TEAMS} component={TeamsPage} />
+              <Route path={ROUTES.ADMIN} component={AdminPage} />
+              <Route path={ROUTES.GAMEADMIN} component={AdminGamesPage} />
             </div>
         </Router>
 );

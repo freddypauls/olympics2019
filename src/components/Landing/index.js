@@ -1,10 +1,47 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import './index.css';
+//import { ReactComponent as Logo } from './svg/logo.svg';  <Logo />
+
+// Sets the number of stars we wish to display
+const numStars = 100;
+
+// For every star we want to display
+for (let i = 0; i < numStars; i++) {
+  let star = document.createElement("div");  
+  star.className = "star";
+  var xy = getRandomPosition();
+  star.style.top = xy[0] + 'px';
+  star.style.left = xy[1] + 'px';
+  document.body.append(star);
+}
+
+// Gets random x, y values based on the size of the container
+function getRandomPosition() {  
+  var y = window.innerWidth;
+  var x = window.innerHeight;
+  var randomX = Math.floor(Math.random()*x);
+  var randomY = Math.floor(Math.random()*y);
+  return [randomX,randomY];
+}
 
 const Landing = () => (
-  <div className="home-card">
-    <h1>Landing</h1>
+  <div className="landing-card">
+    <audio id="audio1" src={require("./audio/Star_Wars_original_opening_crawl_1977.mp3")} autoPlay />
+    <section className="intro">
+      About one year ago, in a garden not all that far away....
+    </section>
+    <section className="logo">
+      <img src={require("./svg/logo.png")} />
+    </section>
+    <div id="board">  
+      <div id="content">
+        <p id="title">Episode II</p>
+        <p id="subtitle">BEER OLYMPICS 2019</p>
+        <br />
+        <p>Turmoil has engulfed the Galactic Republic as Christopher Kade finishes studying to become a master in his trade.</p>
+        <p>Last summer was a good one, many got drunk and few went sober.</p>
+      </div>
+    </div>
   </div>
 );
 

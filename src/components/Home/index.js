@@ -55,7 +55,7 @@ class HomePage extends Component {
               <div className="home-card">
 
                 <div className="card-text">
-                  <Clock deadline={'July, 20, 2019'} />
+                  <Clock deadline={'June, 28, 2019'} />
                 <br/>
                   <hr />
                     <div className="welcome"> WELCOME </div>
@@ -66,7 +66,7 @@ class HomePage extends Component {
                     <i class="material-icons icon-font-size">place</i>
                   </div>
                   <div className="icon-event">
-                    Time
+                    28.09.2019
                     <i class="material-icons icon-font-size">event</i>
                   </div>
                   
