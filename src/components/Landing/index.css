@@ -1,7 +1,7 @@
 .landing-card {
     margin: 0;
     background-color: black;
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@ div.landing-card p {
           top: 100%;
       }
       100% {
-          top: -170%;
+          top: -150%;
       }
   }
 
