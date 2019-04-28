@@ -18,7 +18,7 @@ class LandingPage extends Component {
       var xy = getRandomPosition();
       star.style.top = xy[0] + 'px';
       star.style.left = xy[1] + 'px';
-      document.body.append(star);
+      document.getElementById("").appendChild(star);
     }
 
     // Gets random x, y values based on the size of the container

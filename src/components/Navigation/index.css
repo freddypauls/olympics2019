@@ -6,7 +6,7 @@ body {
 .navigation {
     background-color: #222;
     color: white;
-    position: relative;
+    position: absolute;
     top: 55px;
     width: 100%;
     border-top: 1px solid #333;
@@ -166,15 +166,13 @@ input#hamburger[type="checkbox"]:checked ~ div.navigation
 
  @media only screen and (min-width: 768px)  {
     
-    div#hamburger,
-    input#hamburger[type="checkbox"] {
+    div#hamburger {
         display: none;
     }
 
-
-
     .navigation {
         transform: none;
+        position: relative;
         top: 0;
         transform-origin: 0% 0%;
         transform: translate(0, 0)!important;
