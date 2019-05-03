@@ -24,18 +24,6 @@ class TeamRemoverBase extends Component {
 
   componentDidMount() {
 
-    this.props.firebase.users().on('value', snapshot => {
-      const usersObject = snapshot.val();
-
-      const usersList = Object.keys(usersObject).map(key => ({
-        ...usersObject[key],
-        uid: key,
-      }));
-
-      this.setState({
-        users: usersList,
-      });
-    });
   }
 
   componentWillUnmount() {
@@ -44,21 +32,15 @@ class TeamRemoverBase extends Component {
 
   onSubmit = event => {
 
-    const { users } = this.state;
-    
-    users.map(user => {
-        if(user.teamnum !== '') {
-            let i = user.teamnum;
-            this.props.firebase
-            .team(`${i}/users/${user.uid}`)
+      for(let i = 1; i <= 6; i++){
+        this.props.firebase
+            .team(`${i}/users`)
             .remove();
 
             this.props.firebase.team(i).update({
               score: 0,
             })
-        }
-
-    })
+      }
         event.preventDefault();
   };
 
@@ -72,7 +54,7 @@ class TeamRemoverBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-delete-teams">
-                <i class="material-icons">delete</i>
+                <i className="material-icons">delete</i>
                 </button>
             </form>
         </div>

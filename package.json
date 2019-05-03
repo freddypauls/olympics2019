@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.7.0",
+    "jquery": "^3.4.1",
     "react": "^16.6.3",
     "react-burger-menu": "^2.6.1",
     "react-dom": "^16.6.3",

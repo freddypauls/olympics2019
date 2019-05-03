@@ -37,8 +37,23 @@ class Clock extends Component {
 
      render() {
           return(
-               <div>
-                    {this.leading0(this.state.days)} D {this.leading0(this.state.hours)} H {this.leading0(this.state.minutes)} M {this.leading0(this.state.seconds)} S
+               <div className="countdown">
+                    <div className="timer-title"> 
+                         {this.leading0(this.state.days)} 
+                         <div className="title-color">Days</div> 
+                    </div> 
+                    <div className="timer-title"> 
+                         {this.leading0(this.state.hours)} 
+                         <div className="title-color">Hours</div> 
+                    </div>
+                    <div className="timer-title"> 
+                         {this.leading0(this.state.minutes)}
+                         <div className="title-color">Minutes</div>
+                    </div>
+                    <div className="timer-title"> 
+                         {this.leading0(this.state.seconds)}
+                         <div className="title-color">Seconds</div>
+                    </div>
                </div>
           );
      }

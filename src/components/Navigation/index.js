@@ -9,13 +9,16 @@ import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 
-import { slide as Menu } from 'react-burger-menu';
+var $ = require("jquery");
 
 class Example extends React.Component {
   showSettings (event) {
     event.preventDefault();
   }
   render () {
+    $("li .link").click(function() {
+      $("#hamburger[type='checkbox']").prop("checked", false);
+    });
     return (
       <div className="navigation">
         <Navigation />

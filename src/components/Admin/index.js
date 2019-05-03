@@ -14,6 +14,7 @@ import './index.css';
 import TeamFinderFunc from './teamFinder.js';
 import TeamSetterFunc from './setTeams.js';
 import TeamRemoverFunc from './delUsersTeam.js';
+import TeamnumDelFunc from './teamDel.js';
 
 /* Team Render Components */
 import RenderTeam1 from '../Teams/team1.js';
@@ -58,16 +59,19 @@ class AdminPage extends Component {
 
   render() {
     const { users, loading } = this.state;
+    const firebase = this.props.firebase;
 
     return (
       <div className="admin-card flex-container-admin">
         <div className="section-admin-table flex-item-admin-section">
-          <UserList users={users} loading={loading} />
+          <UserList users={users} loading={loading} firebase={firebase} />
           <TeamFinderFunc />
 
           <TeamSetterFunc />
 
           <TeamRemoverFunc />
+
+          <TeamnumDelFunc />
         </div>
         <div className="flex-item-admin-aside">
           <RenderTeam1 />
@@ -80,18 +84,18 @@ class AdminPage extends Component {
           
           <RenderTeam5 />
 
-          <RenderTeam6 />
+          <RenderTeam6 />  
         </div>
       </div>
     );
   }
 }
 
-const UserList = ({ users, loading }) => (
+const UserList = ({ users, loading, firebase }) => (
   <table className="admin-table">
       <thead>
         <tr className="admin-table-row admin-table-header">
-          <th colSpan="6">Users</th>
+          <th colSpan="7">Users</th>
         </tr>
       </thead>
       <thead>
@@ -102,6 +106,9 @@ const UserList = ({ users, loading }) => (
           </th>
           <th>
             Team:
+          </th>
+          <th>
+            Extra:
           </th>
         </tr>
           :
@@ -121,6 +128,10 @@ const UserList = ({ users, loading }) => (
           <th>
             Rolle:
           </th>
+          <th>
+            Extra:
+          </th>
+          <th></th>
         </tr>
       }
       </thead>
@@ -134,6 +145,10 @@ const UserList = ({ users, loading }) => (
               </td>
               <td>
                 { user.teamnum }
+              </td>
+              <td>
+                <button onClick={() => firebase.user(user.uid).update({roles: {2: "Admin",} })}>Set Admin</button>
+                <button onClick={() => firebase.user(user.uid).update({roles: {1: "Team Leader",} })}>Set Team Leader</button>
               </td>
             </tr>
           </tbody>
@@ -156,8 +171,15 @@ const UserList = ({ users, loading }) => (
               { user.gender }
             </td>
             <td>
-              { user.house }
-            </td> 
+              { user.roles }
+            </td>
+            <td>
+              <button className="btnbtn" onClick={() => firebase.user(user.uid).update({roles: {0: "Game Admin",} })}>Set Game Admin</button>
+              <button className="btnbtn" onClick={() => firebase.user(user.uid).update({roles: {1: "Team Leader",} })}>Set Team Leader</button>
+            </td>
+            <td>
+              <button className="btnDelete" onClick={() => firebase.user(user.uid).remove()}>x</button>
+            </td>
           </tr>
         </tbody>
       ))}

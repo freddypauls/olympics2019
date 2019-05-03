@@ -59,7 +59,7 @@ class AccountPage extends Component {
               </div>
               
             <div className="account-team-btn-div">
-              {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} house={user.house} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+              {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
             </div>
           </div>
           ))}
@@ -70,12 +70,11 @@ class AccountPage extends Component {
   }
 }
 
-const TeamInfo = ({users, team, house}) => (
+const TeamInfo = ({users, team}) => (
   <table className="account-table account-table-teams">
      <thead>
        <tr className="account-table-row">
-         <th>Your Team:</th>
-         <th>House: The {house + "s"} </th>
+         <th colSpan="2"> Your Team: </th>
        </tr>
      </thead>
      <tbody>
@@ -84,7 +83,7 @@ const TeamInfo = ({users, team, house}) => (
             <td>
                 {user.username}
             </td>
-            <td></td>
+            <td> </td>
           </tr>
         ))}
      </tbody>

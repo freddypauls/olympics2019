@@ -46,17 +46,12 @@ class TeamSetterBase extends Component {
 
     const { users } = this.state;
     
-    users.map(user => {
-        if(user.teamnum !== '') {
-            let i = user.teamnum;
+    users.filter(user => user.teamnum).map(user => {
             this.props.firebase
-            .team(`${i}/users/${user.uid}`)
+            .team(`${user.teamnum}/users/${user.uid}`)
             .set({
                 username: user.username,
-                house: user.house,
             });
-        }
-
     })
         event.preventDefault();
   };
@@ -71,7 +66,7 @@ class TeamSetterBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-set-teams">
-                <i class="material-icons">group_add</i>
+                  <i className="material-icons">group_add</i>
                 </button>
             </form>
         </div>

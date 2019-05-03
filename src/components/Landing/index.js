@@ -7,6 +7,8 @@ class LandingPage extends Component {
     super(props)
   }
 
+  
+
   render() {
     // Sets the number of stars we wish to display
     const numStars = 100;
@@ -18,7 +20,8 @@ class LandingPage extends Component {
       var xy = getRandomPosition();
       star.style.top = xy[0] + 'px';
       star.style.left = xy[1] + 'px';
-      document.getElementById("").appendChild(star);
+      //document.getElementById("landing-card").appendChild(star);
+      document.body.append(star);
     }
 
     // Gets random x, y values based on the size of the container

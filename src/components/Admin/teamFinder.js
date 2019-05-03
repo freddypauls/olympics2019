@@ -23,6 +23,16 @@ class TeamFinderBase extends Component {
   }
 
   componentDidMount() {
+    function shuffleArray(array) {
+      let i = array.length - 1;
+      for (; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    }
 
     this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
@@ -32,8 +42,10 @@ class TeamFinderBase extends Component {
         uid: key,
       }));
 
+      const shuffleUsers = shuffleArray(usersList);
+
       this.setState({
-        users: usersList,
+        users: shuffleUsers,
       });
     });
   }
@@ -45,185 +57,49 @@ class TeamFinderBase extends Component {
   onSubmit = event => {
 
     const { users } = this.state;
+    const teams = 6;
 
-    const GoT = ["Lannister", "Targaryen", "Baratheon", "Stark"];
-    const HP = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
-    const PJ = ["Poseidon", "Zeus", "Hades", "Athena", "Ares", "Hephaestus", "Aphrodite"];
-    const LotR = ["Elf", "Dwarf", "Hobbit", "Goblin", "Balroy", "Huorn"];
-    const SW = ["Jedi", "Wookie", "Rebel"];
-    const M = ["Sith", "Stormstrooper", "Imperial"];
-
-    function shuffleArray(array) {
-      let i = array.length - 1;
-      for (; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-      return array;
+    const boys = users.filter(user => user.gender === "Male" && user.wantTeam === true && user.roles[0] === "Participant");
+    for(let t = 0; t < teams; t++){
+      let i = 0;
+      boys.map(user => {
+        if(i < (boys.length / teams)) {
+          this.props.firebase.user(user.uid).update({
+            teamnum: t+1,
+          })
+          boys.splice(i, 1);
+          i++
+        } else if (i > (boys.length / teams) && boys.length != 0) {
+          boys.map(user => {
+            this.props.firebase.user(user.uid).update({
+              teamnum: Math.floor(Math.random() * (teams + 1)),
+            })
+          })
+        }
+      })
     }
-  
-    const shuffledUsers = shuffleArray(users);
-    let i = 1;
-    let j = 1;
 
-    shuffledUsers.map(user => {
-        if(user.wantTeam === true && user.gender === "Female") {
-          if(i > 6) {
-            i = 1;
-          }
-
-          if(i === 1) {
+    const girls = users.filter(user => user.gender === "Female" && user.wantTeam === true && user.roles[0] === "Participant");
+    for(let tj = teams; tj > 0; tj--){
+      let j = 0;
+      girls.map(user => {
+        if(j <= Math.round(girls.length / teams)) {
+          this.props.firebase.user(user.uid).update({
+            teamnum: tj,
+          })
+          girls.splice(j, 1);
+          j++
+        } else if (j > (girls.length / teams) && girls.length != 0) {
+          girls.map(user => {
             this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: shuffleArray(GoT)[0],
+              teamnum: Math.floor(Math.random() * (teams + 1)),
             })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++;
-
-          } else if(i === 2) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: shuffleArray(HP)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++
-
-          } else if(i === 3) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: `Daugther of ${shuffleArray(PJ)[0]}`,
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++
-
-          } else if(i === 4) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: shuffleArray(LotR)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++
-
-          } else if(i === 5) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: shuffleArray(SW)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++
-
-          
-          } else if(i === 6) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: i,
-              house: shuffleArray(M)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            i++
-
-            
-          } 
+          })
         }
-        else if(user.wantTeam === true && user.gender === "Male") {
-          if(j > 6) {
-            j = 1;
-          }
-          if(j === 1) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: shuffleArray(GoT)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
+      })
+    }
 
-            j++
-
-
-          } else if(j === 2) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: shuffleArray(HP)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            j++
-
-           
-          } else if(j === 3) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: `Son of ${shuffleArray(PJ)[0]}`,
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            j++
-
-          } else if(j === 4) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: shuffleArray(LotR)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            j++
-
-          } else if(j === 5) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: shuffleArray(SW)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            j++
-
-          } else if(j === 6) {
-            this.props.firebase.user(user.uid).update({
-              teamnum: j,
-              house: shuffleArray(M)[0],
-            })
-            .catch(error => {
-                this.setState({ error });
-            });
-
-            j++
-
-          } 
-        }
-
-    })
-
-        event.preventDefault();
-    
-
+    event.preventDefault(); 
   };
 
   onChange = event => {
@@ -236,7 +112,7 @@ class TeamFinderBase extends Component {
         <div>
             <form onSubmit={this.onSubmit}>
                 <button type="submit" className="form-btn-devide-teams">
-                <i class="material-icons">shuffle</i>
+                <i className="material-icons">shuffle</i>
                 </button>
             </form>
         </div>

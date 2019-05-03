@@ -61,8 +61,8 @@ class RenderTeam1 extends Component {
             <th className="double-colspan">
               User:
             </th>
-            <th className="double-colspan">
-              House:
+            <th>
+                Leader: Eirik
             </th>
           </tr>
         </thead>
@@ -71,7 +71,7 @@ class RenderTeam1 extends Component {
           {users.map(user => (
             <tr className="table-for-teams-row" key={user.uid}>
                 <td>{user.username}</td>
-                <td>{user.house ? user.house : "None"}</td>
+                <td></td>
             </tr>
           ))}
         </tbody>

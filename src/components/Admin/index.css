@@ -55,7 +55,7 @@
     text-align: center!important;
 }
 
-.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams {
+.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams, .btn-del-teams {
     position: fixed;
     background-color: #333;
     color: white;
@@ -76,13 +76,38 @@
     right: 15px;
 }
 
+.btn-del-teams {
+    bottom: 15px;
+    right: 155px;
+}
+
 .form-btn-delete-teams {
     bottom: 15px;
     left: 15px;
 }
 
-.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams {
+.btnbtn {
+    border: 1px solid #333;
+    color: white;
+    background-color: #333;
+    padding: 5px;
+    margin: 2px;
+}
+
+.btnbtn:hover {
+    background-color: #555;
+}
+
+.form-btn-set-teams, .form-btn-devide-teams, .form-btn-delete-teams, .btn-del-teams {
     outline: 0;
+}
+
+.btnDelete {
+    outline: 0;
+    border: 0px solid white;
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: 200;
 }
 
 

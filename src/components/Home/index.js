@@ -48,36 +48,38 @@ class HomePage extends Component {
     // !! coerces value to be a Boolean
     // we want it to be true or false (true if scrollPositionY> 0)
     // it works because scrollPositionY=== 0 is falsy
-    const isScrolling = !!this.state.scrollPositionY
+    //const isScrolling = !!this.state.scrollPositionY
        return (
             <div className="">
             <section className="background-image-behind-card ">
               <div className="home-card">
-
                 <div className="card-text">
-                  <Clock deadline={'June, 28, 2019'} />
-                <br/>
-                  <hr />
-                    <div className="welcome"> WELCOME </div>
-                  <hr className="hr2" />
-                  <br />
-                  <div className="icon-place">
-                    Place
-                    <i class="material-icons icon-font-size">place</i>
-                  </div>
-                  <div className="icon-event">
-                    28.09.2019
-                    <i class="material-icons icon-font-size">event</i>
-                  </div>
-                  
+                    <div className="main-title">BEER</div>
+                    <div className="main-title">OLYMPICS</div>
                 </div>
+                <Clock className="countdown" deadline={'June, 28, 2019'} />
               </div>
             </section>
             
             <section className="home-flex-container">
-            {/*<div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}>
-            
-            </div>*/}
+            {/*<div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}></div>*/}
+              <div className="games games-flex">
+                  <div className="games-title">Bøtte Beerpong</div>
+                  <div className="games-text">
+                      To lag spiller mot hverandre med seks bøtter per lag. Reglene er enkle, hver gang en spiller treffer en bøtte må motstanderlaget drikke.
+                      Spillet er over ett lag er tom for bøtter.
+                      Så beerpong med større mål.
+                  </div>
+              </div>
+            </section>
+
+            <section className="footer">
+              <div>
+
+              </div>
+              <div>
+                
+              </div>
             </section>
 
           </div>
