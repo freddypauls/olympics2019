@@ -5,7 +5,6 @@ import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
-import '../SignIn/index.css';
 
 const SignUpPage = () => (
   <div className="form-card">

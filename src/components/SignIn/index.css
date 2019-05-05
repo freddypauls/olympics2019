@@ -7,7 +7,7 @@
     font-size: 13px;
     padding: 10px 13px;
     text-align: left;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0C0A3E;
     border-radius: 1px;
     width: 75%;
     margin: 10px;
@@ -16,7 +16,7 @@
 }
 
 .form-input:focus {
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid #F9564F;
 }
 
 .form-input-email {
@@ -33,13 +33,12 @@
 
 .form-btn-signin {
     display: inline-block;
-    background-color: #333;
+    background-color: #0C0A3E;
     padding: 10px 15px;
     margin: 10px;
     color: white;
     width: 40%;
     outline: none;
-    border: 1px solid #333;
 }
 
 .form-btn-signin:disabled {
@@ -51,7 +50,7 @@
 }
 
 .form-btn-signin:hover {
-    background-color: #555;
+    background-color: #7B1E7A;
 }
 
 .form-card {

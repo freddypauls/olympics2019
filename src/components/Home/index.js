@@ -63,22 +63,32 @@ class HomePage extends Component {
             
             <section className="home-flex-container">
             {/*<div className={(isScrolling) ? 'info-splitter isScrolling' : 'info-splitter'}></div>*/}
-              <div className="games games-flex">
-                  <div className="games-title">Bøtte Beerpong</div>
-                  <div className="games-text">
-                      To lag spiller mot hverandre med seks bøtter per lag. Reglene er enkle, hver gang en spiller treffer en bøtte må motstanderlaget drikke.
-                      Spillet er over ett lag er tom for bøtter.
-                      Så beerpong med større mål.
-                  </div>
+              <div className="games">
+                <div className="games-title">Bøtte Beerpong</div>
+                <div className="games-text">
+                    To lag spiller mot hverandre med seks bøtter per lag. Reglene er enkle, hver gang en spiller treffer en bøtte må motstanderlaget drikke.
+                    Spillet er over ett lag er tom for bøtter.
+                    Så beerpong med større mål.
+                </div>
+              </div>
+              <div className="games">
+                <div className="games-title"></div>
+                <div className="games-text">
+
+                </div>
               </div>
             </section>
 
+            <section className="low-mid-section">
+              <div></div>
+            </section>
+
             <section className="footer">
-              <div>
+              <div className="top-footer">
 
               </div>
-              <div>
-                
+              <div className="bot-footer">
+                <span>Copyright &#169; 2019 | made by Fredrik Paulsen</span>
               </div>
             </section>
 

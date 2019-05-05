@@ -96,35 +96,51 @@ body {
 .home-flex-container {
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #f2f2f2;
     justify-content: center;
 }
 
 .games {
-    width: 100%;
-    height: 400px;
-}
-
-.games-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 60%;
+    margin-top: 10px;
+    width: 90%;
+    height: 250px;
+    padding-top: 20px;
+    text-align: center;
+    border: 5px solid #F9564F;
 }
 
 .games-text {
-    width: 60%
+    color: #555;
+    padding: 20px;
+    text-align: justify
 }
 
 .games-title {
-    width: 60%;
+    color: #F9564F;
     font-weight: 300;
     font-size: 30px;
     height: auto;
 }
 
+.footer .top-footer {
+    background-color: rgb(123,30,122);
+    height: 100px;
+}
+
+.footer .bot-footer {
+    background-color: rgb(12, 10, 62);
+    height: 50px;
+    color: #F3C677;
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.footer .bot-footer span {
+    vertical-align: middle;
+}
 
 
 @media screen and (min-width: 678px) and (max-width: 1450px) {
