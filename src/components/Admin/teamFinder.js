@@ -63,18 +63,16 @@ class TeamFinderBase extends Component {
     for(let t = 0; t < teams; t++){
       let i = 0;
       boys.map(user => {
-        if(i < (boys.length / teams)) {
+        if(i <= Math.floor(boys.length / teams)) {
           this.props.firebase.user(user.uid).update({
             teamnum: t+1,
           })
           boys.splice(i, 1);
           i++
-        } else if (i > (boys.length / teams) && boys.length != 0) {
-          boys.map(user => {
+        } else if (i > Math.floor(boys.length / teams) && boys.length != 0) {
             this.props.firebase.user(user.uid).update({
-              teamnum: Math.floor(Math.random() * (teams + 1)),
+              teamnum: Math.floor(Math.random() * ((teams - 1)+ 1) + 1),
             })
-          })
         }
       })
     }
@@ -83,18 +81,16 @@ class TeamFinderBase extends Component {
     for(let tj = teams; tj > 0; tj--){
       let j = 0;
       girls.map(user => {
-        if(j <= Math.round(girls.length / teams)) {
+        if(j <= Math.floor(girls.length / teams)) {
           this.props.firebase.user(user.uid).update({
             teamnum: tj,
           })
           girls.splice(j, 1);
           j++
-        } else if (j > (girls.length / teams) && girls.length != 0) {
-          girls.map(user => {
+        } else if (j > Math.floor(girls.length / teams) && girls.length != 0) {
             this.props.firebase.user(user.uid).update({
-              teamnum: Math.floor(Math.random() * (teams + 1)),
+              teamnum: Math.floor(Math.random() * ((teams - 1)+ 1) + 1),
             })
-          })
         }
       })
     }
@@ -107,7 +103,6 @@ class TeamFinderBase extends Component {
   };
 
   render() {
-
     return (
         <div>
             <form onSubmit={this.onSubmit}>

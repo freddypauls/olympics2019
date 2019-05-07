@@ -24,6 +24,17 @@ class TeamSetterBase extends Component {
 
   componentDidMount() {
 
+    function shuffleArray(array) {
+      let i = array.length - 1;
+      for (; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+    }
+
     this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
@@ -32,8 +43,10 @@ class TeamSetterBase extends Component {
         uid: key,
       }));
 
+      const shuffleUsers = shuffleArray(usersList);
+
       this.setState({
-        users: usersList,
+        users: shuffleUsers,
       });
     });
   }
@@ -46,6 +59,15 @@ class TeamSetterBase extends Component {
 
     const { users } = this.state;
     
+    const leaders = users.filter(user => user.roles[1] === "Team Leader");
+    let tl = 1;
+    leaders.map(user => {
+      this.props.firebase.team(tl).update({
+        leader: user.username,
+      })
+      tl++
+    })
+
     users.filter(user => user.teamnum).map(user => {
             this.props.firebase
             .team(`${user.teamnum}/users/${user.uid}`)

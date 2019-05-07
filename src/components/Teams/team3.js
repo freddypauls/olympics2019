@@ -12,6 +12,7 @@ class RenderTeam3 extends Component {
     this.state = {
       loading: false,
       users: [],
+      teams: [],
     };
   }
 
@@ -33,6 +34,22 @@ class RenderTeam3 extends Component {
         });
       }
     });
+    this.props.firebase.teams().on('value', snapshot => {
+      const teamsObject = snapshot.val();
+      
+      if(teamsObject != null){
+        // Setting object as list (to ready for print)
+        const teamsList = Object.keys(teamsObject).map(key => ({
+          ...teamsObject[key],
+          teamnum: key,
+        }));
+
+        // Setting the list of users as state to be used across the file
+        this.setState({
+          teams: teamsList,
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
@@ -40,7 +57,7 @@ class RenderTeam3 extends Component {
   }
 
   render() {
-    const { users } = this.state;
+    const { users, teams } = this.state;
     return (
       <table className="table-for-teams">
         <thead className="table-for-teams-header">
@@ -55,9 +72,11 @@ class RenderTeam3 extends Component {
             <th className="double-colspan">
               User:
             </th>
-            <th>
-              Leader: Fredrik
-            </th>
+            {teams.filter(team => team.teamnum === "team3").map(team => (
+              <th key={team.teamnum}>
+                Leader: {team.leader}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className="table-for-teams-body">

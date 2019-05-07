@@ -34,9 +34,9 @@ li .link:hover {
 
 .btn-signout {
     background-color: transparent;
-    color: rgba(179,63,98, 1)!important;
+    color: rgb(179,63,98)!important;
     border: none;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'roboto', sans-serif;
     font-size: 17px;
     width: 100%;

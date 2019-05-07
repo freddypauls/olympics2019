@@ -12,6 +12,7 @@ class RenderTeam1 extends Component {
     this.state = {
       loading: false,
       users: [],
+      teams: [],
     };
   }
 
@@ -36,6 +37,23 @@ class RenderTeam1 extends Component {
         });
       }
     });
+
+    this.props.firebase.teams().on('value', snapshot => {
+      const teamsObject = snapshot.val();
+      
+      if(teamsObject != null){
+        // Setting object as list (to ready for print)
+        const teamsList = Object.keys(teamsObject).map(key => ({
+          ...teamsObject[key],
+          teamnum: key,
+        }));
+
+        // Setting the list of users as state to be used across the file
+        this.setState({
+          teams: teamsList,
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
@@ -45,7 +63,7 @@ class RenderTeam1 extends Component {
 
   render() {
     // Fetching all users from state, and assigning a variable to call them
-    const { users } = this.state;
+    const { users, teams } = this.state;
     // Returning JSX to render
     return (
       <table className="table-for-teams">
@@ -61,9 +79,11 @@ class RenderTeam1 extends Component {
             <th className="double-colspan">
               User:
             </th>
-            <th>
-                Leader: Eirik
-            </th>
+            {teams.filter(team => team.teamnum === "team1").map(team => (
+              <th key={team.teamnum}>
+                Leader: {team.leader}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className="table-for-teams-body">
