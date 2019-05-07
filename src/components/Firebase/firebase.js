@@ -3,12 +3,12 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: "AIzaSyBbupd36sOqLD1pwJoSknDc8XY1rHwSYDY",
-    authDomain: "bolympics.firebaseapp.com",
-    databaseURL: "https://bolympics.firebaseio.com",
-    projectId: "bolympics",
-    storageBucket: "bolympics.appspot.com",
-    messagingSenderId: "858275292059"
+    apiKey: "your api key",
+    authDomain: "your domain",
+    databaseURL: "database url",
+    projectId: "project id",
+    storageBucket: "storage bucket",
+    messagingSenderId: "messaging sender id"
   };
 
   class Firebase {
