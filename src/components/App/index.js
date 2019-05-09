@@ -13,6 +13,7 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import TeamsPage from '../Teams';
+import LeadersPage from '../Leaders';
 import AdminGamesPage from '../AdminScores';
 
 import * as ROUTES from '../../constants/routes';
@@ -37,6 +38,7 @@ const App = () => (
               <Route path={ROUTES.HOME} component={HomePage} />
               <Route path={ROUTES.ACCOUNT} component={AccountPage} />
               <Route path={ROUTES.TEAMS} component={TeamsPage} />
+              <Route path={ROUTES.TEAMLEAD} component={LeadersPage} />
               <Route path={ROUTES.ADMIN} component={AdminPage} />
               <Route path={ROUTES.GAMEADMIN} component={AdminGamesPage} />
             </div>

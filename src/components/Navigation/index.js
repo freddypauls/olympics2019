@@ -51,6 +51,9 @@ const NavigationAuth = ({ authUser }) => (
       <Link className="link" to={ROUTES.ACCOUNT}>Profile</Link>
     </li>
     <li>
+      <Link className="link" to={ROUTES.TEAMLEAD}>Team Leaders</Link>
+    </li>
+    <li>
         <Link className="link" to={ROUTES.TEAMS}>Teams</Link>
     </li>
     {authUser.roles.includes(ROLES.GAMEADMIN) && (

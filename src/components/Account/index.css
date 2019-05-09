@@ -13,6 +13,14 @@
 
 }
 
+.overlay-bluetint {
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(12, 10, 62, 0.7);
+}
+
 th {
     font-weight: 400!important;
 }
@@ -123,6 +131,10 @@ th {
     vertical-align: middle;
     line-height: normal;
   }
+
+.profile-banner-header::first-letter {
+    color: #F9564F;
+}
 
 
 @media only screen and (min-width: 768px)  { 

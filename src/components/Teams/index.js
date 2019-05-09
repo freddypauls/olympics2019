@@ -45,7 +45,9 @@ class TeamsPage extends Component {
     return (
       <div className="flex-container-teams">
         <div className="flex-item-leaderboard">
+          <div className="overlay-bluetint">
             <Leaderboard />
+          </div>
         </div>
         <div className="flex-item-renderTeams">
             <RenderTeam1 />

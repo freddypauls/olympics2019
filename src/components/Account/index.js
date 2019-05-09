@@ -49,21 +49,23 @@ class AccountPage extends Component {
       <AuthUserContext.Consumer>
         {authUser => (
           <div className="profile-full">
-          {users.filter(user => user.uid === authUser.uid).map(user => (
-          <div className="flex-container-account" key={user.uid}>
-            <div className="profile-card-banner">
-              <span className="profile-banner-header">Hello, {user.username.split(" ")[0]}</span>
-            </div>
-              <div className="profile-card-left">
-                <AccountInfo user={user} /> 
+            {users.filter(user => user.uid === authUser.uid).map(user => (
+            <div className="flex-container-account" key={user.uid}>
+              <div className="profile-card-banner">
+                <div className="overlay-bluetint">
+                  <span className="profile-banner-header">Hello, {user.username.split(" ")[0]}</span>
+                </div>
               </div>
-              
-            <div className="account-team-btn-div">
-              {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+                <div className="profile-card-left">
+                  <AccountInfo user={user} /> 
+                </div>
+                
+              <div className="account-team-btn-div">
+                {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+              </div>
             </div>
+            ))}
           </div>
-          ))}
-        </div>
         )}
       </AuthUserContext.Consumer>
     );

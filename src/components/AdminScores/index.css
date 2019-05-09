@@ -4,8 +4,14 @@
     font-size: 35px;
     margin: 20px;
     font-weight: 100;
-    border: 1px solid #999;
+    border: 2px solid #F9564F;
     padding: 10px;
+}
+
+.game-admin-header {
+    background-color: rgba(12, 10, 62, 1);
+    height: 55px;
+    width: 100%;
 }
 
 .admin-score-header {
@@ -16,14 +22,14 @@
 .admin-score-btn-plus {
     height: 60px;
     width: 60px;
-    border: 1px solid #555;
+    border: 1px solid rgb(179,63,98);
     border-radius: 50px;
     font-size: 35px;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
     margin: 10px 20px 10px 20px;
     color: white;
-    background-color: #333;
+    background-color: rgb(179,63,98);
     vertical-align: middle;
 }
 
@@ -34,14 +40,14 @@
 .admin-score-btn-minus {
     height: 60px;
     width: 60px;
-    border: 1px solid #555;
+    border: 1px solid rgb(179,63,98);
     border-radius: 50px;
     font-size: 45px;
     font-family: 'roboto', sans-serif;
     font-weight: 100;
     margin: 10px 20px 10px 20px;
     color: white;
-    background-color: #333;
+    background-color: rgb(179,63,98);
     vertical-align: middle;
 }
 
