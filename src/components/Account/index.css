@@ -1,6 +1,7 @@
 .profile-full {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-color: #f2f2f2;
 }
 
@@ -11,6 +12,10 @@
     font-family: 'roboto', sans-serif;
     font-weight: 100;
 
+}
+
+.header-color {
+    color: #F9564F;
 }
 
 .overlay-bluetint {
@@ -93,12 +98,14 @@ th {
 
 .profile-card-left {
     margin-top: 10px;
-    height: 28vh;
+    height: 100%;
     align-self: center;
+    margin-bottom: 10px;
 }
 .account-team-btn-div {
     text-align: center;
     width: 100%;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -140,7 +147,7 @@ th {
 @media only screen and (min-width: 768px)  { 
     
     .profile-full {
-        height: 94.5vh;
+        min-height: 94.5vh;
     }
 
     .flex-container-account {
@@ -153,6 +160,7 @@ th {
     
     .account-team-btn-div {
         width: 60%;
+        justify-content: flex-end;
     }
     
     .profile-card-banner    {
@@ -168,7 +176,7 @@ th {
     }
 
     .account-table-teams {
-        position: absolute;
+        position: relative;
         right: 10px;
         margin-top: 10px;
     }

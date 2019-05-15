@@ -44,6 +44,7 @@ class AccountPage extends Component {
   render() {
     //Fetching state, and making a obj arr in the render
     const { users } = this.state;
+    const helloArray = ["AAARE YOOOUUUU REEEEEEEAAADY???", "Time to get WASTED", "Welcome", "Hey sexy ;)", "Go shower", "ONE OF US... ONE OF US", "PERKELE", "WHY AM I SCREAMING??", "Where am I?.. WHO am I?", "Why hello there", "🔥this is fine🔥", "Bonjour" ];
 
     return (
       <AuthUserContext.Consumer>
@@ -53,7 +54,7 @@ class AccountPage extends Component {
             <div className="flex-container-account" key={user.uid}>
               <div className="profile-card-banner">
                 <div className="overlay-bluetint">
-                  <span className="profile-banner-header">Hello, {user.username.split(" ")[0]}</span>
+                  <span className="profile-banner-header"> <span className="header-color">{helloArray[Math.floor(Math.random() * ((helloArray.length - 1)))] }</span>, {user.username.split(" ")[0]}</span>
                 </div>
               </div>
                 <div className="profile-card-left">
@@ -61,7 +62,7 @@ class AccountPage extends Component {
                 </div>
                 
               <div className="account-team-btn-div">
-                {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
+                {user.wantTeam ? user.teamnum ? <TeamInfo users={users} team={user.teamnum} /> : user.roles[1] === "Team Leader" ? <p>You are a team leader, check teams page for the team you might be leading to victory</p> : <p>Waiting for teams to be assigned</p> : <TeamBtn />}
               </div>
             </div>
             ))}

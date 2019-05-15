@@ -77,205 +77,77 @@ body {
     color: white;
 }
 
-.info-splitter.isScrolling {
-    position: relative;
-    top: -5%;
-    height: 20%;
-}
-
-.home-flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-    background-color: #f2f2f2;
-    justify-content: center;
-    padding-bottom: 10px;
-}
-
-.games {
-    background-color: rgb(179,63,98);
-    width: 100%;
-    height: 250px;
-    padding-top: 20px;
+.home-flex-container h2 {
+    margin: 30px;
+    font-weight: 400;
+    color: #555;
     text-align: center;
 }
 
-.games:nth-of-type(2) {
-    background-color: rgba(179,63,98, 0.9);
-}
-
-.games-text {
-    color: white;
-    padding: 20px;
-    text-align: justify
-}
-
-.games-title {
-    color: #F9564F;
+.home-flex-container h5 {
     font-weight: 300;
-    font-size: 30px;
-    height: auto;
-}
-
-.footer .top-footer {
-    background-color: rgb(123,30,122);
-    height: 100px;
-}
-
-.footer .bot-footer {
-    background-color: rgb(12, 10, 62);
-    height: 50px;
-    color: #F3C677;
+    font-size: 15px;
+    color: #666;
     text-align: center;
-    font-weight: 200;
-    font-size: 18px;
 }
 
-.footer .bot-footer span {
-    vertical-align: middle;
+.rwt__tabs[data-rwt-vertical="true"] {
+    flex-wrap: wrap;
+}
+
+.rwt__tablist[aria-orientation="vertical"] {
+    width: 100%;
+    background-color: rgba(12, 10, 62, 0.7);
+}
+
+.rwt__tablist[aria-orientation="vertical"] button {
+    color: white;
+}
+
+div#vertical-tab-one {
+    width: 100%;
+}
+
+div#vertical-tab-one,
+div#vertical-tab-two,
+div#vertical-tab-three,
+div#vertical-tab-four,
+div#vertical-tab-five,
+div#vertical-tab-six,
+div#vertical-tab-seven,
+div#vertical-tab-eight,
+div#vertical-tab-nine {
+    margin-left: 15px;
+}
+
+div#vertical-tab-one p:first-child,
+div#vertical-tab-two p:first-child,
+div#vertical-tab-three p:first-child,
+div#vertical-tab-four p:first-child,
+div#vertical-tab-five p:first-child,
+div#vertical-tab-six p:first-child,
+div#vertical-tab-seven p:first-child,
+div#vertical-tab-eight p:first-child,
+div#vertical-tab-nine p:first-child {
+    color: #F9564F;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 
-@media screen and (min-width: 678px) and (max-width: 1450px) {
-
-    .card-text {
-        width: 50%;
-        align-self: center;
-        height: 33%;
+@media screen and (min-width: 678px) {
+    .rwt__tablist[aria-orientation="vertical"] {
+        width: auto;
     }
-
-    .flex-container {
-        height: 100%;
-        width: 100%;
-    }
-
-    .flex-item {
-        width: 500px;
-    }
-
-    .icon-place {
-        position: absolute;
-        transform: translate(-445px, 0px);
-        text-align: center;
-        width: 500px;
-        height: 50px;
-        left: 0;
-        top: 150px;
-        padding-top: 15px;
-        font-size: 35px;
-        padding-right: 20px;
-    }
-    
-    .icon-font-size {
-        font-size: 35px;
-        float: right;
-    }
-    
-    .icon-place:hover {
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
-        transform: translate(0px, 0px);
-        background-color: rgba(11,11,11,0.5);
-        color: white;
-        padding-left: 20px;
-        padding-top: 15px;
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
-    
-    }
-    
-    .icon-event {
-        position: absolute;
-        transform: translate(-445px, 0px);
-        text-align: center;
-        width: 500px;
-        height: 50px;
-        left: 0;
-        top: 350px;
-        padding-top: 15px;
-        font-size: 35px;
-        padding-right: 20px;
-    }
-    
-    .icon-event:hover {
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
-        transform: translate(0px, 0px);
-        background-color: rgba(11,11,11,0.5);
-        color: white;
-        padding-left: 20px;
-        padding-top: 15px;
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
-    
-    }
-
-}
-
-@media screen and (min-width: 1450px) {
-
-    .card-text {
+    div#vertical-tab-one,
+    div#vertical-tab-two,
+    div#vertical-tab-three,
+    div#vertical-tab-four,
+    div#vertical-tab-five,
+    div#vertical-tab-six,
+    div#vertical-tab-seven,
+    div#vertical-tab-eight,
+    div#vertical-tab-nine {
         width: 40%;
-        align-self: center;
-        height: 37%;
     }
-
-    .icon-place {
-        position: absolute;
-        transform: translate(-445px, 0px);
-        text-align: center;
-        width: 500px;
-        height: 50px;
-        left: 0;
-        top: 150px;
-        padding-top: 15px;
-        font-size: 35px;
-        padding-right: 20px;
-    }
-    
-    .icon-font-size {
-        font-size: 35px;
-        float: right;
-    }
-    
-    .icon-place:hover {
-        transition-duration: 0.6s;
-        transition-timing-function: ease-in-out;
-        transform: translate(0px, 0px);
-        background-color: rgba(11,11,11,0.5);
-        color: white;
-        padding-left: 20px;
-        padding-top: 15px;
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
-    
-    }
-    
-    .icon-event {
-        position: absolute;
-        transform: translate(-445px, 0px);
-        text-align: center;
-        width: 500px;
-        height: 50px;
-        left: 0;
-        top: 350px;
-        padding-top: 15px;
-        font-size: 35px;
-        padding-right: 20px;
-    }
-    
-    .icon-event:hover {
-        transition-duration: 0.6s;
-        transition-timing-function: ease-in-out;
-        transform: translate(0px, 0px);
-        background-color: rgba(11,11,11,0.5);
-        color: white;
-        padding-left: 20px;
-        padding-top: 15px;
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
-    
-    }
-    
 }

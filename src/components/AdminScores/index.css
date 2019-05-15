@@ -9,8 +9,12 @@
 }
 
 .game-admin-header {
-    background-color: rgba(12, 10, 62, 1);
+    background-color: rgba(12, 10, 62, 0.9);
     height: 55px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
     width: 100%;
 }
 
@@ -67,5 +71,9 @@
 
     .admin-score-background {
         height: 94.5vh;
+    }
+
+    .game-admin-header {
+        display: none;
     }
 }

@@ -157,6 +157,10 @@ input#hamburger[type="checkbox"]:checked ~ div.navigation
         display: none;
     }
 
+    input#hamburger[type="checkbox"] {
+        display: none;
+    }
+
     .navigation {
         transform: none;
         position: relative;

@@ -54,6 +54,7 @@
     background-image: url('../Account/img/backlit-chiemsee-dawn-1363876.jpg');
     background-size: cover;
     text-align: center;
+    background-position: center;
 }
 
 .leaderboard {
