@@ -1,4 +1,4 @@
-.background-image-behind-card {
+ .background-image-behind-card {
     background-image: url("./img/beerCarrier.jpg");
     background-size: cover;
     background-position: center;
@@ -134,11 +134,37 @@ div#vertical-tab-nine p:first-child {
     font-size: 20px;
 }
 
+.home-card .main-title.date {
+    display: none;
+}
+
+.home-flex-container .home-intro {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    background-color: rgba(12, 10, 62, 0.8); 
+}
+
+.home-flex-container .home-intro .intro-tittel {
+    color: #F3C677;
+    font-size: 30px;
+}
+
+.home-flex-container .home-intro .intro-text {
+    color: white;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.intro-leker-agenda {
+    font-size: 16px;
+}
 
 @media screen and (min-width: 678px) {
     .rwt__tablist[aria-orientation="vertical"] {
         width: auto;
     }
+
     div#vertical-tab-one,
     div#vertical-tab-two,
     div#vertical-tab-three,
@@ -149,5 +175,55 @@ div#vertical-tab-nine p:first-child {
     div#vertical-tab-eight,
     div#vertical-tab-nine {
         width: 40%;
+    }
+
+    .rwt__tabs {
+        width: 60%;
+    }
+
+    .home-flex-container h2,
+    .home-flex-container h5 {
+        width: 100%;
+    }
+
+    .home-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .agenda {
+        width: 40%;
+    }
+
+    .main-title {
+        font-size: 200px;
+    }
+
+    .main-title:first-child() {
+        top: 0px;
+    }
+
+    .main-title:last-child() {
+        bottom: 0px;
+    }
+
+    .home-card .main-title.date {
+        display: block;
+    }
+
+    .home-card .main-title.date::first-line {
+        color: white;
+    }
+
+    .home-card .main-title.date span {
+        color: #F9564F;
+    }
+
+    .countdown {
+        width: 20%;
+    }
+
+    .card-text {
+        width: 75%;
     }
 }

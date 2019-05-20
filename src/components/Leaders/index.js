@@ -4,7 +4,6 @@ import { withAuthorization } from '../Session';
 import '../SignIn/index.css';
 import './index.css';
 
-var $ = require("jquery");
 
 class LeadersPage extends Component {
   constructor(props) {
@@ -85,7 +84,7 @@ class LeadersPage extends Component {
               <div className="img"></div>
               <div className="leaders-text">
                 <h4>Andreas "Dua" Runningen</h4>
-                <p>Gått skole i trondheim (frivillig venn med Eirik så noe må jo være galt)</p>
+                <p>Andreas AKA Dua, som oftest blir han fullere enn de fleste, men finner alltid veien hjem til senge. Har noen vrangforestillinger om at han kommer til å ta seieren i år, men de fleste som har sett han i en drikkelek vet at dette ikke kommer til å skje. Om kvelden går som planlagt kan dere finne Andreas snorkende på nærmeste bussholdeplass.</p>
               </div>
               <div className="desktopimg"></div>
             </div>

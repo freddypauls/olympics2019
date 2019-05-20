@@ -72,12 +72,19 @@
 .leaders .img {
      width: 20%;
      background-color: gray;
-     background-image: url("../Home/img/background-blur-clean-531880.jpg");
      background-position: center;
      background-size: cover;
      height: 300px;
      width: 300px;
  }
+
+.leaders.eirik .img {
+    background-image: url("../Home/img/Eirik.jpg");
+}
+
+.leaders.ola .img {
+    background-image: url("../Home/img/Ola.jpg");
+}
 
  .leaders .desktopimg {
      display: none;
@@ -89,7 +96,6 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: #555;
-    margin-top: 30px;
     padding-top: 20px;
  }
 
@@ -174,11 +180,14 @@
         display: block;
         width: 20%;
         background-color: gray;
-        background-image: url("../Home/img/background-blur-clean-531880.jpg");
         background-position: center;
         background-size: cover;
         height: 300px;
         width: 300px;
+    }
+
+    .leaders.ola .desktopimg {
+            background-image: url("../Home/img/Ola.jpg");
     }
 
     .leaders.ola .img {
