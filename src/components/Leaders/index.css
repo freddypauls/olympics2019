@@ -14,7 +14,7 @@
     display: block;
     width: 100%;
     height: 25vh;
-    background-image: url('../Account/img/backlit-chiemsee-dawn-1363876.jpg');
+    background-image: url('./img/backlit-chiemsee-dawn-1363876.jpg');
     background-size: cover;
     text-align: center;
     background-position: center;
@@ -79,11 +79,11 @@
  }
 
 .leaders.eirik .img {
-    background-image: url("../Home/img/Eirik.jpg");
+    background-image: url("./img/Eirik.jpg");
 }
 
 .leaders.ola .img {
-    background-image: url("../Home/img/Ola.jpg");
+    background-image: url("./img/Ola.jpg");
 }
 
  .leaders .desktopimg {
@@ -187,7 +187,7 @@
     }
 
     .leaders.ola .desktopimg {
-            background-image: url("../Home/img/Ola.jpg");
+            background-image: url("./img/Ola.jpg");
     }
 
     .leaders.ola .img {
