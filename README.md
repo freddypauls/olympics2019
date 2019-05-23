@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+
+This is a hobby project I made to learn React. But it is also ment for use at an actual event we are doing with a friend group. The project is made in React with firebase as backend. It allows users to make an account and log in, if you want to join a team you can say so on your profile page, and this will let the system know when making the teams. Teams are randomly generated in the code, and is controlled by the admin. The admin can start team generator, assign or delete teams, he/she can also assign team leaders or game adminds. Game admins control the game, but the only functionality this entails is to give out or remove points for the existing teams. Team page shows all teams, and leaders page gives out some info about the leaders. Teams page is build on team components that print out corresponding teams, and shows a leaderboard that will filter automatically with right placements. Leaders and home page are both static pages and need to be changed if content is to be different. Sign up and sign in happen through firebase, you can also recover passwords (as long as the email used to create your user is legit). Info page is the first page or the landing page as you might say, this page is a static page that "generates" or shows a animation of a star wars crawl. Here all the text and timings etc can be changed accrodingly.
+
 ## Available Scripts
 
 In the project directory, you can run:
