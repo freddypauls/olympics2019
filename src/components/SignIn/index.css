@@ -15,6 +15,12 @@
     outline: none;
 }
 
+.sign-nav {
+    height: 55px;
+    width: 100%;
+    background-color: rgba(12, 10, 62, 0.9);
+}
+
 .form-input:focus {
     border-bottom: 2px solid #F9564F;
 }
@@ -71,6 +77,10 @@
         margin-left: 25%;
     }
 
+    .sign-nav {
+        display: none;
+    }
+
     .form-input {
         width: 75%;
     }
@@ -84,6 +94,10 @@
 @media screen and (max-width: 2000px) and (min-width: 1251px) {
     .form-input {
         width: 50%;
+    }
+
+    .sign-nav {
+        display: none;
     }
 
     .form-card {

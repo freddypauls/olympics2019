@@ -174,11 +174,25 @@ div#vertical-tab-nine p:first-child {
     div#vertical-tab-seven,
     div#vertical-tab-eight,
     div#vertical-tab-nine {
+        width: 80%;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex .game {
+        width: 40%;
+    }
+
+    .flex .poeng {
         width: 40%;
     }
 
     .rwt__tabs {
-        width: 60%;
+        width: 100%;
     }
 
     .home-flex-container h2,

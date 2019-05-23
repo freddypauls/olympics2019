@@ -12,17 +12,20 @@ class LandingPage extends Component {
   render() {
     // Sets the number of stars we wish to display
     const numStars = 100;
-
-    // For every star we want to display
-    for (let i = 0; i < numStars; i++) {
-      let star = document.createElement("div");  
-      star.className = "star";
-      var xy = getRandomPosition();
-      star.style.top = xy[0] + 'px';
-      star.style.left = xy[1] + 'px';
-      //document.getElementById("landing-card").appendChild(star);
-      document.body.append(star);
-    }
+    
+    process.nextTick(() => {
+      // For every star we want to display
+      for (let i = 0; i < numStars; i++) {
+        let star = document.createElement("div");  
+        star.className = "star";
+        var xy = getRandomPosition();
+        star.style.top = xy[0] + 'px';
+        star.style.left = xy[1] + 'px';
+        //document.getElementById("landing-card").appendChild(star);
+        document.querySelector(".landing-card").append(star);
+      }
+    })
+    
 
     // Gets random x, y values based on the size of the container
     function getRandomPosition() {  
@@ -49,7 +52,7 @@ class LandingPage extends Component {
                   <p>June 8th 2018, 20 brave souls (aspiring alcoholics) gathered in the garden of Eirik to find who could control their problems enough to rise victorious in the end.</p>
                   <p>The group was divided into 6 teams, and went through 6 games one more challenging than the next. Some held their composure, while others needed a break in the bushes ;), while most just got drunk enough to see the world spinning.. or all of the above.</p>
                   <p>At the end of it all, one team rose to victory, the team, led by Ola the average drunk, displayed alcoholism at its finest form. They won the competition that came to be the event of the year. From here the night led some to go home, while others raced to town in celebration.</p>
-                  <p>Scroll on to see this years adventure unfold.</p>
+                  <p>Sign in to see this years adventure unfold.</p>
                 </div>
               </div>
             </div> 

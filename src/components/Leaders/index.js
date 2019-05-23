@@ -43,7 +43,8 @@ class LeadersPage extends Component {
               <div className="leaders-text">
                 <h4>Erik Holtebukt Alexander</h4>
                 <p>Eirik har perioder med alkoholisme, det er ikke mye tid imellom (som regel ingen), men drikken varierer i smak.. ikke mengde. </p>
-                <p>I fjor var det Tequila (ingen god tid), mens i år må det nesten være Cava, cavasøndag har blitt den nye religionen til Eirik. Hva religionen går ut på aner jeg ikke, men han holder iallfall ett litt for nært samhold med sin gud.</p>
+                <p>Om du leter etter han, er han gjerne den som faller i moshpit på dua lipa konsert, 
+                  eller så er det cavasøndag. Cavasøndag har blitt den nye religionen til Eirik. Hva religionen går ut på aner jeg ikke, men han holder iallfall ett litt for nært samhold med sin gud.</p>
               </div>
             </div>
 
@@ -60,7 +61,12 @@ class LeadersPage extends Component {
               <div className="img"></div>
               <div className="leaders-text">
                 <h4>Fredrik Paulsen</h4>
-                <p>Virker som en edru person helt til det smeller, men da er det for sent å stoppe. Ikke det største alkoholikeren, men kjent for å sjenke deg med Jäger og/eller Absinth. Beer pong King (yes you heard me Eirik), website wizard among other things.</p>
+                <p>
+                  Virker som en edru person helt til det smeller, 
+                  men da er det for sent å stoppe. Ikke den største alkoholikeren, 
+                  men kjent for å sjenke deg med Jäger og/eller Absinth. 
+                  Wizard of websites among other things.
+                </p>
               </div>
             </div>
 
@@ -68,16 +74,23 @@ class LeadersPage extends Component {
               <div className="img"></div>
               <div className="leaders-text">
                 <h4>Martin Levin</h4>
-                <p>Martins 99 hunt er over, og 00 sesongen har startet (neida, joda). Jobbet for tiden som bartender, hvem som har stolt på en alkoholiker med å mixe alkohol til andre aner jeg ikke, men han har ikke blitt tatt enda.</p>
+                <p>
+                  Martins 99 hunt er over, og 00 sesongen har startet (neida, joda). 
+                  Jobber for tiden som bartender, 
+                  hvem som har stolt på en alkoholiker med å mixe alkohol til andre aner jeg ikke, 
+                  men han har ikke blitt tatt enda.
+                </p>
               </div>
               <div className="desktopimg"></div>
             </div>
 
-            <div className="leaders TBA">
+            <div className="leaders tba">
               <div className="img"></div>
               <div className="leaders-text">
                 <h4>TBA</h4>
-                <p></p>
+                <p>
+
+                </p>
               </div>
             </div>
 
@@ -85,7 +98,13 @@ class LeadersPage extends Component {
               <div className="img"></div>
               <div className="leaders-text">
                 <h4>Andreas "Dua" Runningen</h4>
-                <p>Andreas AKA Dua, som oftest blir han fullere enn de fleste, men finner alltid veien hjem til senge. Har noen vrangforestillinger om at han kommer til å ta seieren i år, men de fleste som har sett han i en drikkelek vet at dette ikke kommer til å skje. Om kvelden går som planlagt kan dere finne Andreas snorkende på nærmeste bussholdeplass.</p>
+                <p>
+                  Andreas AKA Dua, som oftest blir han fullere enn de fleste, 
+                  men finner alltid veien hjem til senge. 
+                  Har noen vrangforestillinger om at han kommer til å ta seieren i år, 
+                  men de fleste som har sett han i en drikkelek vet at dette ikke kommer til å skje. 
+                  Om kvelden går som planlagt kan dere finne Andreas snorkende på nærmeste bussholdeplass.
+                </p>
               </div>
               <div className="desktopimg"></div>
             </div>

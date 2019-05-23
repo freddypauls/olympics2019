@@ -60,52 +60,94 @@ class HomePage extends Component {
                 <Tab tabFor="vertical-tab-six">Relay Race</Tab>
               </TabList>
               <TabPanel tabId="vertical-tab-one">
-                <p className="">Bøtte Beerpong</p>
-                <p>
-                  To lag spiller mot hverandre med seks bøtter per lag. 
-                  Reglene er enkle, hver gang en spiller treffer en bøtte, og da må alle på laget som ikke kastet drikke. 
-                  Spillet er over når et lag er tom for bøtter.
-                </p>
+                <div className="flex">
+                  <div className="game">
+                    <p className="">Bøtte Beerpong</p>
+                    <p>
+                      To lag spiller mot hverandre med seks bøtter per lag. 
+                      Reglene er enkle, hver gang en spiller treffer en bøtte, og da må alle på laget som ikke kastet drikke. 
+                      Spillet er over når et lag er tom for bøtter.
+                    </p>
+                  </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel tabId="vertical-tab-two">
-                <p>Flip the cup</p>
-                <p>Fungerer som et helt vanlig game med flip the cup, alle spillerene på to lag har en kopp med øl. En etter en drikker opp ølen og flipper koppen så den lander etter de er ferdig. Første laget som blir ferdig med alle koppene vinner.</p>
+                <div className="flex">
+                  <div className="game">
+                  <p>Flip the cup</p>
+                  <p>Fungerer som et helt vanlig game med flip the cup, alle spillerene på to lag har en kopp med øl. En etter en drikker opp ølen og flipper koppen så den lander etter de er ferdig. Første laget som blir ferdig med alle koppene vinner.</p>
+                </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel tabId="vertical-tab-three">
-                <p>Shotgun race</p>
-                <p>En etter en på ett lag skal shotgune en øl, tiden blir tatt fra første personen starter å drikke til siste personen er ferdig med å drikke.</p>
+                <div className="flex">
+                  <div className="game">
+                    <p>Shotgun race</p>
+                    <p>En etter en på ett lag skal shotgune en øl, tiden blir tatt fra første personen starter å drikke til siste personen er ferdig med å drikke.</p>
+                  </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel tabId="vertical-tab-four">
-                <p>Elimination cage</p>
-                <p>Elimination cage fungerer ikke som et vanlig spill med cage. Man har en kopp som er sentrert på bordet. Alle spillerene har en kopp som står i en sirkel rundt koppen. Treffer en spiller koppen i midten må alle spillerene uten om han som kastet chugge, for deretter å prøve å flippe koppen, den siste som klarer dette blir eliminert. Treffer du en annen spiller sin kopp er konkuransen mellom spilleren som traff, og spilleren som har koppen som ble truffet. Treffer du din egen kopp er du eliminert, og må drikke opp drikken din.</p>
+                <div className="flex">
+                  <div className="game">
+                    <p>Elimination cage</p>
+                    <p>Elimination cage fungerer ikke som et vanlig spill med cage. Man har en kopp som er sentrert på bordet. Alle spillerene har en kopp som står i en sirkel rundt koppen. Treffer en spiller koppen i midten må alle spillerene uten om han som kastet chugge, for deretter å prøve å flippe koppen, den siste som klarer dette blir eliminert. Treffer du en annen spiller sin kopp er konkuransen mellom spilleren som traff, og spilleren som har koppen som ble truffet. Treffer du din egen kopp er du eliminert, og må drikke opp drikken din.</p>
+                  </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel tabId="vertical-tab-five">
-                <p>Quarters</p>
-                <p>En og en spiller skal sprette en mynt i en kopp så drikke den opp. Tiden blir tatt for laget og den beste tiden vinner.</p>
+              <div className="flex">
+                  <div className="game">
+                    <p>Quarters</p>
+                    <p>En og en spiller skal sprette en mynt i en kopp så drikke den opp. Tiden blir tatt for laget og den beste tiden vinner.</p>
+                  </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel tabId="vertical-tab-six">
-                <p>Relay race</p>
-                <p>
-                  Går gjennom fire poster.<br /><br />
-                    Post en går ut på å snurre rundt ett balltre 10 ganger for deretter og chugge en 0.33 liter, deretter løper du videre til neste post.
-                    <br /><br />
-                    Post 2 går ut på å treffe en beerpong kopp for deretter å drikke innholdet. Så gå videre til neste post.
-                    <br /><br />
-                    Post 3 går ut på å treffe en stack med noen ølbokser oppå hverandre så chugge en 0.33 liter
-                    <br /><br />
-                    Post 4 er avsluttende og har flere faser. Det starter med suck and blow. Deretter skal laget kjøre en runde med denne flasken skal aldri stå. Og avsluttes med en runde med titanic.
-                    <br /><br />
-                </p>
+                <div className="flex">
+                    <div className="game">
+                      <p>Relay race</p>
+                      <p>
+                        Mer info kommer kanskje, eller ikke. usikker enda.
+                        {/*
+                        Går gjennom fire poster.<br /><br />
+                          Post en går ut på å snurre rundt ett balltre 10 ganger for deretter og chugge en 0.33 liter, deretter løper du videre til neste post.
+                          <br /><br />
+                          Post 2 går ut på å treffe en beerpong kopp for deretter å drikke innholdet. Så gå videre til neste post.
+                          <br /><br />
+                          Post 3 går ut på å treffe en stack med noen ølbokser oppå hverandre så chugge en 0.33 liter
+                          <br /><br />
+                          Post 4 er avsluttende og har flere faser. Det starter med suck and blow. Deretter skal laget kjøre en runde med denne flasken skal aldri stå. Og avsluttes med en runde med titanic.
+                          <br /><br />*/}
+                      </p>
+                    </div>
+                  <div className="poeng">
+                    <p>Her kommer poeng system</p>
+                  </div>
+                </div>
               </TabPanel>
             </Tabs>
-
-            <div className="agenda">
-              Her kommer planen for dagen...
-            </div>
           </section>
 
           <section className="low-mid-section">
-            <div></div>
+            <div className="agenda">
+              <p>Her kommer planen for dagen...</p>
+            </div>
           </section>
 
           <section className="teams-footer-flex">

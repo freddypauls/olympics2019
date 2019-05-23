@@ -14,7 +14,7 @@
     display: block;
     width: 100%;
     height: 25vh;
-    background-image: url('./img/backlit-chiemsee-dawn-1363876.jpg');
+    background-image: url('./img/Beerfest_2006_1.jpg');
     background-size: cover;
     text-align: center;
     background-position: center;
@@ -84,6 +84,22 @@
 
 .leaders.ola .img {
     background-image: url("./img/Ola.jpg");
+}
+
+/*.leaders.fredrik .img {
+    background-image: url("./img");
+}
+
+.leaders.martin .img {
+    background-image: url("./img");
+}*/
+
+.leaders.tba .img {
+    background-image: url("./img/Snapchat-2099757064.jpg");
+}
+
+.leaders.anders .img {
+    background-image: url("./img/anders.jpg");
 }
 
  .leaders .desktopimg {
@@ -187,10 +203,26 @@
     }
 
     .leaders.ola .desktopimg {
-            background-image: url("./img/Ola.jpg");
+        background-image: url("./img/Ola.jpg");
     }
 
     .leaders.ola .img {
+        display: none;
+    }
+
+    .leaders.martin .desktopimg {
+
+    }
+
+    .leaders.martin .img {
+        display: none;
+    }
+
+    .leaders.anders .desktopimg {
+        background-image: url("./img/anders.jpg");
+    }
+
+    .leaders.anders img {
         display: none;
     }
 

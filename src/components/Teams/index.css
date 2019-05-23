@@ -51,7 +51,7 @@
 .flex-item-leaderboard {
     width: 100%;
     height: 100vh;
-    background-image: url('../Account/img/backlit-chiemsee-dawn-1363876.jpg');
+    background-image: url('./img/beer-2370783_1920.jpg');
     background-size: cover;
     text-align: center;
     background-position: center;
@@ -64,8 +64,12 @@
     font-size: 35px;
     height: 94.5vh;
     align-self: center;
-    color: white;
+    color: #F9564F;
     padding-top: 10px;
+}
+
+.leaderboard-li {
+    color: white;
 }
 
 .leaderboard-header {

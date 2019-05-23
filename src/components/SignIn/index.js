@@ -10,6 +10,7 @@ import './index.css';
 
 const SignInPage = () => (
   <div className="form-card">
+    <div className="sign-nav"></div>
     <h1>Sign In</h1>
     <SignInForm />
     <PasswordForgetLink />
