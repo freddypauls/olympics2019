@@ -86,11 +86,11 @@
     background-image: url("./img/Ola.jpg");
 }
 
-/*.leaders.fredrik .img {
-    background-image: url("./img");
+.leaders.fredrik .img {
+    background-image: url("./img/fredrik.jpg");
 }
 
-.leaders.martin .img {
+/*.leaders.martin .img {
     background-image: url("./img");
 }*/
 
