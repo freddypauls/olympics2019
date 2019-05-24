@@ -4,12 +4,12 @@ import 'firebase/database';
 
 //firebase shizz
 const config = {
-    apiKey: "AIzaSyBbupd36sOqLD1pwJoSknDc8XY1rHwSYDY",
-    authDomain: "bolympics.firebaseapp.com",
-    databaseURL: "https://bolympics.firebaseio.com",
-    projectId: "bolympics",
-    storageBucket: "bolympics.appspot.com",
-    messagingSenderId: "858275292059"
+    apiKey: "API key here",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   };
 
   class Firebase {
