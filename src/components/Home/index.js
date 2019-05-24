@@ -70,7 +70,7 @@ class HomePage extends Component {
                     </p>
                   </div>
                   <div className="poeng">
-                    <p>hvem møter hvem</p>
+                    <p>Hvem møter hvem</p>
                     <p>lag 1 vs lag 2</p>
                     <p>lag 3 vs lag 4</p>
                     <p>lag 5 vs lag 6</p>
@@ -98,7 +98,7 @@ class HomePage extends Component {
                     <p>En etter en på ett lag skal shotgune en øl, tiden blir tatt fra første personen starter å drikke til siste personen er ferdig med å drikke.</p>
                   </div>
                   <div className="poeng">
-                    <p>Hvem mot hvem</p>
+                    <p>Hvem møter hvem</p>
                     <p>lag 1 vs lag 6</p>
                     <p>lag 2 vs lag 3</p>
                     <p>lag 4 vs lag 5</p>
@@ -112,7 +112,7 @@ class HomePage extends Component {
                     <p>Elimination cage fungerer ikke som et vanlig spill med cage. Man har en kopp som er sentrert på bordet. Alle spillerene har en kopp som står i en sirkel rundt koppen. Treffer en spiller koppen i midten må alle spillerene uten om han som kastet chugge, for deretter å prøve å flippe koppen, den siste som klarer dette blir eliminert. Treffer du en annen spiller sin kopp er konkuransen mellom spilleren som traff, og spilleren som har koppen som ble truffet. Treffer du din egen kopp er du eliminert, og må drikke opp drikken din.</p>
                   </div>
                   <div className="poeng">
-                    <p>Hvem mot hvem</p>
+                    <p>Hvem møter hvem</p>
                     <p>lag 1 vs lag 4</p>
                     <p>lag 2 vs lag 6</p>
                     <p>lag 3 vs lag 5</p>
@@ -163,25 +163,25 @@ class HomePage extends Component {
           <section className="low-mid-section">
             <div className="agenda">
               <h1>Agenda for dagen</h1>
-              <p>
+              <div>
                 <h3>Åpningssermoni (17:30)</h3>
                 <p>Nationalsangen spiller på kazoo</p>
                 <p>Tale fra arrangøren</p>
                 <p>Lagledere presenterer lagene sine</p>
-              </p>
-              <p>
+              </div>
+              <div>
                 <h3>Lekene (18:00)</h3>
-                <p>Bøtte Beerpong</p>
-                <p></p>
-                
-              </p>
-              <p>
+                <p>Bøtte Beerpong -> Flip the cup</p>
+                <p>Shotgun race -> Elimination cage</p>
+                <p>Quarters -> Relay race</p>
+              </div>
+              <div>
                 <h3>Avslutningssermoni (22:00/22:30)</h3>
                 <p>Premieutdeling</p>
                 <p>Vinneren holder tale</p>
                 <p>Avslutningstale fra arrangøren</p>
                 <p>Ut på byen</p>
-              </p>
+              </div>
             </div>
           </section>
 

@@ -90,9 +90,9 @@
     background-image: url("./img/fredrik.jpg");
 }
 
-/*.leaders.martin .img {
-    background-image: url("./img");
-}*/
+.leaders.martin .img {
+    background-image: url("./img/Martin.png");
+}
 
 .leaders.tba .img {
     background-image: url("./img/Snapchat-2099757064.jpg");
@@ -211,7 +211,7 @@
     }
 
     .leaders.martin .desktopimg {
-
+        background-image: url("./img/Martin.png")
     }
 
     .leaders.martin .img {

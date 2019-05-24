@@ -117,7 +117,7 @@ div#vertical-tab-six,
 div#vertical-tab-seven,
 div#vertical-tab-eight,
 div#vertical-tab-nine {
-    margin-left: 15px;
+    padding: 15px;
 }
 
 div#vertical-tab-one p:first-child,
@@ -158,6 +158,35 @@ div#vertical-tab-nine p:first-child {
 
 .intro-leker-agenda {
     font-size: 16px;
+}
+
+.low-middle-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.poeng p:nth-child(2), 
+.poeng p:nth-child(3), 
+.poeng p:nth-child(4) {
+    text-align: center;
+}
+
+.poeng p {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.agenda {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 40px 0;
+    font-size: 1.1em;
+    color: #555
+}
+
+.agenda h1 {
+    color: #F9564F;
 }
 
 @media screen and (min-width: 678px) {
@@ -239,5 +268,20 @@ div#vertical-tab-nine p:first-child {
 
     .card-text {
         width: 75%;
+    }
+
+    .low-middle-section {
+        width: 100%;
+    }
+
+    .agenda {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .agenda h1 {
+        width: 100%;
     }
 }
