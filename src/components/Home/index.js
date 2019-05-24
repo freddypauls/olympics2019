@@ -70,7 +70,10 @@ class HomePage extends Component {
                     </p>
                   </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>hvem møter hvem</p>
+                    <p>lag 1 vs lag 2</p>
+                    <p>lag 3 vs lag 4</p>
+                    <p>lag 5 vs lag 6</p>
                   </div>
                 </div>
               </TabPanel>
@@ -81,7 +84,10 @@ class HomePage extends Component {
                   <p>Fungerer som et helt vanlig game med flip the cup, alle spillerene på to lag har en kopp med øl. En etter en drikker opp ølen og flipper koppen så den lander etter de er ferdig. Første laget som blir ferdig med alle koppene vinner.</p>
                 </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>Hvem møter hvem</p>
+                    <p>lag 1 vs lag 3</p>
+                    <p>lag 2 vs lag 5</p>
+                    <p>lag 4 vs lag 6</p>
                   </div>
                 </div>
               </TabPanel>
@@ -92,7 +98,10 @@ class HomePage extends Component {
                     <p>En etter en på ett lag skal shotgune en øl, tiden blir tatt fra første personen starter å drikke til siste personen er ferdig med å drikke.</p>
                   </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>Hvem mot hvem</p>
+                    <p>lag 1 vs lag 6</p>
+                    <p>lag 2 vs lag 3</p>
+                    <p>lag 4 vs lag 5</p>
                   </div>
                 </div>
               </TabPanel>
@@ -103,7 +112,10 @@ class HomePage extends Component {
                     <p>Elimination cage fungerer ikke som et vanlig spill med cage. Man har en kopp som er sentrert på bordet. Alle spillerene har en kopp som står i en sirkel rundt koppen. Treffer en spiller koppen i midten må alle spillerene uten om han som kastet chugge, for deretter å prøve å flippe koppen, den siste som klarer dette blir eliminert. Treffer du en annen spiller sin kopp er konkuransen mellom spilleren som traff, og spilleren som har koppen som ble truffet. Treffer du din egen kopp er du eliminert, og må drikke opp drikken din.</p>
                   </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>Hvem mot hvem</p>
+                    <p>lag 1 vs lag 4</p>
+                    <p>lag 2 vs lag 6</p>
+                    <p>lag 3 vs lag 5</p>
                   </div>
                 </div>
               </TabPanel>
@@ -114,7 +126,10 @@ class HomePage extends Component {
                     <p>En og en spiller skal sprette en mynt i en kopp så drikke den opp. Tiden blir tatt for laget og den beste tiden vinner.</p>
                   </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>Hvem møter hvem</p>
+                    <p>lag 1 vs lag 5</p>
+                    <p>lag 2 vs lag 4</p>
+                    <p>lag 3 vs lag 6</p>
                   </div>
                 </div>
               </TabPanel>
@@ -137,7 +152,8 @@ class HomePage extends Component {
                       </p>
                     </div>
                   <div className="poeng">
-                    <p>Her kommer poeng system</p>
+                    <p>Hvem møter hvem</p>
+                    <p>Alle spiller, dette går på tid folkens</p>
                   </div>
                 </div>
               </TabPanel>
@@ -155,6 +171,8 @@ class HomePage extends Component {
               </p>
               <p>
                 <h3>Lekene (18:00)</h3>
+                <p>Bøtte Beerpong</p>
+                <p></p>
                 
               </p>
               <p>
