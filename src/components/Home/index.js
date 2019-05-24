@@ -146,7 +146,24 @@ class HomePage extends Component {
 
           <section className="low-mid-section">
             <div className="agenda">
-              <p>Her kommer planen for dagen...</p>
+              <h1>Agenda for dagen</h1>
+              <p>
+                <h3>Åpningssermoni (17:30)</h3>
+                <p>Nationalsangen spiller på kazoo</p>
+                <p>Tale fra arrangøren</p>
+                <p>Lagledere presenterer lagene sine</p>
+              </p>
+              <p>
+                <h3>Lekene (18:00)</h3>
+                
+              </p>
+              <p>
+                <h3>Avslutningssermoni (22:00/22:30)</h3>
+                <p>Premieutdeling</p>
+                <p>Vinneren holder tale</p>
+                <p>Avslutningstale fra arrangøren</p>
+                <p>Ut på byen</p>
+              </p>
             </div>
           </section>
 
