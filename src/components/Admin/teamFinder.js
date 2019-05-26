@@ -42,6 +42,13 @@ class TeamFinderBase extends Component {
         uid: key,
       }));
 
+      console.log("All users that want teams " + usersList.filter(user => user.wantTeam === true && user.roles[0] === "Participant").length);
+      console.log("All female users " + usersList.filter(user => user.roles[0] === "Participant" && user.wantTeam === true && user.gender === "Female").length);
+      console.log("All male users " + usersList.filter(user => user.roles[0] === "Participant" && user.wantTeam === true && user.gender === "Male").length);
+      console.log("All users " + usersList.filter(user => user.roles[0] === "Participant").length);
+      
+      console.log("Users that dont want teams " + usersList.filter(user => user.wantTeam === false));
+
       const shuffleUsers = shuffleArray(usersList);
 
       this.setState({
@@ -58,6 +65,7 @@ class TeamFinderBase extends Component {
 
     const { users } = this.state;
     const teams = 6;
+
 
     const boys = users.filter(user => user.gender === "Male" && user.wantTeam === true && user.roles[0] === "Participant");
     for(let t = 0; t < teams; t++){
@@ -94,6 +102,13 @@ class TeamFinderBase extends Component {
         }
       })
     }
+
+    console.log(users.filter(user => user.teamnum === 1).length);
+    console.log(users.filter(user => user.teamnum === 2).length);
+    console.log(users.filter(user => user.teamnum === 3).length);
+    console.log(users.filter(user => user.teamnum === 4).length);
+    console.log(users.filter(user => user.teamnum === 5).length);
+    console.log(users.filter(user => user.teamnum === 6).length);
 
     event.preventDefault(); 
   };
