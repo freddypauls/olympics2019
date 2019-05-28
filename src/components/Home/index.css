@@ -166,12 +166,6 @@ div#vertical-tab-nine p:first-child {
     justify-content: center;
 }
 
-.poeng p:nth-child(2), 
-.poeng p:nth-child(3), 
-.poeng p:nth-child(4) {
-    text-align: center;
-}
-
 .poeng p {
     width: 100%;
     margin-left: 0px;
