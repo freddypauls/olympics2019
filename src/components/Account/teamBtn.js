@@ -46,7 +46,7 @@ class SetTeamBtnLogic extends Component {
   
       return (
         <form onSubmit={this.onSubmit}>
-          <span className="account-team-btn-label"> Join games </span>
+          <span className="account-team-btn-label"> Jeg vil ha lag -> </span>
           <button type="submit" className="form-btn-want-team">
               +
           </button>

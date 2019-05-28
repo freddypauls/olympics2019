@@ -26,6 +26,13 @@
     background-color: rgba(12, 10, 62, 0.7);
 }
 
+.account-team-btn-label {
+    color: #F9564F;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+}
+
 th {
     font-weight: 400!important;
 }

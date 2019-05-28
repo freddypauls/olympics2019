@@ -52,6 +52,7 @@ class AccountPage extends Component {
           <div className="profile-full">
             {users.filter(user => user.uid === authUser.uid).map(user => (
             <div className="flex-container-account" key={user.uid}>
+              {/* user.wantTeam === false ? alert("Om du vil bli med på lekene må du trykke på plus tegnet nede til høyere") : null */}
               <div className="profile-card-banner">
                 <div className="overlay-bluetint">
                   <span className="profile-banner-header"> <span className="header-color">{helloArray[Math.floor(Math.random() * ((helloArray.length - 1)))] }</span> {/*user.username.split(" ")[0]*/}</span>
