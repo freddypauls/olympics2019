@@ -64,6 +64,7 @@ class TeamSetterBase extends Component {
     leaders.map(user => {
       this.props.firebase.team(tl).update({
         leader: user.username,
+        teamname: user.teamname,
       })
       tl++
     })

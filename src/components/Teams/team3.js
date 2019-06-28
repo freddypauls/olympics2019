@@ -62,9 +62,11 @@ class RenderTeam3 extends Component {
       <table className="table-for-teams">
         <thead className="table-for-teams-header">
           <tr className="table-for-teams-row">
-            <th colSpan="2">
-                Team 3
-            </th>
+          {teams.filter(team => team.teamnum === "team3").map(team => (
+              <th colSpan="2" key={team.teamnum}>
+               {team.teamname}
+              </th>
+            ))}
           </tr>
         </thead>
         <thead className="table-for-teams-header">

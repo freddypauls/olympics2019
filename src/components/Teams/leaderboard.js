@@ -53,7 +53,7 @@ class Leaderboard extends Component {
       <div className="leaderboard">
           <div className="leaderboard-header">Leaderboard</div>
           {teams.sort((a, b) => a.score - b.score).reverse().map(team => (
-            <div className="leaderboard-li" key={team.tid}> <div className={`leaderboard-num${i}`}>{i++}{helper[i-2]}</div> Team {team.teamnum}: {team.score} pts </div> 
+            <div className="leaderboard-li" key={team.tid}> <div className={`leaderboard-num${i}`}>{i++}{helper[i-2]}</div> {team.teamname}: {team.score} pts </div> 
           ))}
       </div>
     );  

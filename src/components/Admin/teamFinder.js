@@ -64,7 +64,7 @@ class TeamFinderBase extends Component {
   onSubmit = event => {
 
     const { users } = this.state;
-    const teams = 6;
+    const teams = 5;
 
 
     const boys = users.filter(user => user.gender === "Male" && user.wantTeam === true && user.roles[0] === "Participant");
@@ -102,13 +102,6 @@ class TeamFinderBase extends Component {
         }
       })
     }
-
-    console.log(users.filter(user => user.teamnum === 1).length);
-    console.log(users.filter(user => user.teamnum === 2).length);
-    console.log(users.filter(user => user.teamnum === 3).length);
-    console.log(users.filter(user => user.teamnum === 4).length);
-    console.log(users.filter(user => user.teamnum === 5).length);
-    console.log(users.filter(user => user.teamnum === 6).length);
 
     event.preventDefault(); 
   };
